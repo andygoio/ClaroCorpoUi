@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Claro">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		<!-- /meta -->
+		<title>Corpo Administrar Servicios</title>
+		<!-- Roboto (***PERTENECE AL TEMA***) -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+		<!-- /Roboto -->
+		<!-- Bootstrap (***PERTENECE AL TEMA***) -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<!-- /Bootstrap -->
+		<!-- Iconos font-awesome (***PERTENECE AL TEMA***) -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- /Iconos font-awesome -->
+		<!-- Animaciones (***PERTENECE AL TEMA***) -->
+		<link rel='stylesheet prefetch' href='css/animate.min.css'>
+		<!-- /Animaciones -->
+		<!-- Waves Style (***PERTENECE AL TEMA***) -->
+		<link rel="stylesheet" href="css/waves.css" media="screen" type="text/css" />
+		<!-- /Waves Style -->
+		<!-- AmaranNotification Style (***PERTENECE AL TEMA***) -->
+		<link rel='stylesheet' href='css/amaran.css'>
+		<!-- /AmaranNotification Style -->
+		<!-- Tabs-acordion-style -->
+		<link rel="stylesheet" href="css/tabs-accordion-responsive-style.css">
+		<!-- Tabs-acordion-style -->
+		<!-- RecompraDePacksStyle Style -->
+		<link rel="stylesheet" href="css/recompra-de-packs.css" media="screen" type="text/css" />
+		<!-- /RecompraDePacksStyle Style -->
+		<!-- Chosen -->
+<!--		<link rel="stylesheet" href="css/bootstrap-chosen.css" media="screen" type="text/css" />-->
+		<!-- /Chosen -->
+		<!-- Select2 Style -->
+		<link rel="stylesheet" href="css/select2.css" media="screen" type="text/css" />
+		<!-- /Select2 Style -->
+		<!-- Responsive Table Style -->
+		<link rel="stylesheet" href="css/responsive-table.css" media="screen" type="text/css" />
+		<!-- /Responsive Table Style -->
+	</head>
+	<body>
+		<!-- Content Wrapper -->
+		<div class="container">
+			<div class="title-container">
+				<h3>Administrar servicios</h3>
+			</div>
+			<!--Horizontal Tab-->
+			<div id="parentHorizontalTab" class="margin-container">
+				<ul class="resp-tabs-list hor_1">
+					<li>
+						<h5>Modalidad de datos excedentes</h5>
+					</li>
+					<li>
+						<h5>Alta por línea</h5>
+					</li>
+					<li>
+						<h5>Alta por paquete</h5>
+					</li>
+					<li>
+						<h5>Baja</h5>
+					</li>
+				</ul>
+				<div class="resp-tabs-container hor_1">
+					<div>
+						<h4>Modificar comportamiento de servicios</h4>
+						<div ng-app="PacksPurchaseApp" ng-controller="PacksPurchaseCtrl" class="ng-scope">
+							<div class="table-responsive-vertical">
+								<table id="packsPurchaseSelectionTable" class="table table-striped">
+									<thead>
+										<tr>
+											<th>Línea</th>
+											<th>Servicios contratados de la línea</th>
+											<th>Agregar servicio</th>
+											<th class="cell-text-align-center">Agregar</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr id="AddItem">
+											<td data-title="Linea">
+                                                <select class="item-Amount" id="item-Amount" js-states form-control ng-model="itemAmount">
+                                                    <option value=""></option>
+                                                    <option value="1150092197">1150092197</option>
+                                                    <option value="1150014845">1150014845</option>
+                                                    <option value="1150014848">1150014848</option>
+                                                    <option value="1150019555">1150019555</option>
+                                                </select>
+											</td>
+											<td data-title="Servicios contratados de la línea" class="unordered-list-contracted-services">
+												<ul>
+													<li><i class="fa fa-check color-icon-success"></i>Internet 500MB</li>
+													<li><i class="fa fa-check color-icon-success"></i>500 SMS</li>
+													<li><i class="fa fa-check color-icon-success"></i>Llamadas ilimitadas Claro</li>
+												</ul>
+												
+
+											</td>
+											<td data-title="Comportamientos disponibles">
+												<select class="js-example-placeholder-multiple" multiple="multiple">
+												  <optgroup label="DATOS">
+												    <option value="Internet 25MB">Internet 25MB</option>
+												    <option value="Internet 200MB">Internet 200MB</option>
+												    <option value="Internet 500MB">Internet 500MB</option>
+												  </optgroup>
+												  <optgroup label="SMS">
+												    <option value="100 SMS">100 SMS</option>
+												    <option value="200 SMS">200 SMS</option>
+												    <option value="300 SMS">300 SMS</option>
+												    <option value="500 SMS">500 SMS</option>
+												  </optgroup>
+												  <optgroup label="ROAMING">
+												    <option value="Pack USA">Pack USA</option>
+												    <option value="Pack Brasil">Pack Brasil</option>
+												    <option value="Pack Europa">Pack Europa</option>
+												  </optgroup>
+												  <optgroup label="VOZ">
+												    <option value="Llamadas ilimitadas Claro">Llamadas ilimitadas Claro</option>
+												  </optgroup>
+												</select>
+
+											</td>
+											<td data-title="Agregar" class="cell-text-align-center display-none">
+												<button class=" waves-effect waves-button waves-float add-service-button-packs-rachat" ng-click="addItem()">
+												<i class="fa fa-plus display-icon-agregar"></i>
+												<span class="display-text-agregar display-text-agregar-style">Agregar</span>
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="error-container-packs-purchase-selection" id="error-container-packs-purchase-selection"></div>
+							</div>
+							<div class="table-responsive-vertical margin-packsPurchaseTable hide-packs-purchase-table-container" id="packsPurchaseTableContainer">
+								<h4>Confirmar cambios</h4>
+								<table id="packsPurchaseTable" class="table table-striped">
+									<thead>
+										<tr>
+											<th>Línea</th>
+											<th>Servicios contratados de la línea</th>
+											<th>Comportamiento seleccionado</th>
+											<th class="cell-text-align-center">Eliminar</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="item in items" class="item-unchecked ng-scope">
+											<td data-title="Linea" class="ng-binding">
+												{{item.amount}}
+											</td>
+											<td data-title="Servicios contratados de la línea">
+												{{item.currentBehavior}}
+											</td>
+											<td data-title="Comportamiento seleccionado">
+												{{item.availableBehavior}}
+											</td>
+											<td data-title="Eliminar" class="padding-last-column cell-text-align-center">
+												<i class="icon-trash00 waves-effect waves-circle icon-trash-style" ng-click="deleteItem($index)"></i>
+											</td>
+											<td data-title="" class="cell-text-align-center">
+												<div class="error-success-container-packs-purchase-table" id="error-success-container-packs-purchase-table"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="error-container-packs-purchase-table" id="error-container-packs-purchase-table"></div>
+							</div>
+							<div class="corpo-info-container corpo-info-container-resize" id="corpo-info-container">
+								<i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+								<p>
+									<span class="info-title-style">Costos de cada comportamiento:</span>
+									<span class="info-subtitle-style">Cuotas de 500MB:</span> $20 por cuota.
+									<span class="info-subtitle-style">Internet por día:</span> $4 por día.
+									<span class="info-subtitle-style"> Bloquear:</span> Sin costo.
+								</p>
+							</div>
+							<div class="margin-buttons-packs-purchase hide-packs-purchase-buttons-container" id="packsPurchaseButtonsContainer">
+								<button type="reset" value="Reset" class="waves-effect waves-button waves-float cancel-button-packs-purchase width-buttons">Cancelar</button>
+								<button type="submit" class="waves-effect waves-button waves-float save-button-packs-purchase width-buttons" id="callProfileAccept" ng-click="selectedBehaviorSubmit()">Guardar</button>
+							</div>
+						</div>
+					</div>
+					<div>
+						<p>Alta por línea.</p>
+					</div>
+					<div>
+						<p>Alta por paquete.</p>
+					</div>
+					<div>
+						<p>Baja.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Content Wrapper -->
+		<!-- jquery js (***PERTENECE AL TEMA***) -->
+		<script src='js/jquery-1.11.2.min.js'></script>
+		<!-- /jquery js -->
+		<!-- Boostrap js (***PERTENECE AL TEMA***) -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<!-- /Boostrap js -->
+		<!-- Waves (***PERTENECE AL TEMA***) -->
+		<script src="js/waves.min.js"></script>
+		<!-- /Waves -->
+		<!-- /Amaran Notification js (***PERTENECE AL TEMA***) -->
+		<script src='js/jquery.amaran.js'></script>
+		<!-- /Amaran Notification js -->
+		<!-- Tabs-accordion-responsive js -->
+		<script src="js/tabs-accordion-responsive.js"></script>
+		<!-- /Tabs-accordion-responsive js -->
+		<!-- Chosen js -->
+<!--		<script src="js/chosen.jquery.js"></script>-->
+		<!-- /Chosen js -->
+		<!-- Select2 js -->
+		<script src='js/select2.full.min.js'></script>
+		<!-- /Select2 js -->
+		<!-- angular js -->
+		<script src='js/angular.min.js'></script>
+		<!-- /angular js -->
+		<!-- PlanesYServiciosIndex js -->
+		<script src="js/recompra-de-packs.js"></script>
+		<!-- /PlanesYServiciosIndex js -->
+	</body>
+</html>
