@@ -1,0 +1,11 @@
+* {
+  margin : 0;
+  padding : 0; 
+}
+
+canvas {
+  left: 0;
+  position: absolute;
+  top: 0;
+z-index: -10;
+}

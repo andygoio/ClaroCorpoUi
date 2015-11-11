@@ -1,0 +1,143 @@
+.content-corpo{
+	margin: 0em 1.5em !important;
+    margin-bottom: 3em !important;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0), 0px 8px 17px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 767px) { 
+    .content-corpo{
+		padding-top: 15px;
+		margin-top:0px;
+		margin-right: 0px;
+		margin-left: 0px;
+		}
+		
+	.td-text-center{
+		text-align: center;
+	}
+}
+
+#corpoTable tbody td a.off-left{
+	cursor:pointer;
+}
+
+.icon-success{
+	color:#5CB85C;
+}
+
+.icon-warning{
+	color:#f89406;
+}
+
+.icon-danger{
+	color: #D32C1C;
+}
+
+.rate-plan, .update-user, .consume, .pin-puk, .line-detail{
+	cursor:pointer;
+}
+
+
+div.detail i{
+	margin-left: 10px;
+}
+
+#corpoTable   > thead > tr{
+	/*background-color: white;*/
+}
+
+#corpoTable   > thead > tr  > th{
+	/*border: 1px solid #F2F2F2;*/
+}
+
+#corpoTable > tbody {
+	/*border: 1px solid #F2F2F2;*/
+}
+
+#corpoTable > tbody > tr:nth-child(2n+1) > td, #corpoTable > tbody > tr:nth-child(2n+1) > th {
+  /* background-color: #ecf0f1;*/
+}
+
+.active-pane{
+	padding-top: 20px;
+}
+
+.selected td{
+	background-color:#95a5a6;
+}
+
+.tableCorpoContent{
+/* 	margin: 0px 1.5em; */
+}
+
+.detailSelected{
+    color: #898989 !important;	
+}
+
+.corpoTableDetail a, .corpoTableDetail:hover a{
+	color: #000;
+}
+
+.nav-tabs > li.active{
+	font-weight: bold;
+}
+
+.lineRow{
+	padding-left: 1.0em !important;	
+}
+
+.actionRow{
+	padding-right: 1.0em !important;
+}
+
+.table-icon-bold-success {
+	font-weight: 600;
+	font-size: 1.1em;
+	margin-right: -0.1em;
+	top: -4px;
+}
+
+.table-icon-bold-warning {
+	font-weight: 400;
+	padding: 0 0.2em;
+	font-size: 1.3em;
+	top: -3px;
+}
+
+.table-icon-bold-danger {
+	font-weight: 600;
+	font-size: 1.2em;
+	top: -4px;
+}
+
+.short-text {
+	display: inline-block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:70%;
+}
+
+
+div.dataTables_filter label {
+	float: left !important;
+	width: 24%;
+	min-width: 13em;
+}
+
+.icon-search-style {
+	font-weight: 600;
+	color: #CCCCCC;
+	font-size: 1.2em;
+}
+
+.dataTables_info {
+	float: left;
+	margin-left: 1em;
+}
+
+.text-align {
+    text-align: center;
+    font-size: 1.1em;
+}

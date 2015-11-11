@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta (***PERTENECE AL TEMA***) -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Corpo Perfil de Llamada</title>
+
+<!-- Roboto (***PERTENECE AL TEMA***) -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!-- Bootstrap (***PERTENECE AL TEMA***) -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+    
+<!-- Waves Style (***PERTENECE AL TEMA***) -->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+    
+<!-- Perfil de Llamada Style -->
+    <link rel="stylesheet" href="css/perfilDeLlamadaStyle.css" media="screen" type="text/css" />
+<!-- /Perfil de Llamada Style -->
+
+<!-- Animaciones (***PERTENECE AL TEMA***) -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+<!-- Switches Simples Style -->
+    <link rel='stylesheet prefetch' href='css/simple-switch-style.css'>
+<!-- /Switches Simples Style -->
+    
+<!-- Switches Dobles Style -->
+    <link rel='stylesheet prefetch' href='css/toggle-switches-style.css'>
+<!-- /Switches Dobles Style -->
+
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div class="container">
+    <row>
+        <div class="overflow-hidden">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding-bootstrap">
+                <div class="title-container">
+                    <h3>Estado de los servicios</h3>  
+                </div>
+
+                    <div class="margin-container shadow-container">
+                        <div id="servicesStatusTable" class="tableCorpoContent">
+                            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover " id="servicesStatusCorpoTable" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Estado Actual</th>
+                                        <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Servicio</th>
+                                        <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></th>	
+                                    </tr>
+                                </thead>
+                                <tbody>		
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">
+                                            <i class="fa fa-check icon-success-call-profile"></i>
+                                        </td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-pading-right">
+                                            Llamada en espera
+                                            <span class="circle-help-container-call-profile">
+                                                <i class='fa fa-question icon-Question-help-call-profile' title="Ayuda"></i>
+                                            </span>
+                                        </td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 padding-bottom-switch-status">
+                                            <label class="tgl">
+                                                <input type="checkbox" checked/>
+                                                <span class="tgl_body">
+                                                    <span class="tgl_switch"></span>
+                                                    <span class="tgl_track">
+                                                        <span class="tgl_bgd">
+                                                            <i class="fa fa-check margin-success-simple-switch"></i>
+                                                        </span>
+                                                        <span class="tgl_bgd tgl_bgd-negative">
+                                                            <i class="fa fa-times margin-cancel-simple-switch"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </td>								
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td colspan="3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineRow">
+                                            <div class="help-text-container-call-profile">
+                                                <i class='fa fa-question icon-Question-Tooltip'></i>
+                                                <div class="help-text-call-profile-display">
+                                                    <span class="help-text-style-call-profile">
+                                                        Este servicio te avisará de las llamadas que recibas mientras estás hablando.
+                                                    </span>  
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">
+                                            <i class="fa fa-times icon-error-call-profile"></i>
+                                        </td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-pading-right">
+                                            Conexión a internet
+                                            <span class="circle-help-container-call-profile">
+                                                <i class='fa fa-question icon-Question-help-call-profile' title="Ayuda"></i>
+                                            </span>
+                                        </td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 padding-bottom-switch-status">
+                                            <label class="tgl">
+                                                <input type="checkbox"/>
+                                                <span class="tgl_body">
+                                                    <span class="tgl_switch"></span>
+                                                    <span class="tgl_track">
+                                                        <span class="tgl_bgd">
+                                                             <i class="fa fa-check margin-success-simple-switch"></i>
+                                                        </span>
+                                                        <span class="tgl_bgd tgl_bgd-negative">
+                                                            <i class="fa fa-times margin-cancel-simple-switch"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </td>                       
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td colspan="3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineRow">
+                                            <div class="help-text-container-call-profile">
+                                                <i class='fa fa-question icon-Question-Tooltip'></i>
+                                                <div class="help-text-call-profile-display">
+                                                    <span class="help-text-style-call-profile">
+                                                        Este servicio permite que tu teléfono se conecte a internet. Consultá los costos de tu plan.
+                                                    </span>  
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">
+                                            <i class="fa fa-check icon-success-call-profile"></i>
+                                        </td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-pading-right">
+                                            Buzón de voz
+                                            <span class="circle-help-container-call-profile">
+                                                <i class='fa fa-question icon-Question-help-call-profile' title="Ayuda"></i>
+                                            </span>
+                                        </td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 padding-bottom-switch-status">
+                                            <label class="tgl">
+                                                <input type="checkbox" checked/>
+                                                <span class="tgl_body">
+                                                    <span class="tgl_switch"></span>
+                                                    <span class="tgl_track">
+                                                        <span class="tgl_bgd">
+                                                            <i class="fa fa-check margin-success-simple-switch"></i>
+                                                        </span>
+                                                        <span class="tgl_bgd tgl_bgd-negative">
+                                                            <i class="fa fa-times margin-cancel-simple-switch"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </td>							
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td colspan="3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineRow">
+                                            <div class="help-text-container-call-profile">
+                                                <i class='fa fa-question icon-Question-Tooltip'></i>
+                                                <div class="help-text-call-profile-display">
+                                                    <div class="help-text-style-call-profile">
+                                                        Este servicio permite que tu contestador automático reciba las llamadas que no puedas atender. Al deshabilitar el buzón se borrarán los mensajes guardados y tu saludo de bienvenida.
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>		
+                        </div>	
+                    </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding-bootstrap">
+                <div class="title-container">
+                    <h3>Estado del Tipo de Discado</h3>  
+                </div>
+
+                <div class="margin-container shadow-container">
+                    <div id="dialTypeStatusTable" class="tableCorpoContent">
+                        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover " id="dialTypeStatusCorpoTable" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Estado Actual</th>
+                                    <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">Servicio</th>
+                                    <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></th>	
+                                </tr>
+                            </thead>
+                            <tbody>		
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">
+<!--                                            <i class="fa fa-check icon-success-call-profile"></i>-->
+                                            <span class="direct-dial-status-style">DDI</span>
+                                        </td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-pading-right">
+                                            <span id="ddi-label" class="show-label-direct-dial-status">
+                                                DDI
+                                                <span class="circle-help-container-call-profile">
+                                                    <i class='fa fa-question icon-Question-help-call-profile' title="Ayuda"></i>
+                                                </span>
+                                            </span>
+                                            <span id="ddn-label" class="hide-label-direct-dial-status">
+                                                DDN
+                                                <span class="circle-help-container-call-profile">
+                                                    <i class='fa fa-question icon-Question-help-call-profile' title="Ayuda"></i>
+                                                </span>
+                                            </span>
+                                            <span id="ddi-full-label" class="hide-label-direct-dial-status">
+                                                DDI Full
+                                                <span class="circle-help-container-call-profile">
+                                                    <i class='fa fa-question icon-Question-help-call-profile' title="Ayuda"></i>
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-bottom-switch-status">
+                                            <div class="switch">
+                                                <input type="radio" class="switch-input" name="view" value="ddi" id="ddi" checked>
+                                                <label for="ddi" class="switch-label switch-label-one">DDI</label>
+                                                <input type="radio" class="switch-input" name="view" value="ddn" id="ddn">
+                                                <label for="ddn" class="switch-label switch-label-two">DDN</label>
+                                                <input type="radio" class="switch-input" name="view" value="ddiFull" id="ddiFull">
+                                                <label for="ddiFull" class="switch-label switch-label-three">DDI Full</label>
+                                                <span class="switch-selection"></span>
+                                            </div>
+                                        </td>								
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td colspan="3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineRow">
+                                            <div class="help-text-container-call-profile">
+                                                <i class='fa fa-question icon-Question-Tooltip'></i>
+                                                <div class="help-text-call-profile-display">
+                                                    <p class="help-text-style-call-profile">
+                                                        <h6>DDN: Discado Directo Nacional</h6>
+                                                        <p>Si estás en Argentina permite realizar llamadas a cualquier número del país. Si estás en el exterior, no podrás recibir llamadas de otros países y te permitirá hacer llamadas sólo al país en el que te encontrás.</p>
+                                                    
+                                                        <h6>DDI: Discado Directo Internacional</h6>
+                                                        <p>Si estás en Argentina permite realizar llamadas a cualquier teléfono del mundo. Si estás en el exterior, podrás recibir llamadas de otros países y llamar dentro del país en el que te encontrás y la Argentina.</p>
+
+                                                        <h6>DDI Full: Discado Directo Internacional Full</h6>
+                                                        <p>Si estás en Argentina permite realizar llamadas a cualquier teléfono del mundo. Si estás en el exterior, podrás recibir llamadas de otros países y llamar a cualquier teléfono del mundo.</p>
+                                                    </p>  
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">
+                                            <i class="fa fa-check icon-success-call-profile"></i>
+                                        </td>
+                                        <td colspan="2" class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Roaming Internacional Voz/SMS</td>					
+                                    </tr>
+<!--
+                                    <tr class="odd gradeX">
+                                        <td colspan="3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineRow">
+                                            <div class="help-text-container-call-profile">
+                                                <i class='fa fa-question icon-Question-Tooltip'></i>
+                                                <div class="help-text-call-profile-display">
+                                                    <p class="help-text-style-call-profile">
+                                                        aaaaaaaaa
+                                                    </p>  
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+-->
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">
+                                            <i class="fa fa-check icon-success-call-profile"></i>
+                                        </td>
+                                        <td colspan="2" class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Roaming Internacional Datos</td>
+                                    </tr>
+<!--
+                                    <tr class="odd gradeX">
+                                        <td colspan="3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineRow">
+                                            <div class="help-text-container-call-profile">
+                                                <i class='fa fa-question icon-Question-Tooltip'></i>
+                                                <div class="help-text-call-profile-display">
+                                                    <p class="help-text-style-call-profile">
+                                                        bbbbbbbbbbbb
+                                                    </p>  
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+-->
+                            </tbody>
+                        </table>		
+                    </div>	
+                </div>
+            </div>
+        </div>
+    </row>
+
+<!--        <div class="overflow-hidden">-->
+    <div class="buttons-user-change-container">
+        <button type="reset" value="Reset" class="waves-effect waves-button waves-float cancel-button-user-change width-buttons">Cancelar</button>
+        <button type="submit" class="waves-effect waves-button waves-float save-button-user-change width-buttons" id="callProfileAccept">Aceptar</button>
+    </div>
+<!--        </div>-->
+
+    
+</div>
+<!-- /Content Wrapper -->
+    
+    
+<!-- jquery js (***PERTENECE AL TEMA***) -->
+    <script src='js/jquery-1.11.2.min.js'></script>
+<!-- /jquery js -->
+
+<!-- Boostrap js (***PERTENECE AL TEMA***) -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+    
+<!-- PlanesYServiciosIndex js -->
+<script src="js/perfilDeLlamadaIndex.js"></script>
+<!-- /PlanesYServiciosIndex js -->
+
+        
+<!-- Waves js (***PERTENECE AL TEMA***) -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+    
+</body>
+
+</html>

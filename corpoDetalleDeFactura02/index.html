@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Detalle de Llamadas/Facturas</title>
+
+<!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+    
+<!-- Style -->
+    <link rel="stylesheet" href="css/detalleDeFacturaStyle.css" media="screen" type="text/css" />
+<!-- /Style -->
+
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+    
+<!-- Animsition -->
+    <link rel="stylesheet" href="css/animsition.min.css">
+<!-- /Animsition -->
+    
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+<div class="container animsition" data-animsition-in="fade-in-right-sm" data-animsition-in-duration="1" data-animsition-out="fade-out-right-sm" data-animsition-out-duration="1000">
+    <div class="title-container">
+        <h3>Detalle de Llamadas/Facturas</h3>  
+    </div>
+    
+    <div class="generated-details-display">
+        <div id="table" class="tableCorpoContent">
+            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover " id="corpoTable" width="100%">
+                <thead>
+                    <tr>
+                        <th class="hidden-xs col-sm-2 col-md-2 col-lg-2 lineRow">Número</th>
+                        <th class="hidden-xs col-sm-3 col-md-3 col-lg-3 text-align">Inicio de Ciclo</th>
+                        <th class="col-xs-4 col-sm-3 col-md-3 col-lg-3 text-align-first-xs">Cierre de Ciclo</th>
+                        <th class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">Detalle de Llamadas</th>
+                        <th class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">Detalle de Factura</th>
+                    </tr>
+                </thead>
+                <tbody>		
+                    <tr class="odd gradeX icon-color-diseable">
+                        <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 lineRow">23674</td>
+                        <td class="hidden-xs col-sm-3 col-md-3 col-lg-3 text-align">09-07-2013</td>
+                        <td class="col-xs-4 col-sm-3 col-md-3 col-lg-3 text-align-first-xs">08-08-2013</td>
+                        <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">
+                            <i class='fa fa-download' title="Su detalle de llamada aún no se encuentra disponible."></i>
+                        </td>
+                        <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">
+                            <i class='fa fa-download' title="Su detalle de factura aún no se encuentra disponible."></i>
+                        </td>
+                    </tr>
+                    <tr class="odd gradeX">
+                        <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 lineRow">23144</td>
+                        <td class="hidden-xs col-sm-3 col-md-3 col-lg-3 text-align">09-03-2013</td>
+                        <td class="col-xs-4 col-sm-3 col-md-3 col-lg-3 text-align-first-xs">08-04-2013</td>
+                        <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">
+                            <a href="callDetailbillDetailError.html">
+                                <i class='fa fa-download'></i>
+                            </a>
+                        </td>
+                        <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">
+                            <i class='fa fa-download'></i>
+                        </td>
+                    </tr>
+                    <tr class="odd gradeX">
+                        <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 lineRow">23011</td>
+                        <td class="hidden-xs col-sm-3 col-md-3 col-lg-3 text-align">09-02-2013</td>
+                        <td class="col-xs-4 col-sm-3 col-md-3 col-lg-3 text-align-first-xs">08-03-2013</td>
+                        <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">
+                            <i class='fa fa-download'></i>
+                        </td>
+                        <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 text-align">
+                            <i class='fa fa-download'></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>		
+        </div>	
+
+        <div class="corpo-info-container">
+            <i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+           Sr Cliente. El archivo del último período se encontrará generado a partir del 12/05/2015
+        </div>
+    </div>
+    
+    
+    <div class="corpo-info-container no-detail-generated no-generated-details-display">
+        <i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+       Sr Cliente. Su cuenta no dispone de detalles generados para el período actual. Los mismos se estarán generando al finalizar el ciclo de facturación.
+    </div>
+</div>
+<!-- /Content Wrapper -->
+    
+    
+<!-- jquery js -->
+    <script src='js/jquery.js'></script>
+<!-- /jquery js -->
+
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+<!-- DetalleDeFacturaIndex js -->
+    <script src='js/detalleDeFacturaIndex.js'></script>
+<!-- /DetalleDeFacturaIndex js -->
+ 
+<!-- Animsition js --> 
+    <script src="js/jquery.animsition.min.js"></script>
+<!-- /Animsition js -->
+
+</body>
+
+</html>

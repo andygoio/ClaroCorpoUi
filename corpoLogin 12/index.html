@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /Meta -->
+    
+  <title>Login | Autogestion Corporativa Claro</title>
+
+<!--[if IE 9 ]>
+    <!-- Placeholders IE9 js -->
+	    <script src="js/placeholders.min.js"></script>
+    <!-- /Placeholders IE9 js -->
+<![endif]-->
+    
+    <!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+    <!-- /Animaciones -->
+    
+    <!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+    <!-- /Roboto -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- /Bootstrap -->
+    
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    
+    <!-- coolPlaceholderStyle -->
+    <link rel="stylesheet" href="css/coolPlaceholderStyle.css" media="screen" type="text/css" />
+    <!-- /coolPlaceholderStyle -->
+    
+    <!-- Waves Style -->
+    <link rel="stylesheet" href="css/waves.css" media="screen" type="text/css" />
+    <!-- /Waves Style -->
+    
+    <!-- Classic Tooltip -->
+    <link rel="stylesheet" type="text/css" href="css/tooltip-classic.css" />
+    <!-- /Classic Tooltip -->
+    
+    <!-- Captcha -->
+    <link type='text/css' href='css/captchaStyle.css' rel='stylesheet' media='screen' />
+    <!-- /Captcha -->
+
+    <!-- AmaranNotification Style -->
+    <link rel='stylesheet' href='css/amaran.css'>
+    <!-- /AmaranNotification Style -->
+    
+    <!-- Connected 2D Particles -->
+ <!--   <link rel="stylesheet" href="css/connected-2d-particles-style.css" media="screen" type="text/css" />-->
+    <!-- /Connected 2D Particles -->
+    
+</head>
+
+<body>
+        <div class="container">
+            <row>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10">
+                  <div class='form aniamted bounceIn'>
+                      <div class='switch'>
+                        <i class='fa fa-key fa-times'></i>
+                        <div class='tooltip-Recuperar-Clave'>Recuperar Clave</div>
+                      </div>
+                      <img src="./img/ClaroLogo.svg" alt="Logo Claro" height="75" width="212" class="img-responsive img-center logo-Login-Style">
+<!--                      <object data="./img/ClaroLogo.svg" type="image/svg+xml" class="img-responsive img-center logo-Login-Style"></object>-->
+                      <div class="titleLogoClaro">Autogestión Empresas</div>
+                  <div class='login'>
+                    <form>
+                      <input placeholder='Número de Cuenta' type='tel' oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" maxlength="10" required/>
+                      <input placeholder='Clave' type='password' pattern='[a-zA-Z0-9]*' class="margin-input-bottom-login" required/>
+                    
+                      <div class="login-message-error-container" id="login-message-error-container"></div>
+                        
+                    <!-- waves button -->
+                    <button type="submit" class="waves-effect waves-button waves-float wave-Button-Login" id="button-login-ingresar">
+                        <span>Ingresar</span>
+                        <div id="canvasloader-container" class="display-initial-canvasloader-container"></div>
+                    </button>
+                    <!-- /waves-button -->
+                    </form>
+                  </div>
+                  <div class='register'>
+                    <h2>Recuperar Clave</h2>
+                    <form>
+                      <input placeholder='Número de Cuenta' type='tel' pattern='[0-9]*' maxlength="10" class="margin-input-bottom-recover-password" required>
+
+                        <!-- captcha -->
+                            <div class="title-Align-Center">
+                                <p class="visualCaptcha-explanation">Click sobre <span class="captcha-Strong">Bandera</span></p>
+                                <!-- waves button refresh -->
+                                <i class="fa fa-refresh waves-effect waves-circle refresh-Captcha-Button-Circular"></i>
+                                <!-- /waves-button refresh -->
+                            </div>
+                        <div class="visualCaptcha-possibilities">
+                            <row>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-Align-Center">
+                                        <div class="img" onclick="selectionCaptcha('img-0')" id="visualCaptcha-img-0"><img src="img/iconos-captcha/3.png" data-index="0" alt="" title=""></div>
+                                        <div class="img" onclick="selectionCaptcha('img-1')" id="visualCaptcha-img-1"><img src="img/iconos-captcha/14.png" data-index="1" alt="" title=""></div>
+                                        <div class="img" onclick="selectionCaptcha('img-2')" id="visualCaptcha-img-2"><img src="img/iconos-captcha/7.png" data-index="2" alt="" title=""></div>
+                                        <div class="img" onclick="selectionCaptcha('img-3')" id="visualCaptcha-img-3"><img src="img/iconos-captcha/18.png" data-index="3" alt="" title=""></div>
+                                        <div class="img" onclick="selectionCaptcha('img-4')" id="visualCaptcha-img-4"><img src="img/iconos-captcha/19.png" data-index="4" alt="" title=""></div>
+                                        <div class="img" onclick="selectionCaptcha('img-5')" id="visualCaptcha-img-5"><img src="img/iconos-captcha/3.png" data-index="5" alt="" title=""></div>
+                                </div>
+                            </row>
+                        </div>
+                        <!-- /captcha -->
+
+                    <!-- waves button -->
+                    <row class="butons-Recuperan-Contrasena-Style">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <button type="reset" value="Reset" class="waves-effect waves-button waves-float margin-cancel-bottom-recover-password wave-Button-LoginCancelar cancel-captcha">Cancelar</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <button type="submit" class="waves-effect waves-button waves-float wave-Button-Login">Restablecer</button>
+                        </div>
+                    </row>
+                    <!-- /waves-button -->
+                    </form>
+                  </div>
+                    <footer>
+                      <!-- Classic Tooltip -->
+                      <span class="tooltip tooltip-effect-4">
+                        <span id="tooltip-item" class="tooltip-item"><i class='fa fa-question-circle animated infinite pulse necesitas-Ayuda-Style'></i> Necesitás ayuda?</span>
+                        <span class="tooltip-content clearfix">
+                            <span class="tooltip-text">
+                                <span class="header-Tooltip">¿Es la primera vez?</span>
+                                <i class='fa fa-question animated infinite pulse icon-Question-Tooltip'></i>
+                                <span class="content-Tooltip">Si es la primera vez que ingresa a Autogestión Empresas comuníquese con nuestros asesores para obtener su clave de acceso al 0800-123-3677 o desde su celular al *26774.</span>
+                            </span>
+                        </span>
+                      </span>
+                      <!-- /Classic Tooltip -->
+                    </footer>
+                </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1"></div>
+            </row>
+        </div>             
+                    
+      <script src='js/jquery-1.11.2.min.js'></script>
+
+  <script src="js/index.js"></script>
+
+    <!-- Waves -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+        Waves.displayEffect();
+    </script>
+    <!-- /Waves -->
+
+    <!-- /Amaran Notification js -->
+    <script src='js/jquery.amaran.js'></script>
+    <!-- /Amaran Notification js -->
+    
+    <!-- Connected 2D Particles -->
+ <!--   <script src="js/connected-2d-particles.js"></script>-->
+    <!-- /Connected 2D Particles -->
+
+<!-- /heartcode-canvasloader js -->
+    <script src='js/heartcode-canvasloader-min-0.9.1.js'></script>
+<!-- /heartcode-canvasloader js -->
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            <!-- Waves (Animación wave del botón) -->
+                $('a.toggle-code').on('click', function() {
+
+                    var link = $(this);
+                    var el = $($(this).data('source'));
+
+                    if (el.hasClass('hide'))
+                    {
+                        link.text('(hide source)');
+                        return el.removeClass('hide');
+                    }
+
+                    link.text('(show source)');
+                    return el.addClass('hide');
+                });
+            <!-- /Waves (Animación wave del botón) -->
+        });
+        
+        
+        function selectionCaptcha(selectedCaptcha){
+            switch(selectedCaptcha){
+                case 'img-0':
+                    $("#visualCaptcha-img-0").addClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").removeClass("captcha-Selected");
+                    break;
+                case 'img-1':
+                    $("#visualCaptcha-img-0").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").addClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").removeClass("captcha-Selected");
+                    break;
+                case 'img-2':
+                    $("#visualCaptcha-img-0").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").addClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").removeClass("captcha-Selected");
+                    break;
+                case 'img-3':
+                    $("#visualCaptcha-img-0").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").addClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").removeClass("captcha-Selected");
+                    break;
+                case 'img-4':
+                    $("#visualCaptcha-img-0").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").addClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").removeClass("captcha-Selected");
+                    break;
+                case 'img-5':
+                    $("#visualCaptcha-img-0").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").addClass("captcha-Selected");
+                    break;
+                default:
+                    $("#visualCaptcha-img-0").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-1").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-2").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-3").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-4").removeClass("captcha-Selected");
+                    $("#visualCaptcha-img-5").removeClass("captcha-Selected");
+            }
+        }
+        
+        
+		var cl = new CanvasLoader('canvasloader-container');
+		cl.setColor('#ffffff'); // default is '#000000'
+		cl.setDiameter(20); // default is 40
+		cl.setDensity(79); // default is 40
+		cl.setRange(1); // default is 1.3
+		cl.setSpeed(4); // default is 2
+		cl.setFPS(22); // default is 24
+		cl.show(); // Hidden by default
+
+    </script>
+    
+</body>
+
+</html>

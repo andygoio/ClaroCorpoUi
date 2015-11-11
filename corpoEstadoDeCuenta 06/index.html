@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Estado de Cuenta</title>
+
+<!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!-- Card Style -->
+    <link rel="stylesheet" href="css/card.css" media="screen" type="text/css" />
+<!-- /Card Style -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+    
+<!-- Style -->
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<!-- /Style -->
+    
+<!-- Calendar -->
+    <link rel="stylesheet" href="css/calendar.css" media="screen" type="text/css" />
+<!-- /Calendar -->
+    
+<!-- Classic Tooltip -->
+    <link rel="stylesheet" type="text/css" href="css/tooltip-classic.css" />
+<!-- /Classic Tooltip -->
+
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+    
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div class="container">
+    <row>
+        <div class="card-container">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <div class="card-name">
+                        <div class="cursor-default">
+                            <div class="app">
+                                <div class="app-calendar">
+                                    <div id="weekday">monday</div>
+                                    <div id="day">13</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div class="cursor-default">
+                            <h4>Cierre de facturación</h4>
+                            <span>08/04/2015</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <div class="card-name icon">
+                        <div class="cursor-default">
+                            <img src="./img/totalVencido00.svg" class="img-responsive" style="height: 100px; width: 100px;"></img>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div class="cursor-default">
+                            <h4>Total vencido</h4>
+                            <span>$  0.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <div class="card-name icon">
+                        <div class="cursor-default">
+                            <img src="./img/totalAPagar00.svg" class="img-responsive" style="height: 100px; width: 100px;"></img>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div class="cursor-default">
+                            <h4>Total a pagar</h4>
+                            <span>$  0.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </row>
+  
+    
+    <div class="title-container">
+        <h3>Últimos períodos facturados:</h3>  
+    </div>
+    
+    
+	<section class="main-content">
+        <div class="content-corpo">
+            <div id="table" class="tableCorpoContent">
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover " id="corpoTable" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">Fecha</th>
+                            <th class="hidden-xs col-sm-3 col-md-3 col-lg-2">Comprobante</th>			
+                            <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Nro Comprobante</th>
+                            <th class="hidden-xs col-sm-2 col-md-2 col-lg-2 ">Fecha de vencimiento</th>
+                            <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">Monto ($)</th>
+                            <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">Saldo ($)</th>
+                            <th class="hidden-xs col-sm-2 col-md-2 col-lg-2 ">Detalle</th>
+                            <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">Descargar</th>
+                        </tr>
+                    </thead>
+                    <tbody>		
+                            <tr class="odd gradeX">
+                                <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">26/02/2015</td>
+                                <td class="hidden-xs col-sm-3 col-md-3 col-lg-2">Factura</td>							
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">85997945</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">19/03/2015</td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2">4.542,91</td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2">0,00</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-align">
+                                    <i class='fa fa-plus'></i>
+<!--                                    <i class='fa fa-eye-slash'></i>-->
+                                </td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-file-pdf-o'></i>-->
+                                    <i class='fa fa-download'></i>
+                                </td>
+                            </tr>
+                            <tr class="odd gradeX">
+                                <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">26/01/2015</td>
+                                <td class="hidden-xs col-sm-3 col-md-3 col-lg-2">Factura</td>							
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">81172023</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20/02/2015</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">4.280,82</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">0,00</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-align">
+                                    <i class='fa fa-plus'></i>
+<!--                                    <i class='fa fa-eye-slash'></i>-->
+                                </td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2 text-align icon-color-diseable">
+<!--                                    <i class='fa fa-file-pdf-o'></i>-->
+                                    
+<!-- Classic Tooltip -->
+<span class="tooltip tooltip-effect-4">
+  <span class="tooltip-item">
+        <i class='fa fa-download' title="Su factura aún no se encuentra disponible."></i>
+    </span>
+  <span class="tooltip-content clearfix">
+      <span class="tooltip-text">
+            <span class="contentTooltip">
+                Su factura aún no se encuentra disponible.
+            </span>
+      </span>
+  </span>
+</span>
+<!-- /Classic Tooltip -->
+                                    
+                                    
+                                </td>
+                            </tr>
+                            <tr class="odd gradeX">
+                                <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">26/12/2014</td>
+                                <td class="hidden-xs col-sm-3 col-md-3 col-lg-2">Factura</td>							
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">75824390</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20/01/2015</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">4.356,27</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">0,00</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-align">
+                                    <i class='fa fa-plus'></i>
+<!--                                    <i class='fa fa-eye-slash'></i>-->
+                                </td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2 text-align icon-color-diseable">
+<!--                                    <i class='fa fa-file-pdf-o'></i>-->
+                                    <i class='fa fa-download' title="Su factura aún no se encuentra disponible."></i>
+                                </td>
+                            </tr>
+                            <tr class="odd gradeX">
+                                <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">26/11/2014</td>
+                                <td class="hidden-xs col-sm-3 col-md-3 col-lg-2">Factura</td>							
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">70880224</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">19/12/2014</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">4.647,40</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">0,00</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-eye'></i>-->
+                                    <i class='fa fa-plus'></i>
+<!--                                    <i class='fa fa-eye-slash'></i>-->
+                                </td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-file-pdf-o'></i>-->
+                                    <i class='fa fa-download'></i>
+                                </td>
+                            </tr>
+                            <tr class="odd gradeX">
+                                <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">26/10/2014</td>
+                                <td class="hidden-xs col-sm-3 col-md-3 col-lg-2">Factura</td>							
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">66291634</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">19/11/2014</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">4.582,97</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">0,00</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-eye'></i>-->
+                                    <i class='fa fa-plus'></i>
+<!--                                    <i class='fa fa-eye-slash'></i>-->
+                                </td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-file-pdf-o'></i>-->
+<!--                                    <i class='fa fa-download'></i>-->
+<!--                                    <i class='fa fa-times-circle'></i>-->
+                                </td>
+                            </tr>
+                            <tr class="odd gradeX">
+                                <td class="col-xs-4 col-sm-2 col-md-2 col-lg-2 lineRow">26/09/2014</td>
+                                <td class="hidden-xs col-sm-3 col-md-3 col-lg-2">Factura</td>							
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">61635219</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">19/10/2014</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">5.629,80</td>
+                                <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">0,00</td>
+                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-eye'></i>-->
+<!--                                    <i class='fa fa-eye-slash'></i>-->
+                                    <i class='fa fa-plus'></i>
+                                </td>
+                                <td class="col-xs-5 col-sm-2 col-md-2 col-lg-2 text-align">
+<!--                                    <i class='fa fa-file-pdf-o'></i>-->
+                                    <i class='fa fa-download'></i>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>		
+            </div>	
+        </div>
+	</section>
+
+ 
+    <div class="title-container">
+        <h3>Accesos útiles:</h3>  
+    </div>
+
+
+    <row>
+        <div class="card-container">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card waves-effect waves-float">
+                    <a href="http://www.pagomiscuentas.com/" target="_blank">
+                        <div class="card-name icon width-right-card-accesos-utiles-estado-de-cuenta full-width-right-card-accesos-utiles-estado-de-cuenta">
+                            <div>
+                                <img src="./img/pagoMisCuentas02.svg" class="img-responsive" style="height: 284px; width: 284px;"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card waves-effect waves-float">
+                    <a href="http://www.linkpagos.com.ar/" target="_blank" >
+                        <div class="card-name icon width-right-card-accesos-utiles-estado-de-cuenta full-width-right-card-accesos-utiles-estado-de-cuenta">
+                            <div>
+                                <img src="./img/pagosLink02.svg" class="img-responsive" style="height: 92px; width: 92px;"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <button class="card waves-effect waves-float out-line-accesos-utiles">
+                    <div class="card-name text-card width-left-card-accesos-utiles-estado-de-cuenta">
+                        <div>
+                            <h4>Cupón de pagos</h4>
+                        </div>
+                    </div>
+                    <div class="card-name icon width-right-card-accesos-utiles-estado-de-cuenta">
+                        <div>
+                            <img src="./img/cuponDePago02.svg" class="img-responsive" style="height: 96px; width: 191px;"></img>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </row>
+
+
+    <row>
+        <div class="card-container">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card waves-effect waves-float">
+                    <a href="http://www.pagomiscuentas.com/" target="_blank">
+                        <div class="card-name icon width-right-card-accesos-utiles-estado-de-cuenta full-width-right-card-accesos-utiles-estado-de-cuenta">
+                            <div>
+                                <img src="./img/pagoMisCuentas02.svg" class="img-responsive" style="height: 284px; width: 284px;"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card waves-effect waves-float">
+                    <a href="http://www.linkpagos.com.ar/" target="_blank" >
+                        <div class="card-name icon width-right-card-accesos-utiles-estado-de-cuenta full-width-right-card-accesos-utiles-estado-de-cuenta">
+                            <div>
+                                <img src="./img/pagosLink02.svg" class="img-responsive" style="height: 92px; width: 92px;"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <button class="card out-line-accesos-utiles corpo-info-circle-background-color">
+                    <div class="card-name text-card width-left-card-accesos-utiles-estado-de-cuenta corpo-info-circle-background-color corpo-info-circle-width-left-card">
+                        <div>
+                            <div class="corpo-info-circle animated infinite pulse">
+                                <i class="fa fa-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-name icon width-right-card-accesos-utiles-estado-de-cuenta corpo-info-circle-background-color corpo-info-circle-width-right-card">
+                        <div>
+                            Para generar su cup&oacute;n de pago debe registrar una l&iacute;nea autorizante.
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </row>
+    
+</div>
+<!-- /Content Wrapper -->
+    
+    
+<!-- jquery js -->
+    <script src='js/jquery.js'></script>
+<!-- /jquery js -->
+
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+<!-- jquery.dataTables.min js -->
+    <script src='js/jquery.dataTables.min.js'></script>
+<!-- /jquery.dataTables.min js -->
+    
+<!-- EstadoDeCuentaIndex js -->
+    <script src='js/estadoDeCuentaIndex.js'></script>
+<!-- /EstadoDeCuentaIndex js -->
+    
+    
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+    
+</body>
+
+</html>
