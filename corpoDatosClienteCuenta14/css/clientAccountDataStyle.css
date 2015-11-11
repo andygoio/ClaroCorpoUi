@@ -1,0 +1,550 @@
+/* Importacion de font datosClienteCuenta */
+@font-face {
+	font-family: 'datosClienteCuenta';
+	src:url('../fonts/datosClienteCuenta.eot?7tjnvv');
+	src:url('../fonts/datosClienteCuenta.eot?#iefix7tjnvv') format('embedded-opentype'),
+		url('../fonts/datosClienteCuenta.woff?7tjnvv') format('woff'),
+		url('../fonts/datosClienteCuenta.ttf?7tjnvv') format('truetype'),
+		url('../fonts/datosClienteCuenta.svg?7tjnvv#datosClienteCuenta') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	font-family: 'datosClienteCuenta';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-razon-social:before {
+	content: "\e600";
+}
+
+.icon-cuit:before {
+	content: "\e601";
+}
+
+.icon-responsable:before {
+	content: "\e602";
+}
+
+.icon-tipo-y-numero-documento:before {
+	content: "\e603";
+}
+
+.icon-numero-de-la-cuenta:before {
+	content: "\e604";
+}
+
+.icon-direccion-facturacion:before {
+	content: "\e605";
+}
+
+.icon-localidad:before {
+	content: "\e606";
+}
+
+.icon-linea-autorizante:before {
+	content: "\e608";
+}
+
+.icon-email:before {
+	content: "\e607";
+}
+
+.icon-lineas-activas:before {
+	content: "\e609";
+}
+
+.icon-factura-00:before {
+	content: "\e60a";
+}
+
+.icon-horario-de-atencion:before {
+	content: "\e60b";
+}
+
+.icon-telefono-de-contacto:before {
+	content: "\e60c";
+}
+
+.icon-almanaque:before {
+	content: "\e60d";
+}
+.icon-almanaque-01:before {
+	content: "\e613";
+}
+.icon-almanaque-04:before {
+	content: "\e622";
+}
+.icon-almanaque-08:before {
+	content: "\e623";
+}
+.icon-almanaque-12 .path8:before {
+	content: "\e632";
+}
+.icon-almanaque-15 .path1:before {
+	content: "\e633";
+}
+.icon-almanaque-19 .path8:before {
+	content: "\e643";
+}
+.icon-almanaque-22 .path1:before {
+	content: "\e644";
+}
+.icon-almanaque-26 .path8:before {
+	content: "\e653";
+}
+
+
+
+
+body {
+    line-height: 150%;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 6px 20px rgba(0, 0, 0, 0), 0px 8px 17px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0), 0px 8px 17px rgba(0, 0, 0, 0.1);
+}
+
+.card > .card-heading {
+  color: #74777b;
+  text-align: center;
+  font-size: 1.4em;
+  border-bottom: 2px solid #ddd;
+}
+.card-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card-body > .card-sub-container {
+/*    display: block;*/
+    display: flex;
+    padding: 0.6em 1em;
+    overflow: hidden;
+}
+
+.card-sub-container > i {
+/*    display: inline-block;*/
+    display: inline-table;
+    float: left;
+    font-size: 25px;
+    width: 53px;
+    height: 53px;
+    margin: auto 0px;
+    padding: 0.6em;
+    padding: 15px;
+/*
+    color: #d32c1c;
+    background: #ddd;
+*/
+    color: #FFFFFF;
+    background: #BFBFBF;
+    border-radius: 2em;
+}
+
+.card-sub-container-icon-email {
+    display: inline-table;
+    float: left;
+    font-size: 25px;
+    width: 53px;
+    height: 53px;
+    margin: auto 0px;
+    padding: 0.6em;
+    padding: 15px;
+    color: #d32c1c;
+    background: #ddd;
+    border-radius: 2em;
+}
+
+.card-sub-container .card-sub-container-icon {
+    font-family: 'datosClienteCuenta';
+}
+
+.card-sub-container .card-sub-container-icon:before {
+    content: "\e000";
+}
+.card-sub-container .card-sub-container-icon:before {
+    font-family: 'datosClienteCuenta' !important;
+    font-size: 14em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.title-container {
+    margin-left: 5%;
+}
+
+.title-container > h3 {
+    font-weight: 500;
+    margin-bottom: 0px !important;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.margin-top {
+    margin-top: 1em;
+}
+
+.card > .card-body > .card-sub-container:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.card > .card-body > .card-sub-container:nth-child(even) {
+    background: #fff;
+}
+
+.card > .card-body > .card-sub-container > div > h4 {
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.card > .card-body > .card-sub-container > div {
+    padding-left: 1em;
+    display: inline-block;
+/*    width: 100%;*/
+}
+
+h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+@media (min-width: 992px){
+    .col-sm-6, .col-md-6, .col-lg-6 {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+}
+
+.margin-left-email-row {
+    margin-left: 0em !important;   
+    display: inline-flex !important;
+}
+
+.card > .card-body > .card-sub-container > div > div > h4 {
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.display-block{
+    display: block !important;
+}
+
+.email-text-container {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.corpo-mesaje-container {
+    font-weight: 200;
+    font-size: 14px;
+    float: right;
+    margin-top: 1em;
+}
+
+.corpo-success-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #69F0AE;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+    margin-right: 0.2em;
+}
+
+.corpo-info-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+    margin-right: 0.2em;
+}
+
+.corpo-warning-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #FFD740;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+    margin-right: 0.2em;
+}
+
+.corpo-error-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #FF8A80;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+    margin-right: 0.2em;
+}
+
+@media (max-width: 768px){
+    .card-sub-container > .corpo-mesaje-container > span {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1322px) {
+    .card-sub-container > .corpo-mesaje-container > span {
+        display: none;
+    }
+}
+
+.margin-top-corpo-mesaje-container {
+    margin-top: 0em;
+}
+
+.card-sub-container-icon-email-error {
+    display: inline-table;
+    float: left;
+    font-size: 25px;
+    width: 53px;
+    height: 53px;
+    margin: auto 0px;
+    padding: 0.6em;
+    padding: 15px;
+    border-radius: 2em;
+    line-height: 1em !important;
+}
+
+.edit-account-setup-icon {
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: -0.6em;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    margin-top: -7px;
+}
+
+.title-editable-text-container {
+    display: block;
+}
+
+.span-editable-text {
+    display: inline-block;
+}
+
+.editable-wrap {
+    display: block !important;
+}
+
+.card > .card-body > .card-sub-container > div > div {
+    display: inline-block;
+}
+
+.lock-icon-stylus {
+    padding-left: 20px !important;
+    padding-top: 16px !important;
+    padding-bottom: 13px !important;
+    padding-right: 18px !important;
+    font-size: 26px !important;
+}
+
+
+/* Estilos xeditables simples*/
+/*Botones*/
+.btn-primary {
+    float: right;
+}
+
+.editable-buttons {
+    display: block;
+    float: left;
+}
+
+.float-buttons-xeditable-configure-account {
+    float: right;
+}
+
+.editable-controls > .editable-buttons > .btn-default, .editable-controls > .editable-buttons > .btn-default:hover, .card-sub-container > div > form > div > span > .btn-default, .card-sub-container > div > form > div > span > .btn-default:hover {
+    width: 40px !important;
+    height: 34px;
+    margin-left: 5px;
+    outline: none;
+}
+
+.editable-controls > .editable-buttons > .btn-primary, .editable-controls > .editable-buttons > .btn-primary:hover, .card-sub-container > div > form > div > span > .btn-primary, .card-sub-container > div > form > div > span > .btn-primary:hover {
+    width: 40px !important;
+    height: 34px;
+    margin-left: 5px;
+    background: #d32c1c;
+    color: #fff;
+    outline: none;
+}
+
+.margin-top-buttons-password-change, .margin-top-buttons-password-change:hover {
+    margin-top: 20px;
+}
+
+@media (max-width: 441px){
+    .margin-top-buttons-password-change, .margin-top-buttons-password-change:hover {
+        margin-top: 0px;
+    }
+}
+
+/*Input*/
+.editable-wrap .editable-input {
+    display: block;
+    float: left;
+    margin-bottom: 5px !important;
+}
+
+.form-control {
+    outline: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -ms-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+
+.form-control:focus {
+    border-color: #CCCCCC !important;
+    outline: 0 !important;
+    -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1) !important;
+    -moz-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1) !important;
+    -ms-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1) !important;
+    -o-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Estilos xeditables form*/
+.card-sub-container > div > form {
+    display: inline-block;
+}
+
+.card-sub-container > div > form > span {
+    display: block;
+}
+
+.card-sub-container > div > form > div > span > .btn-primary {
+    margin-left: 5px;
+    background: #d32c1c;
+    color: #fff;
+    outline: none;
+    width: 6em;
+    margin-bottom: 5px;
+}
+
+.card-sub-container > div > form > div > span > .btn-default {
+    margin-left: 5px;
+    outline: none;
+    width: 6em;
+}
+
+.card > .card-body > .card-sub-container > div > form {
+    display: inline-block;
+}
+
+.card-sub-container > div > form > div > span > div > input {
+    width: 7em;
+    margin-right: 7px
+}
+
+.card > .card-body > .card-sub-container > div > form > h4 {
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.card-sub-container > div > form > div {
+    display: inline-block;
+    padding: 0px 0px !important;
+    float: left;
+}
+
+.card-sub-container > div > form > div > span {
+    padding: 0px 0px !important;
+    vertical-align: inherit;
+    font-weight: 500 !important;
+    font-size: 0.96em;
+    color: #333;
+}
+
+
+
+/*
+.error-container-pass-account {
+    display: block;
+    height: 7em;
+    background: #09A223;
+    width: 5em;
+}*/

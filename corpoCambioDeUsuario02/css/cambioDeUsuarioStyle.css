@@ -1,0 +1,230 @@
+@font-face {
+	font-family: 'cambioDeUsuario';
+	src: url('fonts/cambioDeUsuario.eot');
+}
+@font-face {
+	font-family: 'cambioDeUsuario';
+	src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	font-family: 'cambioDeUsuario';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-usuario00:before {
+	content: "\e600";
+}
+.icon-linea00:before {
+	content: "\e601";
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.corpo-info-container {
+    text-align: center;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.corpo-info-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+}
+
+.card-sub-container {
+/*    display: inline-flex;*/
+    display: inline-block;
+    padding: 0.5em 1em;
+    overflow: hidden;
+    text-align: left;
+}
+
+.card-sub-container > i {
+    display: inline-table;
+    float: left;
+    font-size: 25px;
+    width: 53px;
+    height: 53px;
+    margin: auto 0px;
+    padding: 0.6em;
+    padding: 15px;
+    color: #FFFFFF;
+    background: #BFBFBF;
+    border-radius: 2em;
+}
+
+.card-sub-container > div > h4 {
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.card-sub-container > div {
+    margin-left: 1em;
+    display: inline-block;
+}
+
+.corpo-info-container2 {
+    display: flex;
+    padding: 0.5em 1em;
+    padding-right: 3em;
+}
+
+.corpo-info-container2 > i {
+    display: inline-table;
+    float: left;
+    font-size: 25px;
+    height: 1.6em;
+    width: 1.6em;
+    line-height: 1.6em;
+    margin: auto 0px;
+    border-radius: 2em;
+    text-align: center;
+    background: #82B1FF;
+    color: #fff;
+}
+
+.corpo-info-container2 > div {
+    padding-left: 1em;
+    display: inline-block;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.margin-corpo-info-container {
+    margin: 0em 1em 1em 0em;
+}
+
+h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.save-button-user-change {
+    background-color: #d32c1c !important;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form > row > div > button:hover {
+    background: rgba(211, 44, 28, 0.84);
+}
+
+.cancel-button-user-change {
+    color: #888888 !important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none !important;
+    font-weight: 400;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.buttons-user-change-container {
+    float: right;
+    margin-right: 10%;
+}
+
+.width-buttons {
+    width: 10em !important;
+    height: 2.65em;
+    margin-right: 1em !important;
+    margin-bottom: 1em !important;
+    display: inline-block;
+}
+
+.waves-button, .waves-button:hover, .waves-button:visited, .waves-button:link, .waves-button-input {
+  margin: 0px;
+}
+
+.corpo-display-table {
+    display: table !important;
+    height: 100%;
+    margin: auto 0px;
+}
+
+.corpo-display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.margin-container-user-change {
+    padding-right: 10% !important;
+    padding-left: 10% !important;
+    margin-top: 18px;
+}
+
+@media (max-width: 768px){
+    .margin-container-user-change {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    
+    .padding-user-and-line {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: 768px){
+    .float-user-container {
+        float: right;
+    }
+}
+
+.user-and-line-container {
+    text-align: center;
+}
+
+@media (max-width: 450px){
+    .user-and-line-container {
+        text-align: left !important;
+    }
+}

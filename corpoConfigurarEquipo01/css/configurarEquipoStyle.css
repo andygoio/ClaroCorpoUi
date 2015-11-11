@@ -1,0 +1,235 @@
+@font-face {
+	font-family: 'configuracionDeEquipo';
+	src: url('fonts/configuracionDeEquipo.eot');
+}
+@font-face {
+	font-family: 'configuracionDeEquipo';
+	src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	font-family: 'configuracionDeEquipo';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-porSms00 .path1:before {
+	content: "\e600";
+	color: rgb(194, 194, 194);
+}
+.icon-porSms00 .path2:before {
+	content: "\e601";
+	margin-left: -1em;
+	color: rgb(213, 43, 30);
+}
+.icon-porSms00 .path3:before {
+	content: "\e602";
+	margin-left: -1em;
+	color: rgb(194, 194, 194);
+}
+.icon-porSim00 .path1:before {
+	content: "\e603";
+	color: rgb(194, 194, 194);
+}
+.icon-porSim00 .path2:before {
+	content: "\e604";
+	margin-left: -1em;
+	color: rgb(213, 43, 30);
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.corpo-info-container {
+    text-align: center;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.waves-button, .waves-button:hover, .waves-button:visited, .waves-button:link, .waves-button-input {
+    margin: 0px;
+}
+
+.margin-container-configure-equipment {
+    padding-right: 10% !important;
+    padding-left: 10% !important;
+}
+
+@media (max-width: 768px){
+    .margin-container-configure-equipment {
+        padding-right: 1em !important;
+        padding-left: 1em !important;
+    } 
+}
+
+.card-configure-equipment-container-left {
+    background: #f9f9f9;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0em 1em 1em;
+    display: table;
+    border-radius: 5em 0em 0em 5em;
+    margin-top: 1em;
+}
+
+.card-configure-equipment-container-left > .margin-text-card > h5 {
+    line-height: 1.4;
+}
+
+.card-configure-equipment-container-right {
+    background: #f9f9f9;
+    width: 100%;
+    text-align: center;
+    padding: 1em 1em 1em 0em;
+    display: table;
+    border-radius: 0em 5em 5em 0em;
+    margin-top: 1em;
+}
+
+.card-configure-equipment-container-right > .margin-text-card > h5 {
+    line-height: 1.4;
+}
+
+.triangle-configure-equipment-left {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3em 1em 3em 0;;
+    border-color: transparent #ffffff transparent transparent;
+    float: right;
+}
+
+.triangle-configure-equipment-right {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3em 0 3em 1em;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+.container-img-configure-equipment-style {
+    width: 6.5em;
+    height: 6.5em;
+    background: #fff;
+    border-radius: 100px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container-img-configure-equipment-style > h4{
+    margin-top: -5px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.icon-size-configure-equipment {
+    font-size: 5em;
+    margin-top: -7px;
+    display: block;
+}
+
+.arrow-icon-right-size {
+    font-size: 1.1em;
+}
+
+.text-align-center {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.margin-text-card {
+    color: #8A8A8A;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 4px;
+}
+
+.title-container-configure-equipment {
+    text-align: center;
+}
+
+.title-container-configure-equipment > h3 {
+    font-weight: 500;
+}
+
+.margin-none-title-h {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.corpo-info-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+}
+
+
+/* ###Subrayado animado */
+.underline-effect, .underline-effect:link, .underline-effect:visited {
+    color: #333;
+    display: inline-block;
+    text-decoration: none;
+}
+.underline-effect:before {
+    content: '';
+    display: block;
+    position: relative;
+    margin-top: -2px;
+    width: 0;
+    top: 1.4em;
+    border-bottom: 2px solid #d32c1c;
+    transition: width 0.4s;
+}
+.underline-effect:hover {
+    color: #d32c1c;
+}
+.underline-effect:hover:before {
+    width: 100%;
+}

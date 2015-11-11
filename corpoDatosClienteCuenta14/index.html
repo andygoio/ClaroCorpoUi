@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+
+    <!-- meta -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Claro">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /meta -->
+    
+    <title>Datos Cliente Cuenta</title>
+    
+    <!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+    <!-- /Roboto -->
+    
+    <!-- Bootstrap (***PERTENECE AL TEMA***) -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- /Bootstrap -->
+    
+    <!-- Iconos font-awesome (***PERTENECE AL TEMA***) -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- /Iconos font-awesome -->
+
+    <!-- Animaciones (***PERTENECE AL TEMA***) -->
+        <link rel='stylesheet prefetch' href='css/animate.min.css'>
+    <!-- /Animaciones -->
+    
+    <!-- Waves Style (***PERTENECE AL TEMA***) -->
+    <link rel="stylesheet" href="css/waves.css" media="screen" type="text/css" />
+    <!-- /Waves Style -->
+    
+    <!-- placeholders2 (***PERTENECE AL TEMA***) -->
+    <link rel="stylesheet" href="css/placeholders2.css" media="screen" type="text/css" />
+    <!-- placeholders2 -->
+    
+    <!-- amaran (***PERTENECE AL TEMA***) -->
+    <link rel="stylesheet" href="css/amaran.css" media="screen" type="text/css" />
+    <!-- /amaran -->
+    
+    <!-- clientAccountDataStyle -->
+        <link rel="stylesheet" href="css/clientAccountDataStyle.css" media="screen" type="text/css" />
+    <!-- /clientAccountDataStyle -->
+    
+    <!-- xeditable Style -->
+    <link rel="stylesheet" href="css/xeditable.css" media="screen" type="text/css" />
+    <!-- xeditable Style -->
+    
+</head>
+
+<body>
+
+    <div class="title-container">
+        <h3>Configurar Cuenta</h3>  
+    </div>
+    
+  <div class="container margin-top">
+      <row>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="card-heading">Cuenta</div>
+                <div class="card-body">
+                    <div class="card-sub-container">
+                        <i class="icon-numero-de-la-cuenta"></i>
+                        <div>
+                           <h4>Número de la cuenta</h4>
+                           <span>126337062</span>
+                        </div>
+                    </div>
+                    <div class="card-sub-container" ng-controller="passwordChangeCtrl">
+                        <i class="fa fa-lock lock-icon-stylus"></i>
+                        <div>
+                            <form editable-form name="editableForm" onbeforesave="checkPass($data)" onaftersave="saveAccount()">
+                                <h4>Clave de la cuenta</h4>
+                                <div>
+                                    <span class="title" ng-show="editableForm.$visible">Nueva clave:</span>
+                                    <span e-type="password" editable-number="pass" e-name="password" e-maxLength="4" oninput="maxLengthCheck(this)"  e-id="password" onbeforesave="checkPassword($data)" ng-model="account.password" e-required>****</span>
+                                </div>
+                                <div>
+                                    <span class="title" ng-show="editableForm.$visible">Confirmar clave:</span>
+                                    <span e-type="password" editable-number="passconfirm" onbeforesave="checkConfirm($data)" e-maxLength="4" oninput="maxLengthCheck(this)" e-size="4" ng-model="account.confirmPassword" e-name="confirmPassword" e-required></span>
+                                </div>
+                                <div>
+                                    <i class="fa fa-pencil waves-effect waves-circle edit-account-setup-icon" ng-click="editableForm.$show()" ng-show="!editableForm.$visible"></i>
+                                    <span ng-show="editableForm.$visible" class="float-buttons-xeditable-configure-account">
+                                        <button type="submit"  class="btn btn-primary waves-effect waves-button waves-float margin-top-buttons-password-change" ng-disabled="editableForm.$waiting">
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default waves-effect waves-button waves-float margin-top-buttons-password-change" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="error-container-pass-account" id="error-container-pass-account"></div>
+                        </div>
+                    </div>    
+                    <div class="card-sub-container">
+                        <i class="icon-direccion-facturacion"></i>
+                        <div>
+                            <h4>Dirección de facturación (editable)</h4>
+                            <span>Calle: DR NICOLAS REPETTO, 1324</span>
+                            <span>Piso: - Dpto: - CP: 1416</span>
+                        </div>
+                    </div>
+                    <div class="card-sub-container">
+                        <i class="icon-localidad"></i>
+                        <div>
+                           <h4>Localidad</h4>
+                           <span>CIUDAD AUTONOMA BUENOS AIRES</span>
+                        </div>
+                    </div>
+                    <div class="card-sub-container" ng-controller="TextBtnCtrl">
+                        <i class="icon-linea-autorizante"></i>
+                        <div>
+                           <h4 class="title-editable-text-container">Línea Autorizante</h4>
+                            <span e-type="tel" e-id="autorizerLine" class="span-editable-text" editable-number="account.tel" e-form="textBtnForm" e-onkeypress="autorizerLineEvent();" e-oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                                {{ account.tel || 'empty' }}
+                            </span>
+                            <i class="fa fa-pencil waves-effect waves-circle edit-account-setup-icon" ng-click="textBtnForm.$show();" ng-hide="textBtnForm.$visible"></i>
+                        </div>
+                    </div>
+                    <div class="card-sub-container" ng-controller="emailChangeCtrl">
+                        <i class="icon-email card-sub-container-icon-email"></i>
+                        <div>
+                           <h4 class="title-editable-text-container">Email</h4>
+                            <span class="span-editable-text" editable-email="account.email" e-form="emailChangeForm">
+                                {{ account.email || 'empty' }}
+                            </span>
+                            <i class="fa fa-pencil waves-effect waves-circle edit-account-setup-icon" ng-click="emailChangeForm.$show()" ng-hide="emailChangeForm.$visible"></i>
+                        </div>
+                    </div>
+                    <div class="card-sub-container">
+                        <i class="icon-lineas-activas"></i>
+                        <div>
+                           <h4>Líneas activas</h4>
+                           <span>48</span>
+                        </div>
+                    </div>
+                    <div class="card-sub-container">
+                        <i class="icon-almanaque">
+                            <span class="path4"></span>
+                        </i>
+                        <div>
+                           <h4>Ciclo facturación</h4>
+                           <span>1</span>
+                        </div>
+                    </div>
+                </div>
+              </div>     
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-heading">Cliente</div>
+            <div class="card-body">
+                <div class="card-sub-container">
+                    <i class="icon-razon-social"></i>
+                    <div>
+                       <h4>Raz&oacute;n social</h4>
+                       <span>Pablo Gargano, PRUEBA NOMBRE</span>
+                    </div>
+                </div>
+                <div class="card-sub-container">
+                    <i class="icon-cuit"></i>
+                    <div>
+                       <h4>CUIT</h4>
+                       <span>30-12345678-1</span>
+                    </div>
+                </div>
+                <div class="card-sub-container">
+                    <i class="icon-responsable"></i>
+                    <div>
+                       <h4>Responsable</h4>
+                       <span>ALBERTO CARLOS CANTOS</span>
+                    </div>
+                </div>
+                <div class="card-sub-container">
+                    <i class="icon-tipo-y-numero-documento"></i>
+                    <div>
+                       <h4>Tipo y n&uacute;mero de documento</h4>
+                       <span>DNI 12345678</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-heading">Ejecutivo de servicio</div>
+            <div class="card-body">
+                <div class="card-sub-container">
+                    <i class="icon-responsable"></i>
+                    <div>
+                       <h4>Ejecutivo</h4>
+                       <span>Maria Marta Elena Delgado</span>
+                    </div>
+                </div>
+                <div class="card-sub-container">
+                    <i class="icon-horario-de-atencion"></i>
+                    <div>
+                       <h4>Horario de atención</h4>
+                       <span>Lunes a Viernes de 9 a 18 Hs.</span>
+                    </div>
+                </div>
+                <div class="card-sub-container">
+                    <i class="icon-telefono-de-contacto"></i>
+                    <div>
+                       <h4>Teléfono de contacto</h4>
+                       <span>0800-123-2677 ó *2677 desde su celular</span>
+                    </div>
+                </div>
+            </div>
+          </div> 
+        </div>
+      </row>
+
+    </div>
+
+    <!-- jquery js (***PERTENECE AL TEMA***) -->
+        <script src='js/jquery-1.11.2.min.js'></script>
+    <!-- /jquery js -->
+
+    <!-- Boostrap js (***PERTENECE AL TEMA***) -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- /Boostrap js -->
+
+    <!-- placeholders2 js (***PERTENECE AL TEMA***) -->
+        <script src='js/placeholders2.js'></script>
+    <!-- /placeholders2 js -->
+
+    <!-- Waves (***PERTENECE AL TEMA***) -->
+        <script src="js/waves.min.js"></script>
+    <!-- /Waves -->
+    
+    <!--Amaran (***PERTENECE AL TEMA***) -->
+        <script src="js/jquery.amaran.js"></script>
+    <!-- /Amaran -->
+    
+    <!-- angular js -->
+        <script src='js/angular.min.js'></script>
+    <!-- /angular js -->
+    
+    <!-- xeditable js -->
+        <script src='js/xeditable.js'></script>
+    <!-- /xeditable js -->
+
+    <!-- angular-mocks js -->
+        <script src='js/angular-mocks.js'></script>
+    <!-- /angular-mocks js -->
+    
+    <!-- clientAccountData js -->
+        <script src='js/clientAccountData.js'></script>
+    <!-- /clientAccountData js -->
+    
+</body>
+
+</html>

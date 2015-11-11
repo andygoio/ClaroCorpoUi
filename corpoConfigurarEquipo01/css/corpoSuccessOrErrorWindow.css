@@ -1,0 +1,64 @@
+.corpo-info-container {
+    margin: 18px Auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.corpo-success-circle {
+    text-align: center;
+    height: 2.2em;
+    width: 2.2em;
+    background: #69F0AE;
+    border-radius: 2em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 2.2em;
+    margin-right: 0.3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1px !important;
+}
+
+.corpo-error-circle {
+    background: #FF8A80 !important;
+    font-size: 1.2em !important;
+    text-align: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 2em;
+    color: #fff;
+    line-height: 2.2em;
+    margin-right: 0.3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1px !important;
+}
+
+.button-style-corpo-ok {
+    background-color: #d32c1c !important;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.width-buttons {
+    width: 10em !important;
+    height: 2.65em;
+}
+
+.button-success-container {
+    float: right;
+    margin-right: 15%;
+}
+
+.waves-button, .waves-button:hover, .waves-button:visited, .waves-button:link, .waves-button-input {
+    margin: 0px;
+    font-size: 14px;
+}
