@@ -1,0 +1,206 @@
+
+.amaran-wrapper * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.amaran-wrapper {
+/*    position: fixed;*/
+    z-index: 9999;
+}
+
+.amaran-wrapper.center {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.amaran {
+/*    width: 200px;*/
+    background: rgba(0,0,0,.7);
+    padding: 3px;
+    color: #fff;
+    border-radius: 4px;
+    display: none;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    min-height: 50px;
+    margin: 0.6em;
+}
+
+.amaran-close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+/*
+.amaran-close:before {
+    color: rgba(231, 76, 60, 0.21);
+    font-weight: 700;
+    font-family: Arial,sans-serif;
+    font-size: 18px;
+}
+*/
+
+.amaran.user {
+/*    width: 22em;*/
+    min-height: 5.5em;
+    background: rgba(255, 255, 255, 0.94);
+/*    margin: 15px;*/
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(147, 147, 147, 0.75);
+    -moz-box-shadow:    0px 0px 15px 1px rgba(147, 147, 147, 0.75);
+    box-shadow:         0px 0px 15px 1px rgba(147, 147, 147, 0.75);
+    border-radius: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.amaran.user .icon {
+    width: 28%;
+    height: 100%;
+    position: absolute;
+    background: rgba(211, 44, 28, 0.16);
+    float: left;
+}
+
+.amaran.user img {
+    max-width: 100%;
+}
+
+.amaran.user .info {
+    padding-left: 32%;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    color: #777;
+    border-radius: 0.3em;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.amaran.user b {
+    display: block;
+    font-size: 16px;
+}
+
+.amaran.user.blue {
+    background: #2773ed;
+    color: #fff;
+}
+
+.amaran.user.yellow {
+    background: #f4b300;
+    color: #fff;
+}
+
+.amaran.user.green {
+    background: #78ba00;
+    color: #fff;
+}
+
+.icon-notification-close {
+    font-size: 1.5em;
+    color: rgba(231, 76, 60, 0.21);
+}
+
+.icon-notification-error {
+    color: rgba(231, 76, 60, 0.21);
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 35%;
+    width: 40%;
+    margin: -35% 0 0 -31%;
+}
+
+/* Error Message 2 */
+.errorMessageIconCenter{
+  position: relative;
+    top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-63%);
+}
+
+.icon-notification-error2 {
+/*  color: rgba(231, 76, 60, 0.21);*/
+  font-size: 3em;
+  display: inline-table;
+  padding-top: 0px !important;
+}
+
+.amaran.errorMessage2 .info2 {
+  padding-left: 42px;
+  color: #777;
+  border-radius: 0.3em;
+  font-weight: 500;
+  font-size: 0.9em;
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+.amaran.errorMessage2 {
+    background: rgba(255, 255, 255, 0.94);
+    font-family: 'Roboto', sans-serif;
+    display: table;
+}
+
+.amaran.errorMessage2 .icon {
+    
+    float: left;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+}
+
+/*.amaran.errorMessage2 img {
+    max-width: 100%;
+}
+
+.amaran.errorMessage2 .info {
+    padding-left: 32%;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    color: #777;
+    border-radius: 0.3em;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.amaran.errorMessage2 b {
+    display: block;
+    font-size: 16px;
+}
+
+.amaran.errorMessage2.blue {
+    background: #2773ed;
+    color: #fff;
+}
+
+.amaran.errorMessage2.yellow {
+    background: #f4b300;
+    color: #fff;
+}
+
+.amaran.errorMessage2.green {
+    background: #78ba00;
+    color: #fff;
+}
+*/

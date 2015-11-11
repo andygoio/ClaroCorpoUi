@@ -1,0 +1,352 @@
+.frmTitle{
+  margin-left: 8px;
+}
+
+.portletTitle {
+color:#FFF;
+font-weight:700;
+font-size:20px;
+background:#8A8A8A;
+text-align:center;
+vertical-align:middle;
+border-radius:5px;
+margin-bottom:10px;
+opacity:0.7;
+text-shadow:1px 1px #464646;
+padding:10px 0 10px 10px;
+}
+
+.txtInputRestrictionService{
+border:2px solid #ddd;
+outline:none;
+border-radius:0;
+
+display:block;
+font-size: 13px;
+width:92%;
+-webkit-transition:border-color 300ms color 300ms;
+transition:border-color 300ms color 300ms;
+-webkit-appearance:none;
+margin:10px 0 0 10px;
+padding:8px;
+}
+
+.configurationButton,.configurationButton:visited {
+background: #BDBDBD no-repeat fixed center;
+border: none;
+color: #6E6E6E;
+cursor: pointer;
+float: right;
+font-size: 13px;
+height: 40px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 0 rgba(0,0,0,0.3);
+width: 110px;
+outline: none;
+-webkit-border-radius: 2px;
+margin: 20px 0px 35px 14px;
+padding: 0;
+font-family: 'Roboto', sans-serif !important;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+}
+
+.configurationButton:hover,.configurationButton:active {
+background:#D52B1E no-repeat fixed center;
+color:#FFF;
+}
+
+
+h3 {
+color:#464646;
+}
+
+.display-info-icon {
+    display: inline-table;
+    float: left;
+}
+.infoContainer {
+    margin-left: 0.1em;
+    margin-top: 0.3em;
+    display: inline-block;
+}
+.clientInfo {
+    display: flex;
+    padding: 0em 1em;
+    margin-top: 1em;
+}
+
+/*+++++++++++++++++Tabla+++++++++++++++++++++++++++++++++*/
+.restTbOption {
+display:block;
+outline:none;
+font-family:arial, sans-serif;
+font-size:12px;
+margin:15px 10px 10px;
+}
+.restTbTitle {
+color:#000;
+}
+
+.restTbAvailable {
+text-align:left;
+width:69%;
+}
+
+#restTbRestrict {
+width: 100%;
+border-right: 3px solid #FFF;
+-moz-border-top-left-radius: 7px;
+-webkit-border-top-left-radius: 7px;
+padding: 16px 0;
+margin-top: 14px;
+margin-bottom: -7px;
+}
+
+#restTbAvailable {
+border-left: 3px solid #FFF;
+border-top-right-radius: 7px;
+-moz-border-top-right-radius: 7px;
+-webkit-border-top-right-radius: 7px;
+padding: 16px 0px 23px;
+}
+
+.restTbRestrictRow {
+cursor:pointer;
+background:#DDD;
+color:#000;
+font-weight:700;
+}
+
+.restTbCell {
+    float: left;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.serviceTitleContainer{
+	display: flex;
+}
+
+.restTbRow {
+    padding: 22px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+}
+
+
+.availableService{
+    display:inline-block;
+    width: 100%;
+}
+
+.selected-row {
+   color: #D32C1C;
+}
+
+.txtInputRestrictionService{
+    width: 59% !important;
+}
+
+/*+++++++++++++++++++++++++Tabla++++++++++++++++++++++++++++++++++*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.margin-boostrap{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+
+}
+#linea-restriction-service{
+    padding: 10px 15px !important;
+}
+
+.configurationButton,.configurationButton:visited {
+background: #BDBDBD no-repeat fixed center;
+border:none;
+color: #6E6E6E;
+cursor:pointer;
+float:right;
+font-size:13px;
+height:40px;
+text-align:center;
+text-decoration:none;
+text-shadow:0 0 0 rgba(0,0,0,0.3);
+width:110px;
+outline:none;
+-webkit-border-radius:2px;
+margin:20px 0px 35px 14px;
+padding:0;
+font-family: 'Roboto', sans-serif !important;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+}
+.configurationButtonContinue,.configurationButtonContinue:visited {
+background:#d32c1c no-repeat fixed center;
+border:none;
+color:#FFF;
+cursor:pointer;
+float:right;
+font-size:13px;
+height:40px;
+text-align:center;
+text-decoration:none;
+text-shadow:0 0 0 rgba(0,0,0,0.3);
+width:110px;
+outline:none;
+-webkit-border-radius:2px;
+margin:20px 0px 0px 14px;
+padding:0;
+font-family: 'Roboto', sans-serif !important;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+}
+
+
+.configurationButtonContinue:hover,.configurationButtonContinue:active {
+background:#d32c1c no-repeat fixed center;
+color:#FFF;
+}
+
+@media (max-width: 549px){
+    .txtInputRestrictionService {
+      width: 94% !important;
+    }
+}
+
+@media (min-width: 549px){
+    .txtInputRestrictionService {
+      width: 60% !important;
+    }
+}
+
+.habilited-text{
+    margin-left: 38px;
+}
+
+.availableService label{
+    display: block;
+    margin-top: 9px;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.corpo-info-container2 {
+    display: flex;
+}
+
+.corpo-info-container2 > i {
+    display: inline-table;
+    float: left;
+    font-size: 18px;
+    height: 1.6em;
+    width: 1.6em;
+    line-height: 1.6em;
+    margin: auto 0px;
+    border-radius: 2em;
+    text-align: center;
+    background: #82B1FF;
+    color: #fff;
+}
+
+.corpo-info-container2 > div {
+    padding-left: 1em;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.margin-corpo-info-container {
+    margin: 0em 1em 1em 0em;
+}
+
+.corpo-display-table {
+    display: table !important;
+    height: 100%;
+    margin: auto 0px;
+    width: 90%;
+}
+
+.corpo-display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.info-autorization-user-container{
+    display: block;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.margin-corpo-info-container{
+    width: 96%;
+    margin: 20px 0px 0px 11px;
+}
+
+.no_selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
+
+/*****************Succes, Error Nuevos*****************/
+
+.corpo-info-messages-container-restriction-service {
+    display: table;
+    width: 89%;
+    margin: 0px auto;
+}
+.gestion-display1 {
+    display: none;
+}
+.corpo-info-circle-container-restriction-service {
+    display: table-cell;
+    vertical-align: middle;
+}
+.corpo-info-circle-messages-restriction-service {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.4em;
+    line-height: 0.6em;
+    padding-left: 0.05em;
+    padding-top: 10px!important;
+
+}
+.corpo-messages-display-table-cell-restriction-service {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+.animated{
+  padding-top: 10px!important;
+}
+
+.wave-Button-Volver {
+    display: block !important;
+    background: transparent !important;
+    color: #888888 !important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none !important;
+    padding: 11px 15px !important;
+    margin: 21px auto !important;
+    font-weight: 400;
+}
+
+.content-wrap section {
+  padding-left: 2em!important;
+  padding-right: 1em!important;
+}

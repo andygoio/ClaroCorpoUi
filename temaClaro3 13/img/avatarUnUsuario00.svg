@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30px" height="30px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3000 3000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#FEFEFE}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M2190 2983l-1321 0 -23 -11c-6,-6 -12,-6 -17,-12l-75 -46c-47,-23 -93,-58 -133,-92l-92 -75c-12,-12 -29,-23 -35,-41 52,-34 127,-63 190,-98 58,-34 127,-63 196,-92 127,-46 231,-81 324,-173 28,-29 40,-58 40,-98 0,-35 6,-35 6,-64 6,-259 -18,-69 -110,-323 -6,-17 -11,-34 -17,-52l-12 -46c-11,-35 -40,-6 -81,-86 -28,-70 -40,-174 24,-214 -47,-202 -81,-427 11,-612 17,-34 41,-75 69,-98 81,-63 139,-98 248,-121 41,-6 122,-17 162,-11 58,5 92,5 144,23 23,5 46,17 64,29 17,11 29,34 46,46 23,17 219,11 265,271 6,58 6,104 6,173 0,58 -23,167 -35,225 -11,29 -17,46 -23,75 75,46 47,179 12,231l-29 34c-52,52 -23,-40 -58,99 -34,144 -115,207 -115,213 0,58 0,115 0,173 0,162 115,196 254,266 121,57 219,75 358,161 23,17 23,12 46,23l6 6c17,11 46,23 57,35 12,11 6,11 12,28 -6,6 -64,58 -75,70 -139,104 -121,86 -254,167l0 0 0 0c-6,6 -6,0 -12,6l-23 11 0 0z"/>
+ </g>
+</svg>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Gestiones en Línea</title>
+
+
+
+<!-- Card Style -->
+    <link rel="stylesheet" href="css/card.css" media="screen" type="text/css" />
+<!-- /Card Style -->
+
+<!-- animsition -->
+    <link rel="stylesheet" href="css/animsition.min.css">
+<!-- /animsition -->
+    
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+
+    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+
+
+<!-- Tabs -->
+    <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+    <script src="js/modernizr.custom.js"></script>
+<!-- Tabs -->
+
+<!-- gestionesEnLinea -->
+    <link rel="stylesheet" href="css/gestionesEnLineaStyle.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/validate.css" media="screen" type="text/css" />
+<!-- gestionesEnLinea -->
+
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div class="container animsition no_selection" data-animsition-in="fade-in-right-sm" data-animsition-in-duration="1" data-animsition-out="fade-out-right-sm" data-animsition-out-duration="1000">
+    <div class="title-container">
+        <h3>Gestiones en L&iacute;nea</h3>  
+    </div>
+    
+    <row>
+        <div class="card-container">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-boostrap">
+                <button class="card waves-effect waves-float outline animsition-link" onclick="location.href='authorizationUser.html'">
+                    <div class="card-name">
+                        <div>
+                            <i class="icon-autorizacionDeUsuario00"></i>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div>
+                            <h4>Autorización de usuario</h4>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-boostrap">
+                <button class="card waves-effect waves-float outline" onclick="changeConfigurationFrm('suspensionLineFrm')">
+                    <div class="card-name">
+                        <div>
+                            <i class="icon-suspensionDeLinea00"></i>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div>
+                            <h4>Suspensión de línea</h4>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-boostrap">
+                <button class="card waves-effect waves-float outline" onclick="changeConfigurationFrm('restrictionFrm')">
+                    <div class="card-name">
+                        <div>
+                            <i class="icon-restriccionesDeServicio00"></i>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div>
+                            <h4>Restricciones de servicios</h4>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-boostrap">
+                <button class="card waves-effect waves-float outline"  onclick="changeConfigurationFrm('orderEnableDeviceFrm')">
+                    <div class="card-name">
+                        <div>
+                            <i class="icon-activarEquipo-Sim00"></i>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div>
+                            <h4>Activar Equipo/SIM</h4>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-boostrap">
+                <button class="card waves-effect waves-float outline">
+                    <div class="card-name">
+                        <div>
+                            <i class="icon-pedidoSim4G00"></i>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div>
+                            <h4>Pedido SIM 4G</h4>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-boostrap">
+                <button class="card waves-effect waves-float outline">
+                    <div class="card-name">
+                        <div>
+                            <i class="icon-cancelacionDeLinea00"></i>
+                        </div>
+                    </div>
+                    <div class="card-name text-card">
+                        <div>
+                            <h4>Cancelación de línea</h4>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </row>
+
+<!-- /Content Wrapper -->
+</div>                        
+
+<!-- jquery js -->
+        <script src="js/jquery-1.11.2.min.js"></script>
+<!-- /jquery js -->
+
+    
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+<!-- animsition js --> 
+    <script src="js/jquery.animsition.min.js"></script>
+<!-- /animsition js --> 
+
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+
+<!-- Tabs js --> 
+    <script src="js/cbpFWTabs.js"></script>
+<!-- /Tabs js --> 
+
+<!-- gestionesEnLineaIndex js --> 
+    <script src="js/gestionesEnLineaIndex.js"></script>
+<!-- /gestionesEnLineaIndex js -->   
+    
+</body>
+
+</html>

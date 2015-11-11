@@ -1,0 +1,53 @@
+.corpo-info-container {
+  margin: 18px Auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 16px;
+}
+
+.corpo-info-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px 6px;
+    padding-left: 0.05em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1px !important;
+}
+
+.corpo-success-circle {
+    text-align: center;
+    height: 2.2em;
+    width: 2.2em;
+    background: #69F0AE;
+    border-radius: 2em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 2.2em;
+    margin-right: 0.3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1px !important;
+
+}
+
+.corpo-error-circle {
+    background: #FF8A80 !important;
+    font-size: 1.2em !important;
+    text-align: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 2em;
+    color: #fff;
+    line-height: 2.2em;
+    margin-right: 0.3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1px !important;
+}

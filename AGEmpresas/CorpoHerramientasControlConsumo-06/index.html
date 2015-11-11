@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Herramientas de Control de Consumo</title>
+
+<!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!-- ESTA EN EL TEMA -->
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+<!-- /ESTA EN EL TEMA -->
+
+<!-- ESTA EN EL TEMA -->    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+<!-- /ESTA EN EL TEMA -->
+    
+<!-- Style -->
+    <link rel="stylesheet" href="css/consumptionControlStyle.css" media="screen" type="text/css" />
+<!-- /Style -->
+
+<!-- ESTA EN EL TEMA -->  
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+<!-- /ESTA EN EL TEMA -->
+
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+
+    <!-- Chosen -->
+    <link rel="stylesheet" href="css/bootstrap-chosen.css" media="screen" type="text/css" />
+    <!-- /Chosen -->
+
+    <link href="css/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+    
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div>
+    <row>
+    <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+    <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 margin-boostraap">
+    <form method="post" action="consumptionControlSuccess.html" id="consumptionControlApplication">
+       <h3 class="frmTitle">Herramientas de Control de Consumo</h3>
+      
+                <div class="corpo-info-messages-container-consumptionControl gestion-display-consumptionControl">
+                    <div class="corpo-info-circle-container-consumptionControl">
+                        <i class="fa fa-info corpo-info-circle-messages-consumptionControl animated infinite pulse"></i>
+                    </div>
+                        <span class="corpo-messages-display-table-cell-consumptionControl">
+                        Seleccione la l&iacute;nea a la cual quiere controlar el consumo.
+                        </span>
+                </div>
+
+                <div>
+                <select data-placeholder="Ingresar número" class="chosen-select" id="chosen-lines" name="chosen-lines" tabindex="1">
+                  <option value=""></option>
+                  <option value="1150092197">1150092197</option>
+                  <option value="1150014845">1150014845</option>
+                  <option value="1150014848">1150014848</option>
+                  <option value="1150019555">1150019555</option>
+                  <option value="1150019660">1150019660</option>
+                  <option value="1150019661">1150019661</option>
+                  <option value="1150030720">1150030720</option>
+                  <option value="1150071777">1150071777</option>
+                  <option value="1150092197">1150092197</option>
+                  <option value="1154004844">1154004844</option>
+                  <option value="1150012123">1150012123</option>
+                  <option value="3517025293">3517025293</option>
+                  <option value="3517734788">3517734788</option>
+                  <option value="3516846803">3516846803</option>
+                </select>
+              </div> 
+
+               <button type="button" class="buttonAdministrative waves-effect waves-float" id="administrativeButton">
+                    <span>Administrar</span>
+                </button>
+
+      <div class="autoStopPopBody">
+        <div class="herramControlConsumoBody">
+          <div id="autoStopInfo" class="autoStopInfo">
+              <div class="montoMinLeft">
+                <div class="montoMinTitle">Monto m&iacute;nimo:</div>
+                <div class="montoMinPriceContainer">
+                  <div class="triangleContainerMontoMin"></div>
+                  <div class="montoMinPrice">$ 90</div>
+                </div>
+              </div>
+              <div class="montoConfigCenter" id="montoConfigCenter">
+                <div class="montoConfigTitle">Monto configurado:</div>
+                <div>
+                  <input type="text" id="amount" class="price">
+                </div>
+                <div id="imgconfig" class="imgconfig" onclick="editAmount()">
+                  <button class="editButton" id="imgconfig" type="button" name="" onmouseover="" onmouseout="" onclick="editAmount()">Editar</button>
+                </div>
+                
+              </div>
+              <div class="montoMaxRight">
+                <div class="montoMaxTitle">Monto m&aacute;ximo:</div>
+                <div class="montoMaxPriceContainer">
+                  <div class="triangleContainerMontoMax"></div>
+                  <div class="montoMaxPrice">$ 190</div>
+                </div>
+              </div>
+              <div class="sliderContainer">
+                <div id="slider-range-min"></div>
+              </div>
+          </div>
+          
+          <div class="notificationContainer">
+            <div class="notificationImg"><img src="./img/mensaje00x45.png" onclick="" alt="Notificaci&oacute;n" title="Notificaci&oacute;n"></div>
+            <div class="notificationText">
+              <div class="notificationTitle">Su correo electr&oacute;nico configurado es:</div>
+              <div class="notificationMail">nicoferretti2@gmail.com</div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+            
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+        </row>
+
+         <row>
+            <div class="col-lg-4 col-md-4 col-sm-1 hidden-xs"></div>
+            <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10 margin-boostraap">
+                <button type="submit" class="configurationButtonContinue waves-effect waves-float">
+                    <span>Guardar</span>
+                </button>
+                <button type="reset" class="configurationButton waves-effect wave-Button-Volver waves-float" onclick="location.href='consumptionControl.html'">
+                    <span>Volver</span>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-1 col-xs-2"></div>
+         </row> 
+     </form>
+</div>
+<!-- /Content Wrapper -->
+    
+<!-- ESTA EN EL TEMA -->  
+<!-- jquery js -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery-ui.js"></script>
+<!-- /jquery js -->
+<!-- /ESTA EN EL TEMA -->
+<!-- ESTA EN EL TEMA -->  
+     <script src='js/placeholders2.js'></script>
+<!-- /ESTA EN EL TEMA -->
+
+<!-- ESTA EN EL TEMA --> 
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+<!-- /ESTA EN EL TEMA -->
+
+ <!-- ESTA EN EL TEMA -->    
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+<!-- /ESTA EN EL TEMA -->
+
+  <!-- Chosen js -->
+    <script src="js/chosen.jquery.js"></script>
+  <!-- /Chosen js -->
+
+  <!-- Chosen js -->
+    <script src="js/controlConsuptionIndex.js"></script>
+  <!-- /Chosen js -->
+
+
+
+<script src="js/jquery.validationEngine-es.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

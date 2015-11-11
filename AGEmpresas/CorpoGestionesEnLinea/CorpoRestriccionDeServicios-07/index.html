@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Gestiones en L&iacute;nea</title>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<!--[if IE 9 ]>
+    <!-- Placeholders IE9 js -->
+        <script src="js/placeholders.min.js"></script>
+    <!-- /Placeholders IE9 js -->
+<![endif]-->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+
+<!-- /coolPlaceholder -->
+    <link rel="stylesheet" href="css/coolPlaceholderStyle.css" media="screen" type="text/css" />
+<!-- /coolPlaceholder -->
+
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+
+		<!--Declaraciones Básicas-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+		<!--Hojas de Estilo-->
+		<link rel="stylesheet" type="text/css" href="css/restrictionServiceStyle.css">
+		<!--Javascripts-->
+		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery-ui.js"></script>		
+		<script type="text/javascript" language="javascript" src="js/jquery.placeholder.js"></script>		
+		<script type="text/javascript" language="javascript" src="js/placeholdem.min.js"></script>
+		<link rel="stylesheet" href="css/validate.css" media="screen" type="text/css" />
+		<script type="text/javascript" language="javascript" src="js/radioButtonJs.js"></script>
+		
+		<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+		<link rel="stylesheet" href="css/radiobutton.css" type="text/css"/>
+		
+	</head>
+	<body>
+
+<!-------------------------------------------------------------------------------------->							
+		
+
+<div class="restrictionServiceContainer no_selection">
+    <form id="restrictionFrm" class="restrictionFrm" method="post" action="restrictionServicesSuccess.html">
+        <h3 class="frmTitle">Restricciones de servicios</h3>
+        <div class="orderObject" >
+            <input placeholder='L&iacute;nea' type='tel' class="txtInputRestrictionService" id="linea-restriction-service" pattern='[0-9]*' maxlength="10" data-validation-engine="validate[required],minSize[10],custom[phone]" required/>
+            <div class="corpo-info-container2 margin-corpo-info-container">
+                        <i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+                        <div class="corpo-display-table">
+                            <div class="corpo-display-table-cell">En esta gesti&oacute;n usted podr&aacute; seleccionar los servicios a restringir.
+                            </div>
+                        </div>
+            </div> 
+            <div class="restTbCell restTbRestrict">
+                <div class="overflow-hidden">
+                    <row>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-boostrap">
+                            <div>
+                                <h4 id="restTbRestrict" class="restTbCell restTbTitle">Seleccione el servicio a restringir</h4>
+                            </div>
+                        </div>
+                    </row>
+                </div>
+                <div class="overflow-hidden">
+                    <row>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-boostrap">
+                            <div class="availableService" id="button-radio1">
+                                <label class="radio" id="label-radio1">
+                                
+                                    <input id="radio1" type="radio" name="radios" checked="">
+                                        <span for="radio1" class="outer">
+                                            <span class="inner"></span>
+                                        </span>
+                                 
+                                        <div class="habilited-text"><b>SMS, Datos, Buz&oacute;n de voz, MMS.</b> <br>Quedar&aacute;n habilitados los siguientes servicios: Llamada en espera, Identificador de llamadas, Conferencia tripartita</div>
+								
+	                            
+                                    </label>
+                                </div>
+                            </div>
+                    </row>
+                    </div>
+                    <div class="overflow-hidden">
+                        <row>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-boostrap">
+                                <div class="availableService" id="button-radio2">
+                                    <label class="radio" id="label-radio2">
+                                        <input id="radio2" type="radio" name="radios" checked="">
+                                            <span class="outer">
+                                                <span class="inner"></span>
+                                            </span>
+                                             <div class="habilited-text"><b>SMS, Datos.</b> <br>Quedar&aacute;n habilitados los siguientes servicios: Buz&oacute;n de voz, Llamada en espera, Identificador de llamadas, Conferencia tripartita</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </row>
+                        </div>
+                        <div class="overflow-hidden">
+                            <row>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-boostrap">
+                                    <div class="availableService" id="button-radio3">
+                                        <label class="radio" id="label-radio3">
+                                            <input id="radio3" type="radio" name="radios" checked="">
+                                                <span class="outer">
+                                                    <span class="inner"></span>
+                                                </span>
+                                                 <div class="habilited-text"><b>SMS</b><br>Quedar&aacute;n habilitados los siguientes servicios: Llamada en espera, Identificador de llamadas, Conferencia tripartita, Buz&oacute;n de voz, Datos y Transferencia de llamadas.</div>
+                                        </label>
+                                        </div>
+                                    </div>
+                                </row>
+                            </div>
+                            <div class="overflow-hidden">
+                                <row>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-boostrap">
+                                        <div class="availableService" id="button-radio4">
+                                            <label class="radio" id="label-radio4">
+                                                <input id="radio4" type="radio" name="radios" checked="">
+                                                    <span class="outer">
+                                                        <span class="inner"></span>
+                                                    </span>
+                                                     <div class="habilited-text"><b>Datos, MMS</b><br>Quedar&aacute;n habilitados los siguientes servicios: Llamada en espera, Identificador de llamadas, Conferencia Tripartita, 
+                                                     Buz&oacute;n de voz  y emisi&oacute;n y recepci&oacute;n de SMS.</div>
+								
+	                                        
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </row>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <row>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-boostrap">
+                                            <div class="availableService" id="button-radio5">
+                                                <label class="radio" id="label-radio5">
+                                                    <input id="radio5" type="radio" name="radios" checked="">
+                                                        <span class="outer">
+                                                            <span class="inner"></span>
+                                                        </span>
+                                                         <div class="habilited-text"><b>Descarga de contenido y SMS Premium </b><br>Quedar&aacute;n habilitados los siguientes servicios: Llamada en espera, Identificador de llamadas, Conferencia tripartita, 
+                                                             Buz&oacute;n de voz, Datos y emisi&oacute;n y recepci&oacute;n de SMS</div>
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </row>
+                                    </div>
+                                </div>
+                            </div>
+                            <row>
+                                <div class="col-lg-6 col-md-6 col-sm-1 hidden-xs"></div>
+                                <div class="col-lg-4 col-md-4 col-sm-10 col-xs-12">
+                                    <button type="submit" class="configurationButtonContinue waves-effect waves-float">
+                                        <span>Enviar</span>
+                                    </button>
+                                    <button type="reset" class="configurationButton waves-effect waves-float" onclick="location.href='index.html'">
+                                        <span>Volver</span>
+                                    </button>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-1 hidden-xs"></div>
+                            </row>
+    </form>
+</div>   
+
+   <script src="js/validateHtml5.js"></script>
+
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+<!--[if IE 9]>
+<script src="js/jquery.validate.js" type="text/javascript"></script>
+<script src="js/jquery.validationEngine-es.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<![endif]-->    
+
+<!--[if IE 9]>
+<script>$("#restrictionFrm").validationEngine();</script>
+<![endif]-->
+<script src="js/jquery.validationEngine-es.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<script>
+		if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+		$("#restrictionFrm").validationEngine();
+		}
+
+</script>
+<script src="js/radioButtonChecked.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
+
+
+

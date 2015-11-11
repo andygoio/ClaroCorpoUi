@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Activación de Equipo/SIM</title>
+
+<!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+
+<!-- /coolPlaceholder -->
+    <link rel="stylesheet" href="css/placeholders2.css" media="screen" type="text/css" />
+<!-- /coolPlaceholder -->
+    
+<!-- Style -->
+    <link rel="stylesheet" href="css/activationEquipmentSIMStyle.css" media="screen" type="text/css" />
+<!-- /Style -->
+
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+<!-- Switch Style-->
+     <link rel="stylesheet" href="css/toggle-switches-style.css" media="screen" type="text/css" />
+<!-- Switch Style-->  
+
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+    
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div>
+    <row>
+    <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+    <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 margin-boostraap">
+    <form method="post" action="surveySuccess.html" id="activationEquipment/SIM">
+       <h3 class="frmTitle">Activación de Equipo/SIM</h3>
+      
+                <div class="corpo-info-messages-container-activation gestion-display-activation">
+                    <div class="corpo-info-circle-container-activation">
+                        <i class="fa fa-info corpo-info-circle-messages-activation animated infinite pulse"></i>
+                    </div>
+                        <span class="corpo-messages-display-table-cell-activation">
+                        En esta gesti&oacute;n usted podr&aacute; solicitar la activaci&oacute;n de un Equipo o SIM que haya recibido por correo.
+                        </span>
+                </div>
+            <div class="placeholder">
+                 <input placeholder='Número de Línea' type='tel' class="txtInput" id="linea-activacion" pattern= '[0-9]*' maxlength="10" data-validation-engine="validate[required], validate[maxSize[10]]" required/>
+            </div>
+            <div class="placeholder">
+                 <input placeholder='Número de pedido' type='text' class="txtInput" id="numeroPedido" pattern= '[0-9]*' maxlength="10" data-validation-engine="validate[required], validate[maxSize[10]]" required/>
+          
+                <div class="corpo-info-messages-container-number-request gestion-display-number-request">
+                    <div class="corpo-info-circle-container-number-request">
+                        <span class="circle-help-container-call-profile">
+                            <i class="fa fa-question icon-Question-help-call-profile" title="Ayuda"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="pop-up-info">
+                    <div class="corpo-info-messages-container-activation gestion-display-activation info-pop-up">
+                        <div class="corpo-info-circle-container-activation">
+                            <i class="fa fa-info corpo-info-circle-messages-activation animated infinite pulse"></i>
+                        </div>
+                            <span class="corpo-messages-display-table-cell-activation">
+                             <em>Importante: </em> 
+                        Deber&aacute; ingresar el n&uacute;mero de pedido a consultar.
+                            </span>
+                    </div>
+                    <div class="icon-corpo-numero-pedido">
+                        <img src="IMG/corpoIMEI.png" alt="Warning" height="85" width="180">
+                    </div>
+                </div>
+
+            </div>
+                
+                 <div class="switchContainer">
+                        <h4 class="textActive">&iquest;Que desea activar?</h4>
+                        <div class="switchYesNo">
+                            <input type="radio" class="switch-input" name="view" value="sim" id="sim" checked>
+                            <label for="sim" class="switch-label switch-label-one">SIM</label>
+                            <input type="radio" class="switch-input" name="view" value="equipo" id="equipo">
+                            <label for="equipo" class="switch-label switch-label-three">Equipo</label>
+                            <span class="switch-selection"></span>
+                        </div>
+                 </div>
+            
+            <div class="placeholder inputActivation switch-numero-sim">
+                 <input placeholder='Número de tarjeta SIM' type='text' class="txtInput" id="numeroSIM" pattern= '[0-9]*' maxlength="10" data-validation-engine="validate[required], validate[maxSize[10]]" required/>
+            </div>
+            <div class="placeholder inputActivation switch-imei-equipo">
+                 <input placeholder='IMEI del Equipo' type='text' class="txtInput" id="imeiEquipo" pattern= '[0-9]*' maxlength="10" data-validation-engine="validate[required], validate[maxSize[10]]" required/>
+
+                  <div class="corpo-info-messages-container-imei gestion-display-imei">
+                    <div class="corpo-info-circle-container-imei">
+                        <span class="circle-help-container-call-profile">
+                            <i class="fa fa-question icon-Question-help-call-profile" title="Ayuda"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="pop-up-info-imei">
+                    <div class="corpo-info-messages-container-activation gestion-display-activation info-pop-up">
+                        <div class="corpo-info-circle-container-activation">
+                            <i class="fa fa-info corpo-info-circle-messages-activation animated infinite pulse"></i>
+                        </div>
+                            <span class="corpo-messages-display-table-cell-activation">
+                             <em>Importante:</em> 
+                        Deber&aacute; ingresar el n&uacute;mero de IMEI del equipo asociado a la l&iacute;nea consultar. Para conocer su IMEI puede marcar *#06#
+                        o en el interior de su equipo, como lo muestra la imagen.
+                            </span>
+                    </div>
+                    <div class="icon-corpo-imei">
+                        <img src="IMG/corpoIMEI.png" alt="Warning" height="85" width="180">
+                    </div>
+                </div>    
+
+            </div>
+            
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+        </row>
+
+         <row>
+            <div class="col-lg-4 col-md-4 col-sm-1 hidden-xs"></div>
+            <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10 margin-boostraap">
+                <button type="submit" class="configurationButtonContinue waves-effect waves-float">
+                    <span>Enviar</span>
+                </button>
+                <button type="reset" class="configurationButton waves-effect wave-Button-Volver waves-float" onclick="location.href='activationEquipmentSIM.html'">
+                    <span>Volver</span>
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-1 col-xs-2"></div>
+         </row> 
+     </form>
+</div>
+<!-- /Content Wrapper -->
+    
+    
+<!-- jquery js -->
+    <script src='js/jquery-1.11.2.min.js'></script>
+<!-- /jquery js -->
+
+     <script src='js/placeholders2.js'></script>
+
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+    
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+
+
+
+<!--[if IE 9]>
+<script>$("#activationEquipment/SIM").validationEngine();</script>
+
+<![endif]-->
+
+<script type="text/javascript" charset="utf-8">
+
+  $('.corpo-info-messages-container-number-request').click(function() {
+      $('.pop-up-info').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
+   $('.corpo-info-messages-container-imei').click(function() {
+      $('.pop-up-info-imei').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
+</script>            
+
+
+<script src="js/jquery.validationEngine-es.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/validateHtml5.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

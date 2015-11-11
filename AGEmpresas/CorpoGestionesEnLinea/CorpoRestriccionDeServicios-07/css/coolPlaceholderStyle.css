@@ -1,0 +1,52 @@
+input[type="text"], input[type="password"], input[type="tel"], input[type="number"], input[type="submit"], input[type="email"] {
+    font-family: Open Sans;
+    font-size: 14px;
+    width: 100%;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+}
+
+input[type="text"], input[type="password"], input[type="tel"], input[type="number"], input[type="email"] {
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+	outline: none;
+	display: block;
+	width: 100%;
+	border: 1px solid #ccc;
+	color: #ccc;
+	font-family: 'Roboto', sans-serif !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-wieght: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+	-ms-transition: 0.2s linear;
+	-o-transition: 0.2s linear;
+	transition: 0.2s linear;
+}
+
+ input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="number"]:focus, input[type="email"]:focus {
+    outline: none;
+	color: #333;
+	border: 1px solid #ADADAD;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    -ms-transform: translate(300px, 0);
+    -o-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+    opacity: 0;
+}

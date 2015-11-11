@@ -1,0 +1,70 @@
+.target-selected {
+/*
+left: -2.5em;
+top: -3.8em;
+*/
+border-radius: 50%;
+/*
+width: 5em;
+height: 5em;
+*/
+position: relative;
+z-index: 10000;
+-webkit-animation: fade-in .3s normal 1 cubic-bezier(0,0,.2,1);
+animation: fade-in .3s normal 1 cubic-bezier(0,0,.2,1);
+    
+border: solid 3px #fff;
+/*box-shadow: 0 0 0 5000px rgba(211, 188, 28, 0.94);*/
+}
+
+.target-selected:after {
+border-radius: 50%;
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+}
+
+/*
+.target-selected .leyend-container {
+left: 100%;
+top: 100%;
+}
+*/
+
+.leyend-container {
+color: #fff;
+cursor: default;
+position: absolute;
+}
+
+.leyend-text {
+font-size: 24px;
+line-height: 1.5;
+width: 14em;
+}
+
+.margin-button-leyend-annotation-overlay {
+margin: 16px -16px;
+pointer-events: auto;
+}
+.button-leyend-annotation-overlay {
+color: #fff;
+background-color: transparent;
+border: none;
+border-radius: 2px;
+cursor: pointer;
+display: inline-block;
+font-weight: bold;
+line-height: 2.5;
+margin: 4px 0;
+padding: 0 16px;
+text-transform: uppercase;
+white-space: nowrap;
+-webkit-transition: box-shadow .2s cubic-bezier(.4,0,.2,1),background-color .2s cubic-bezier(.4,0,.2,1);
+transition: box-shadow .2s cubic-bezier(.4,0,.2,1),background-color .2s cubic-bezier(.4,0,.2,1);
+-webkit-font-smoothing: antialiased;
+font-family: inherit;
+font-size: 1.2em;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Encuesta</title>
+
+<!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+    
+<!-- Style -->
+    <link rel="stylesheet" href="css/surveyStyle.css" media="screen" type="text/css" />
+<!-- /Style -->
+
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+    
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div>
+    <div class="barLogo">
+        <i class="icon-logotipoClaro00"></i>
+       </div>
+
+    <row>
+    <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+    <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 margin-boostraap-survey">
+    <form method="post" action="surveySuccess.html">
+       
+       <h3 class="frmTitle">Encuesta de Satisfacci&oacute;n</h3>
+                <div class="question-survey"> &#191;C&oacute;mo evaluar&iacute;a la resoluci&oacute;n de su Solicitud?</div>
+               <div class="valueContainer">
+                <span class="value">Valoraci&oacute;n:</span>
+            <div class="stars-container">
+                <a id="star-1" href="#star-1" class="link-stars" onclick="mostrar();mostrarInfo();mostrarContadorCaracteres();mostrarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                <a id="star-2" href="#star-2" class="link-stars" onclick="mostrar();mostrarInfo();mostrarContadorCaracteres();mostrarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                <a id="star-3" href="#star-3" class="link-stars" onclick="mostrar();mostrarInfo();mostrarContadorCaracteres();mostrarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                <a id="star-4" href="#star-4" class="link-stars"  onclick="mostrar();mostrarInfo();mostrarContadorCaracteres();mostrarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                <a id="star-5" href="#star-5" class="link-stars"  onclick="mostrar();mostrarInfo();mostrarContadorCaracteres();mostrarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                <a id="star-6" href="#star-6" class="link-stars" onclick="mostrar();mostrarInfo();mostrarContadorCaracteres();mostrarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                 <a id="star-7" href="#star-7" class="link-stars" onclick="ocultar();ocultarInfo();ocultarContadorCaracteres();ocultarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                 <a id="star-8" href="#star-8" class="link-stars" onclick="ocultar();ocultarInfo();ocultarContadorCaracteres();ocultarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                 <a id="star-9" href="#star-9" class="link-stars" onclick="ocultar();ocultarInfo();ocultarContadorCaracteres();ocultarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+                 <a id="star-10" href="#star-10" class="link-stars" onclick="ocultar();ocultarInfo();ocultarContadorCaracteres();ocultarTextoContadorCaracteres();">
+                <svg width="35px" height="31" viewBox="0 0 96 91">
+                  <polygon points="50 75 20.6107374 90.4508497 26.2235871 57.7254249 2.44717419 34.5491503 35.3053687 29.7745751 50 0 64.6946313 29.7745751 97.5528258 34.5491503 73.7764129 57.7254249 79.3892626 90.4508497 "></polygon>
+                </svg>
+                </a>
+            </div>
+                   
+                <span class="voting">
+                    <span class="numberStar1">1</span>
+                    <span class="numberStar2">2</span>
+                    <span class="numberStar3">3</span>
+                    <span class="numberStar4">4</span>
+                    <span class="numberStar5">5</span>
+                    <span class="numberStar6">6</span>
+                    <span class="numberStar7">7</span>
+                    <span class="numberStar8">8</span>
+                    <span class="numberStar9">9</span>
+                    <span class="numberStar10">10</span>
+                </span>
+
+
+                <div class="corpo-info-messages-container1 gestion-display1" id='ocultar-info'>
+                    <div class="corpo-info-circle-container1">
+                        <i class="fa fa-info corpo-info-circle-messages1 animated infinite pulse"></i>
+                    </div>
+                        <span class="corpo-messages-display-table-cell1">
+                        Entendemos por resolución la gestión de su solicitud en tiempo y forma.
+                        </span>
+                </div>  
+
+            <textarea class='autoExpand' id='text-area' rows='3' data-min-rows='3' name="mensaje" maxlength="500" placeholder='Gracias por su opini&oacute;n'></textarea>
+            <div class="texto-contador" id="text-count">Caracteres restantes:<div id="chars" class="contadorCaracteres"></div></div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+        </row>
+
+         <row>
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 margin-boostraap-survey">
+                <button type="submit" class="configurationButtonContinue waves-effect waves-float">
+                    <span>Enviar</span>
+                </button>
+                 <button type="button" value="Volver" class="configurationButton waves-effect waves-float" onclick="changeConfigurationFrm('card-container')">Omitir</button>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+         </row> 
+     </form>
+</div>
+<!-- /Content Wrapper -->
+    
+    
+<!-- jquery js -->
+    <script src='js/jquery.js'></script>
+<!-- /jquery js -->
+
+    <script src='js/textArea.js'></script>
+
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+ <script src='js/contadorCaracteres.js'></script>
+    
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+
+<script type="text/javascript">
+function mostrar(){
+document.getElementById('text-area').style.display = 'block';}
+</script>
+
+<script type="text/javascript">
+function ocultar(){
+document.getElementById('text-area').style.display = 'none';}
+</script>
+
+<script type="text/javascript">
+function mostrarInfo(){
+document.getElementById('ocultar-info').style.display = 'block';}
+</script>
+
+<script type="text/javascript">
+function ocultarInfo(){
+document.getElementById('ocultar-info').style.display = 'none';}
+</script>
+
+<script type="text/javascript">
+function mostrarContadorCaracteres(){
+document.getElementById('chars').style.display = 'block';}
+</script>
+
+<script type="text/javascript">
+function ocultarContadorCaracteres(){
+document.getElementById('chars').style.display = 'none';}
+</script>
+
+<script type="text/javascript">
+function mostrarTextoContadorCaracteres(){
+document.getElementById('text-count').style.display = 'block';}
+</script>
+
+<script type="text/javascript">
+function ocultarTextoContadorCaracteres(){
+document.getElementById('text-count').style.display = 'none';}
+</script>
+
+<script>
+          $(document).ready( function() {
+        var elem = $("#chars");
+        $("#text-area").limiter(500, elem);
+        });
+</script>
+    
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Declaraciones Básicas-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Consumo de la l&iacute;nea</title>
+		
+		<!--Hojas de Estilo-->
+		<link rel="stylesheet" href="css/consumptionCR.css">
+		<link rel="stylesheet" href="css/jquery.dataTables_themeroller.css">
+		<!--Hojas de Estilo-->
+		
+		<!--Javascripts-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		
+		<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="js/countUp.js"></script>
+        <!--Javascripts-->
+        <!-- Bootstrap -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<!-- Boostrap js -->
+   		 <script src="bootstrap/js/bootstrap.min.js"></script>
+   		 <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- /Boostrap js -->
+		<!-- /Bootstrap -->
+
+		<!-- Animaciones -->
+		<link rel='stylesheet prefetch' href='css/animate.min.css'>
+		<!-- /Animaciones -->
+
+		<!-- Roboto -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+		<!-- /Roboto -->
+
+	</head>
+   <body>
+   	 <div class="consumptionContainers no_selection" id="consumptionContainers">
+		
+		<div class="consumptionData ">
+         <row>
+           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-boostrap"> 	
+		  <div class="saldoDePaquetesTitle">Consumo del abono</div>
+		  <span class="barLeyend">Abono $120</span>
+					<table style="width: 100%;">
+						<tr>
+						<td style="width:400px">
+							<div class="consumptionProgress">
+								<div id="progressbar">
+									<div class="progressbarContainter">
+										<div class="consumePercent">Se consumieron $ <span id="precioAbonoBar"></span> del abono</div>
+										<div id="progressRateSMS"></div>
+									</div>
+								</div>
+							</div>
+						</td>
+						</tr>
+					</table>
+		 <div align="center">
+			<div id="mensajeConsumo">Al día 04/07/2014 usted ha consumido $ 50,00, que representa el 50% de su abono. El período actual cierra el 31/07/2014.</div>
+		 </div>
+		 </div>
+			<div class="saldoDePaquetesBarContainer">
+			   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin-boostrap">
+			   	<div class="saldoDePaquetesTitle">Saldo de paquetes</div>
+				<div id="barraPeriodo" class="barraPeriodoMb">
+					<span class="barLeyend">Pack 200 MB </span>
+					<table style="width: 100%;">
+						<tr>
+						<td style="width:400px">
+								<div class="consumptionProgress">
+									<div id="progressbar">
+										<div class="progressbarContainter">
+											<div class="consumePercent">Consumo actual <span id="precioConsumoMbBar"></span> MB</div>
+											<div id="progressRateMB"></div>
+										</div>
+									</div>
+								</div>
+						</td>
+						</tr>
+					</table>
+					<div align="center">
+						<div id="mensajeConsumo">Le quedan 976 MB de su paquete de 976 MB.<br>Vence el 26/07/2014.</div>
+					</div>
+				</div>
+
+				<div class="corpo-info-container4">
+           		<i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+	            <div class="corpo-display-table">
+	                <div class="corpo-display-table-cell">
+	                    La línea no posee paquetes de internet. En caso de existir tráfico de datos, los cargos serán descontados de su abono.
+	                </div>
+	            </div>
+       		 </div> 
+
+			  </div>
+		   </div>
+		 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin-boostrap">
+				<div id="barraPeriodo" class="barraPeriodoSms">
+					<span class="barLeyend">Pack 200 SMS</span>
+					<table style="width: 100%;">
+						<tr>
+						<td style="width:400px">
+							<div class="consumptionProgress">
+								<div id="progressbar">
+									<div class="progressbarContainter">
+										<div class="consumePercent">Consumo actual <span id="precioConsumoSmsBar"></span> SMS</div>
+										<div id="progressRateSMS"></div>
+									</div>
+								</div>
+							</div>
+						</td>
+						</tr>
+					</table>
+					<div align="center">
+						<div id="mensajeConsumo">Le quedan 238 SMS de su paquete de 250 SMS.<br>Vence el 26/07/2014.</div>
+					</div>
+				</div>
+
+			    	<div class="corpo-info-container4">
+           		<i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+	            <div class="corpo-display-table">
+	                <div class="corpo-display-table-cell">
+	                    La línea no posee paquete de SMS. Al enviar mensajes, los cargos serán descontados de su abono.
+	                </div>
+	            </div>
+       		 </div> 
+
+			</div>
+		</div>
+		 </row>
+	     <row>
+	     	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-boostrap"> 	
+			<div class="tableContainerTitle">Crédito de recargas</div>
+			<div class="tableContainer" >
+				<div class="tableLeft" >
+					<div class="tableTitleCenter">
+						<div class="tableTitle">Crédito</div>
+					</div>
+                    
+                    <div class="margin-container shadow-container">
+                    <div id="table" class="tableCorpoContent">
+                        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover " id="corpoTable" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Tipo</th>
+                                    <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Saldo</th>
+                                    <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">Vencimiento</th>	
+                                </tr>
+                            </thead>
+                            <tbody>		
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Recarga</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">$ 0,05</td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">04/07/2014</td>								
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Promocional</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">$ 40,00</td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">04/07/2014</td>						
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Recarga</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">$ 0,05</td>
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">04/07/2014</td>						
+                                    </tr>
+                            </tbody>
+                        </table>		
+                    </div>	
+                </div>
+
+                <div class="corpo-info-container4">
+           		<i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+	            <div class="corpo-display-table">
+	                <div class="corpo-display-table-cell">
+	                    Actualmente la línea no registra recargas ni saldo disponibles.
+	                </div>
+	            </div>
+       		 </div> 
+
+
+				</div>
+				</div>
+			   </div>
+		       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="tableRight">
+					<div class="tableTitleCenter">
+						<div class="tableTitle">Historial de recargas</div>
+					</div>
+					<div class="margin-container shadow-container">
+                    <div id="table" class="tableCorpoContent">
+                        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-hover " id="corpoTable" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">Monto de Recarga</th>
+                                    <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Fecha de Acreditación</th>
+                                </tr>
+                            </thead>
+                            <tbody>		
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">$ 20,00</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">04/07/2014</td>					
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">$ 20,00</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">04/07/2014</td>				
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">$ 20,00</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">04/07/2014</td>					
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">$ 20,00</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">04/07/2014</td>					
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">$ 20,00</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">04/07/2014</td>					
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3 lineRow">$ 20,00</td>
+                                        <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">04/07/2014</td>					
+                                    </tr>
+                            </tbody>
+                        </table>		
+                    </div>	
+                </div>
+				</div>
+			</div>
+		</row>
+		<row>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="corpo-info-container3">
+           		<i class="fa fa-info corpo-info-circle animated infinite pulse"></i>
+	            <div class="corpo-display-table">
+	                <div class="corpo-display-table-cell">
+	                    Última Recarga: 13/05/2016. <br>
+	                    Todos los importes no incluyen impuestos.
+	                </div>
+	            </div>
+       		 </div> 
+       		</div>
+        </row>
+		</div>
+	 </div>
+
+  </body>
+
+</html>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+	
+		oTable = $('.dataCorpoTable').dataTable({
+		"bJQueryUI" : true,
+		"bPaginate": false,
+		"bAutoWidth": false,
+		"bInfo": false,
+		"bProcessing": true,
+		"bFilter": false ,
+		"oLanguage" : {
+			"sInfo" : "Mostrando _START_ - _END_ de _TOTAL_ ",
+			"sEmptyTable" : "No hay información en la tabla",
+			"sInfoEmpty" : "Mostrando 0 - 0 de 0",
+			"sInfoFiltered" : "(filtrado de un total de _MAX_)",
+			"sInfoThousands" : ".",
+			
+			"sLoadingRecords" : "Cargando...",
+			"sProcessing" : "Procesando...",
+			"sSearch" : "Buscar:",
+			"sZeroRecords" : "No hay coincidencias",
+			"oPaginate" : {
+				"sPrevious" : "Previo",
+				"sNext" : "Próximo",
+				"sLast" : "Último",
+				"sFirst" : "Primero",
+			},
+			"oAria" : {
+				"sSortAscending" : ": clic para ordenar la columna en forma ascendente",
+				"sSortDescending" : ": clic para ordenar la columna en forma descendente"
+			}
+		},
+		});
+	
+		$( "#consumptionContainer" ).draggable({ handle: ".consumptionDraggable" });
+		$( ".consumptionDraggable" ).disableSelection();
+		
+		changeWidthAbono();
+		changeWidthMB();
+		changeWidthSMS();
+		
+		//animacion numerica de abono
+		var optionsCountUpAbono = {
+			useEasing : true,
+			useGrouping : true,
+			separator : '',
+			decimal : ',',
+			prefix : '',
+			suffix : ''
+		}
+		countUpAbono = new countUp('precioAbonoBar', 0, 80.00, 2, 2.0, optionsCountUpAbono);
+		countUpAbono.start();
+		
+		//animacion numerica de consumo MB
+		var optionsCountUpConsumoMB = {
+			useEasing : true,
+			useGrouping : true,
+			separator : '',
+			decimal : ',',
+			prefix : '',
+			suffix : ''
+		}
+		countUpConsumoMB = new countUp('precioConsumoMbBar', 0, 100, 0, 2.0, optionsCountUpConsumoMB);
+		countUpConsumoMB.start();
+		
+			//animacion numerica de consumo SMS
+		var optionsCountUpConsumoSMS = {
+			useEasing : true,
+			useGrouping : true,
+			separator : '',
+			decimal : ',',
+			prefix : '',
+			suffix : ''
+		}
+		countUpConsumoSMS = new countUp('precioConsumoSmsBar', 0, 50, 0, 2.0, optionsCountUpConsumoSMS);
+		countUpConsumoSMS.start();
+	
+	});
+
+	function toggleconsumptionPop(){
+		$("#consumptionBlackBg").toggle();
+		$("#consumptionContainer").toggle("drop",200);
+	}
+	
+	function changeWidthAbono(){
+		$("#progressRateAbono").width( "70.0%" );
+	} 
+	
+	function changeWidthMB(){
+		$("#progressRateMB").width( "40.0%" );
+	} 
+	
+	function changeWidthSMS(){
+		$("#progressRateSMS").width( "20.0%" );
+	} 
+</script>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Gestiones en Línea</title>
+
+<!-- Roboto (***PERTENECE AL TEMA***) -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+<!-- /Roboto -->
+
+<!--||||||||||||||||||||||Ya esta en el tema|||||||||||||||||||||||||||||||-->
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- /Bootstrap -->
+<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
+<!--||||||||||||||||||||||Ya esta en el tema|||||||||||||||||||||||||||||||-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/placeholders2.css" media="screen" type="text/css" />
+
+    <link rel="stylesheet" href="css/radiobutton.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/validate.css" media="screen" type="text/css" />
+<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->    
+
+<!--||||||||||||||||||||||Ya esta en el tema|||||||||||||||||||||||||||||||-->    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->  
+
+
+<!-- Switch Style-->
+     <link rel="stylesheet" href="css/toggle-switches-style.css" media="screen" type="text/css" />
+<!-- Switch Style-->
+<!-- Switch Style-->
+     <link rel="stylesheet" href="css/simple-switch-style.css" media="screen" type="text/css" />
+<!-- Switch Style-->      
+<!-- Style -->
+    <link rel="stylesheet" href="css/suspensionLineStyle.css" media="screen" type="text/css" />
+ <!-- Style -->   
+
+<!-- Tabs -->
+    <!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+    <!-- /Animaciones -->
+
+
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+    
+<div class="Suspensioncontainer">
+
+<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
+     <form id="suspensionLineFrm" class="suspensionLineFrm" method="post" action="index.html">
+       <h3 class="SuspensionLineTitle">Suspensi&oacute;n de l&iacute;neas</h3>
+        <div class="orderObject" id="suspensionLineContainer">
+           <row>
+              <div class="col-lg-12 col-md-12 col-sm-10 col-xs-12">
+                <div class="corpo-info-messages-container-suspension gestion-display-suspension">
+                    <div class="corpo-info-circle-container-suspension">
+                        <i class="fa fa-info corpo-info-circle-messages-suspension animated infinite pulse"></i>
+                    </div>
+                    <span class="corpo-messages-display-table-cell-suspension">
+                    En la siguiente gesti&oacute;n usted podr&aacute; suspender l&iacute;neas de su cuenta por robo o extrav&iacute;o. Recuerde que al suspender una l&iacute;nea por robo o p&eacute;rdida, el sistema dejar&aacute; negada la terminal asociada a la misma.
+                    </span>
+                </div>
+               </div>   
+           </row>
+           <row>
+              <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+               <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 margin-bootstrap-suspension-line">
+                <div class="placeholder">
+                <input type="text" class="txtInputSuspensionLine" id="edLine" placeholder="L&iacute;nea de la cuenta">
+                </div>                  
+                <p id="slReasonTag">Motivo de suspensi&oacute;n</p>
+               <div class="radioContainer">
+               <div class="radio-robo-perdida">     
+                     <label class="radio"><input id="radio1" type="radio" name="radios" checked><span class="outer"><span class="inner"></span></span>Robo</label>
+                     <label class="radio"><input id="radio2" type="radio" name="radios"><span class="outer"><span class="inner"></span></span>Perdida</label>
+               </div>
+               </div>
+                    <div class="SIMConfirmContainer">
+                        <p class="textNewSim">&iquest;Desea que le env&iacute;emos una nueva SIM?</p> 
+                    
+                        <!-- <div class="switchYesNo"> -->
+                            <!-- <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                            <label for="week" class="switch-label switch-label-one" onclick="ConfirmClick('slSIMYes', 'slSIMNo', 'slDeiverySIM', 'No')">No</label>
+                            <input type="radio" class="switch-input" name="view" value="year" id="year">
+                            <label for="year" class="switch-label switch-label-three" onclick="ConfirmClick('slSIMYes', 'slSIMNo', 'slDeiverySIM', 'Yes')">Si</label>
+                            <span class="switch-selection"></span> -->
+                     
+                         <label class="tgl" id="check-container">
+                            <input type="checkbox" id="check"/>
+                            <span class="tgl_body">
+                                <span class="tgl_switch"></span>
+                                <span class="tgl_track">
+                                    <span class="tgl_bgd">
+                                        <i class="fa fa-check margin-success-simple-switch"></i>
+                                    </span>
+                                    <span class="tgl_bgd tgl_bgd-negative">
+                                        <i class="fa fa-times margin-cancel-simple-switch"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+
+                       <!--  </div> -->
+                       </div>
+               
+    
+            <div id="slDeiverySIM" class="slDeiverySIM">
+              
+                                     
+                        <div>                      
+                            <div class="clientInfoSuspensionLine">
+                            <div class="card-sub-container-contacto">
+                              <div class="contact">
+                                <i class="icon-telefono"></i>
+                                <div>
+                                   <h5 class="margin-text"><b>Contacto</b></h5>
+                                   <span>37879749247923794</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                             <div class="card-sub-container-adress-suspension-line">
+                              <div class="adress-suspension-line">
+                                <i class="icon-direccion"></i>
+                                <div>
+                                   <h5 class="margin-text"><b>Domicilio</b></h5>
+                                   <span>Boulevard Chacabuco 234</span>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>                            
+                       </div>
+                  
+                     
+                      <div class="placeholder">
+                        <div class="placeholder-contact-suspension">
+                          <input type="text" class="txtInputSuspensionLine" id="slContact" placeholder="Persona que recibir&aacute; la SIM">
+                        </div>
+                      </div>
+
+            
+                        <div class="btOptionContainer">
+                      
+                            <p id="slReasonTag">Horario de contacto</p>
+                            <div class="radioContainer">
+                            <div class="radio-robo-perdida">     
+                                <label class="radio"><input id="radio" type="radio" name="radios1" checked><span class="outer"><span class="inner"></span></span>Mañana</label>
+                                <label class="radio"><input id="radio" type="radio" name="radios1"><span class="outer"><span class="inner"></span></span>Tarde</label>
+                            </div>
+                            </div>
+                         
+                        </div>
+                    
+                                       
+                        <div class="btOptionContainer">
+                            <p class="textSimType">Seleccione el tipo de tarjeta Sim</p>
+
+                            <div class="radioContainerSimType">     
+
+                                   <div class="switch">
+                                        <input type="radio" class="switch-input" name="view" value="sim" id="sim" checked>
+                                        <label for="sim" class="switch-label switch-label-one">SIM</label>
+                                        <input type="radio" class="switch-input" name="view" value="micro-sim" id="micro-sim">
+                                        <label for="micro-sim" class="switch-label switch-label-two">Micro SIM</label>
+                                        <input type="radio" class="switch-input" name="view" value="nano-sim" id="nano-sim">
+                                        <label for="nano-sim" class="switch-label switch-label-three">Nano SIM</label>
+                                        <span class="switch-selection"></span>
+                                    </div>
+                            </div>
+                        </div>                      
+
+            </div>
+            </div>
+               <div class="col-lg-2 col-md-2 col-sm-1 hidden-xs"></div>   
+            </row>  
+   
+        <row>
+            <div class="col-lg-5 col-md-5 col-sm-1 hidden-xs"></div>
+            <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10 margin-bootstrap">
+                <button type="submit" class="configurationButtonContinue waves-effect waves-float" id="buttonContinue" onclick="location.href='suspensionLineSuccess.html'">
+                <span>Enviar</span>
+               </button>
+               <button type="reset" class="configurationButton waves-effect wave-Button-Volver waves-float" onclick="location.href='suspensionLine.html'">
+                <span>Volver</span>
+               </button>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-1 col-xs-2"></div>
+        </row>
+     </form>                 
+
+<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
+</div> 
+
+        <!-- jquery js -->
+        <script type="text/javascript" language="javascript" src="js/jquery-1.11.2.min.js"></script>
+<!-- /jquery js -->
+        
+         <script type="text/javascript" language="javascript" src="js/placeholders2.js"></script>
+
+
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+
+  $('#check-container').click(function() {
+   if($('#check').is(':checked')) {
+      $('#slDeiverySIM').animate({height: "toggle", opacity: "toggle"}, "slow");
+   };
+});
+
+</script>                           
+
+</body>
+
+</html>
+

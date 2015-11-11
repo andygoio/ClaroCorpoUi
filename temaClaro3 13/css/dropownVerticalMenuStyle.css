@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'entypo';
+  src: url('../fonts/entypo.eot') format('eot'), 
+  url('../fonts/entypo.woff') format('woff'), 
+  url('../img/entypo.svg') format('svg');
+}
+.entypo-down-open-big:before{content:"\e764"}
+
+*, *:after, *:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class*="entypo-"]:before, #form #submit, .green, .orange {
+  -webkit-font-smoothing: antialiased;
+  -moz-macosx-text-rendering: grayscale;
+}
+
+.wrap:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.wrap:before {
+  content: "";
+  display: table;
+}
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  font-style: normal;
+}
+
+a {
+  color: #3D9970;
+  text-decoration: none;
+/*  margin-bottom: 1em;*/
+}
+a:hover {
+  color: #FF851B;
+}
+a i {
+  margin-right: 7px;
+}
+
+.wrap {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+section {
+  background: #fff;
+/*  border: 1px solid #e0e0e0;*/
+  width: 31.333333333%;
+  float: left;
+  padding: 0;
+    width: 100%;
+}
+
+#vert-nav ul {
+  list-style: none;
+  padding: 0;
+}
+#vert-nav .topmenu li.openmenu > a {
+  background: #f2f4f8;
+}
+#vert-nav .topmenu li.openmenu .sf {
+  -webkit-transform: rotate(180deg);
+}
+#vert-nav .topmenu li {
+  position: relative;
+}
+#vert-nav .topmenu li .sf {
+  position: absolute;
+  z-index: 9;
+    top: 1.2em;
+    right: 1.5em;
+  color: #A6A6A6;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+}
+/*#vert-nav .topmenu li:last-child a {
+  border-bottom: 0.2em solid #388e68;
+}*/
+#vert-nav .topmenu li a {
+  margin: 0;
+    padding: 1em 1em 1em 1.5em;
+  display: block;
+  width: 100%;
+  background: #FFFFFF;
+  color: #646464;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+/*  border-bottom: 0.1em solid #E2E2E2;*/
+}
+#vert-nav .topmenu li a:hover {
+  background: #f2f4f8;
+}
+#vert-nav .submenu {
+  display: none;
+}
+#vert-nav .submenu li:last-child a {
+  border-width: .1em;
+}
+#vert-nav .submenu li a {
+  padding-left: 3.5em;
+  background: #FFFFFF;
+
+
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+    
+    font-size: 0.9em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+#vert-nav .submenu li a:hover {
+  background: #F4F4F4;
+}
+
+#form input, #form textarea {
+  width: 100%;
+  outline: none;
+  border: 0.1em solid #eaeaea;
+  border-bottom: none;
+  color: #aaa;
+  padding: .65em .65em .65em 2.2em;
+}
+#form input:focus, #form textarea:focus {
+  background: #fcfcfc;
+}
+#form .field {
+  padding: 0;
+  position: relative;
+}
+#form label {
+  position: absolute;
+  text-transform: uppercase;
+  color: #e5e5e5;
+  top: .5em;
+  left: .5em;
+  font-size: 1.2em;
+}
+#form label.focused {
+  color: #3D9970;
+}
+#form #rangeval {
+  float: right;
+}
+#form #submit {
+  outline: none;
+  border: none;
+  background: #3D9970;
+  display: block;
+  color: #fff;
+  padding: 0.75em;
+  font-size: 1em;
+  border-bottom: 0.2em solid #388e68;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#form #submit:hover {
+  color: #fff;
+  background: #50a37e;
+}
+#form #submit:active {
+  border-bottom: none;
+  margin-top: .2em;
+}
+
+.green {
+  background: #3D9970;
+  display: inline-block;
+  color: #fff;
+  padding: 1em 2em;
+  font-size: 1em;
+  border-bottom: 0.2em solid #388e68;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.green:hover {
+  color: #fff;
+  background: #50a37e;
+}
+.green:active {
+  border-bottom: none;
+  margin-top: .2em;
+}
+
+.orange {
+  background: #FF851B;
+  display: inline-block;
+  color: #fff;
+  padding: 1em 2em;
+  font-size: 1em;
+  border-bottom: 0.2em solid #ed7b19;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.orange:hover {
+  color: #fff;
+  background: #ff9131;
+}
+.orange:active {
+  border-bottom: none;
+  margin-top: .2em;
+}
+#vert-nav .topmenu li a i {
+    min-width: 15px;
+}

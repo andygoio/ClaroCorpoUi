@@ -1,0 +1,26 @@
+.menu-icon {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+.menu-icon:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: 30px;
+  top: 30px;
+  opacity: 1;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.menu-icon.anim.in:before, .menu-icon.anim.out:before {
+  -webkit-transition: all 400ms cubic-bezier(0, 0.7, 0.5, 1);
+          transition: all 400ms cubic-bezier(0, 0.7, 0.5, 1);
+  width: 100px;
+  height: 100px;
+  left: -20px;
+  top: -20px;
+  opacity: 0;
+}

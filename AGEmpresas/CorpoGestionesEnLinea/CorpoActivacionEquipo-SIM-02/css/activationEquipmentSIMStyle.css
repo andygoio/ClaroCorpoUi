@@ -1,0 +1,351 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.frmTitle{
+  margin-left: 8px;
+}
+
+/*++++++++++++++++++++ Mensaje de info++++++++++++++++++++*/
+
+.corpo-info-messages-container-activation {
+    display: table;
+    width: 87%;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+}
+.gestion-display1 {
+    display: none;
+}
+.corpo-info-circle-container-activation {
+    display: table-cell;
+    vertical-align: middle;
+}
+.corpo-info-circle-messages-activation {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 0.6em;
+    padding-left: 0.02em;
+
+}
+.corpo-messages-display-table-cell-activation {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+.corpo-info-messages-container-number-request {
+    display: inline-block;
+    padding-top: 0.5em;
+}
+.gestion-display1 {
+    display: none;
+}
+.corpo-info-circle-container-number-request {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.corpo-info-circle-messages-number-request {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 0.6em;
+    padding-left: 0.05em;
+
+}
+.corpo-messages-display-table-cell-number-request {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+
+.corpo-info-messages-container-imei {
+    display: inline-block;
+    padding-top: 0.5em;
+}
+.gestion-display1 {
+    display: none;
+}
+.corpo-info-circle-container-imei {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.corpo-info-circle-messages-imei {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 0.6em;
+    padding-left: 0.05em;
+
+}
+.corpo-messages-display-table-cell-imei {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+
+
+
+
+
+.animated {
+    padding-top: 10px!important;
+}
+
+/*++++++++++++++++++++ Fin Mensaje de info++++++++++++++++++++*/
+
+/*++++++++++++++++++++ Mediasquery +++++++++++++++++++++++++++*/
+
+/*++++++++++++++++++++ Fin Mediasquery +++++++++++++++++++++++*/
+
+/*+++++++++++++Botonnes continuar y volver ++++++++++++++++++*/
+
+.configurationButton, .configurationButton:visited {
+    background: #BDBDBD no-repeat fixed center;
+    border: none;
+    color: #6E6E6E;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 0 rgba(0,0,0,0.3);
+    width: 110px;
+    outline: none;
+    -webkit-border-radius: 2px;
+    margin: 20px 0px 35px 14px;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wave-Button-Volver {
+    display: block !important;
+    background: transparent !important;
+    color: #888888 !important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none !important;
+    padding: 11px 15px !important;
+    margin: 21px auto !important;
+    font-weight: 400;
+}
+
+.configurationButtonContinue,.configurationButtonContinue:visited {
+background:#d32c1c no-repeat fixed center;
+border:none;
+color:#FFF;
+cursor:pointer;
+float:right;
+font-size:13px;
+height:40px;
+text-align:center;
+text-decoration:none;
+text-shadow:0 0 0 rgba(0,0,0,0.3);
+width:110px;
+outline:none;
+-webkit-border-radius:2px;
+margin:20px 0px 0px 14px;
+padding:0;
+font-family: 'Roboto', sans-serif !important;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+}
+
+
+.configurationButtonContinue:hover,.configurationButtonContinue:active {
+background:#d32c1c no-repeat fixed center;
+color:#FFF;
+}
+
+/*++++++++++++++Fin botones continuar y volver++++++++++++++++++*/
+
+.margin-boostraap{
+  padding-left: 0px!important;
+}
+
+.txtInput {
+    margin: 0 8px 13px !important;
+}
+
+.textActive{
+  float: left;
+  margin-top: 2em;
+  font-size: 15px;
+  margin-left: 1em;
+  margin-bottom: 0px;
+}
+
+.switchYesNo{
+  margin-top: 1.7em!important;
+  margin-bottom: 21px!important;
+}
+
+.inputActivation{
+  margin-top: 6em;
+}
+
+.switch-imei-equipo{
+ display: none;
+}
+
+#numeroPedido{
+ float:left;
+ width: 85%;
+}
+
+.switchContainer{
+    padding-top: 23px;
+    width: 100%;
+}
+
+
+.info-pop-up{
+    float:left;
+    width: 56%;
+}
+
+.icon-corpo-imei{
+    display: inline-block;
+    margin-left: 16px;
+    margin-top: 2em;
+}
+
+.icon-corpo-numero-pedido{
+    display: inline-block;
+    margin-left: 16px;
+    margin-top: 1em;
+}
+
+.pop-up-info{
+    display:none;
+}
+
+#imeiEquipo{
+    float: left;
+    width: 85%;
+}
+
+.pop-up-info-imei{
+    display:none;
+}
+
+
+.switchYesNo {
+    position: relative;
+    margin: -3px 0px 0px 10px;
+    height: 26px;
+    width: 160px;
+    background: rgb(242, 242, 242);
+    border-radius: 15px;
+    border: 2px solid rgb(247, 247, 247);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-user-select: none;
+    float: left;
+}
+
+.switch-input:checked + .switch-label-three ~ .switch-selection {
+    /* Note: left: 50% doesn't transition in WebKit; */
+    left: 50%!important;
+}
+
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: -3px;
+    left: 0%;
+    width: 50%!important;
+    height: 30px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 22px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.8), inset 0 1px 0 #8b69a1;
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+    border: 2px solid rgb(202, 202, 202);
+    font-weight: 600;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(168, 168, 168, 0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(168, 168, 168, 0.75);
+    box-shadow: 0px 0px 6px 0px rgba(168, 168, 168, 0.75);
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 49%!important;
+    line-height: 26px;
+    font-size: 11px;
+    color: rgba(178, 178, 178, 1);
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 507px){
+.info-pop-up {
+    width: 95%!important;
+    }
+.pop-up-info-imei {
+    width: 95%!important;    
+    }
+}
+
+.circle-help-container-call-profile {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: #C3C3C3;
+    border-radius: 17px;
+    /* float: right; */
+    margin-top: 0px;
+}
+
+.icon-Question-help-call-profile {
+    color: #fff !important;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 0px;
+    margin-left: 8px;
+    margin-top: 15px;
+}

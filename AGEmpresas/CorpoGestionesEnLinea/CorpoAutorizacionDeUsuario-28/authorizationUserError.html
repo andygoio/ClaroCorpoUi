@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Gestiones en Línea</title>
+
+
+<!--[if IE 9 ]>
+    <!-- Placeholders IE9 js -->
+        <script src="js/placeholders.min.js"></script>
+    <!-- /Placeholders IE9 js -->
+<![endif]-->
+
+<!-- Card Style -->
+    <link rel="stylesheet" href="css/card.css" media="screen" type="text/css" />
+<!-- /Card Style -->
+
+<!-- animsition -->
+    <link rel="stylesheet" href="css/animsition.min.css">
+<!-- /animsition -->
+    
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+
+<!-- gestionesEnLinea -->
+    <link rel="stylesheet" href="css/gestionesEnLineaStyle.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/validate.css" media="screen" type="text/css" />
+<!-- gestionesEnLinea -->
+
+
+
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+<div class="container no_selection">  
+    <div class="authorizationUserContainerError">
+        <div class="title-container">
+            <h3>Autorizaci&oacute;n de usuario</h3>  
+        </div>
+
+         <row class="animsition" data-animsition-in="fade-in-right-sm" data-animsition-in-duration="1000" data-animsition-out="fade-out-right-sm" data-animsition-out-duration="800">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row-width-gestiones-en-linea-succes">
+                <!-- <div class="corpo-info-container">
+                    <i class="fa fa-times corpo-error-circle animated infinite pulse"></i>
+                    Sr. Cliente, en estos momentos no podemos procesar su gesti&oacute;n. Por favor intente m&aacute;s tarde.
+                </div> -->
+
+                 <div class="corpo-info-messages-container-autorization gestion-display-autorization">
+                    <div class="corpo-info-circle-container-autorization">
+                        <i class="fa fa-info corpo-error-circle animated infinite pulse"></i>
+                    </div>
+                        <span class="corpo-messages-display-table-cell-autorization">
+                        Sr. Cliente, en estos momentos no podemos procesar su gesti&oacute;n. Por favor intente m&aacute;s tarde.
+                        </span>
+                 </div>
+
+             </div>
+         </row>
+
+         <row>
+            <div class="col-lg-5 col-md-6 col-sm-1 hidden-xs"></div>
+            <div class="col-lg-4 col-md-4 col-sm-10 col-xs-12 buttonContinue">
+                <button type="button" value="Continuar" class="configurationButtonContinue waves-effect waves-float" id="auContinue" onclick="location.href='index.html'">Volver</button>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-1 hidden-xs"></div>
+        </row>
+    </div>     
+
+</div>                        
+
+<!-- jquery js -->
+        <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jquery-ui.js"></script> 
+<!-- /jquery js -->
+
+<!-- jquery.min js --> 
+    <script src="js/jquery.min.js"></script>
+<!-- /jquery.min js --> 
+    
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+<!-- animsition js --> 
+    <script src="js/jquery.animsition.min.js"></script>
+<!-- /animsition js --> 
+
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js --> 
+
+<!-- gestionesEnLineaIndex js --> 
+    <script src="js/gestionesEnLineaIndex.js"></script>
+<!-- /gestionesEnLineaIndex js -->
+
+    <script>
+    function disabletext(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=disabletext
+    document.onclick=reEnable
+    }
+    </script>  
+    
+</body>
+
+</html>

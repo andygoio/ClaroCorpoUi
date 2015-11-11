@@ -1,0 +1,523 @@
+@font-face {
+  font-family: 'suspensionDeLinea00';
+  src:url('../fonts/suspensionDeLinea00.eot?-hjw9jz');
+  src:url('../fonts/suspensionDeLinea00.eot?#iefix-hjw9jz') format('embedded-opentype'),
+    url('../fonts/suspensionDeLinea00.ttf?-hjw9jz') format('truetype'),
+    url('../fonts/suspensionDeLinea00.woff?-hjw9jz') format('woff'),
+    url('../fonts/suspensionDeLinea00.svg?-hjw9jz#suspensionDeLinea00') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  font-family: 'suspensionDeLinea00';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-telefono:before {
+  content: "\e600";
+}
+.icon-direccion:before {
+  content: "\e601";
+}
+.icon-sim:before {
+  content: "\e602";
+}
+.icon-micro-sim:before {
+  content: "\e603";
+}
+.icon-nano-sim:before {
+  content: "\e604";
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.oMContainer {
+background:#FFF;
+font-weight:400;
+font-family:arial, sans-serif;
+top:10%;
+width:600px;
+z-index:9;
+}
+
+
+
+/******************** Form Suspension de Linea *********************************/
+.SuspensionLineTitle{
+  margin-left: 3%;
+}
+
+
+#suspensionLineContainer{
+	margin-left: 3%;
+}
+
+#slReasonTag {
+  float: left;
+  font-weight: 700;
+  color: #464646;
+  margin: 20px 2% 0 10px;
+  }
+
+  #suspensionLineReason {
+  margin-top: 14px;
+  outline: none;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 5px;
+}
+
+.SIMConfirmContainer h3 {
+  float: left;
+  margin: 21px 10px 0;
+}
+
+.SIMConfirmContainer{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+.SIMConfirmOption {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  margin: 19px 0px 0px 7px;
+}
+
+#slDeiverySIM{
+	display: none;
+}
+
+.clientInfoSuspensionLine{
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+width: 100%;
+margin-bottom: 17px;
+}
+
+#imgContact{
+  margin-bottom: 5px;
+}
+
+#pContact{
+  margin: -30px 5px 0px 38px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+#imgAddress{
+  margin-bottom: 5px;
+}
+
+#pAddress{
+  margin: -30px 5px 0px 38px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+
+.btOptionLeft {
+  -moz-bowrder-radius: 5px 0 0 5px;
+  margin: 5px -1px 0 1px;
+}
+
+.btOption {
+  display: inline-block;
+  cursor: pointer;
+  background: #DDD;
+  color: #000;
+  border: 1px solid #FFF;
+  font-weight: 700;
+  outline: none;
+  padding: 5px 10px;
+}
+
+#slHoursContactMor{
+  color: rgb(255, 255, 255);
+  background: rgb(213, 43, 30);
+}
+
+.btOptionContainer{
+	margin-top: 14px;
+}
+
+.btOptionContainer h3, .clientInfo h3 {
+  float: left;
+  margin: 10px 10px 0 0;
+}
+
+.btn-Group-Motive{
+  margin-top: 12px;
+}
+
+.btn-motive{
+  border-radius: 2px;
+}
+
+.textNewSim{
+    float: left;
+    padding-bottom: 1em;
+    float: left;
+    font-weight: 700;
+    color: #464646;
+    margin: 10px 2% 0 10px;
+}
+
+.radioContainerSimType{
+    float: left;
+    margin: 8px 0px 0px 0px;
+    width: 263px;
+    display: inline-block;
+}
+
+.textSimType{
+  float:left;
+  padding-bottom: 1em;
+  margin-left: 0.2em;
+  margin-right: 2em;
+  font-weight: 700;
+  color: #464646;
+  margin: 12px 2% 0 10px;
+}
+
+.txtInputSuspensionLine{
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    outline: none;
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-family: 'Roboto', sans-serif !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-wieght: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -ms-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+
+.configurationButtonContinue, .configurationButtonContinue:visited {
+    background: #d32c1c no-repeat fixed center;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 0 rgba(0,0,0,0.3);
+    width: 110px;
+    outline: none;
+    -webkit-border-radius: 2px;
+    margin: 20px 0px 0px 14px;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.configurationButton, .configurationButton:visited {
+    background: #BDBDBD no-repeat fixed center;
+    border: none;
+    color: #6E6E6E;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 0 rgba(0,0,0,0.3);
+    width: 110px;
+    outline: none;
+    -webkit-border-radius: 2px;
+    margin: 20px 0px 35px 14px;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.corpo-info-messages-container-suspension {
+    display: table;
+    width: 87%;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+}
+
+.corpo-info-circle-container-suspension {
+    display: table-cell;
+    vertical-align: middle;
+}
+.corpo-info-circle-messages-suspension {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 0.2em;
+}
+.corpo-messages-display-table-cell-suspension {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+.switchYesNo {
+    position: relative;
+    margin: 7px 0px 0px 10px;
+    height: 26px;
+    width: 160px;
+    background: rgba(242, 242, 242, 1);
+    border-radius: 15px;
+    border: 2px solid rgb(247, 247, 247);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float: left;
+}
+
+.radio-robo-perdida{
+  display: inline-block;
+}
+
+.margin-bootstrap-suspension-line{
+  padding-left: 0px!important; 
+}
+
+.tgl{
+    margin-top: 6px;
+    padding-left: 1em;
+}
+
+.card-sub-container-contacto{
+    display: inline-block;
+    margin-bottom: 1em;
+    overflow: hidden;
+    margin-left: 1em;
+    float:left;
+}
+
+.contact > i {
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    width: 53px;
+    height: 53px;
+    margin: auto 0px;
+    padding: 14px;
+    color: #FFFFFF;
+    background: #BFBFBF;
+    border-radius: 2em;
+}
+.contact > div {
+    margin-left: 4.2em;
+    padding-top: 8px;
+}
+
+.adress-suspension-line > i {
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    width: 53px;
+    height: 53px;
+    margin: auto 0px;
+    padding: 14px;
+    color: #FFFFFF;
+    background: #BFBFBF;
+    border-radius: 2em;
+}
+
+.adress-suspension-line > div {
+    margin-left: 4.2em;
+    padding-top: 9px;
+}
+
+@media (min-width: 992px){
+.col-md-6 {
+    width: 56%!important;
+    }
+}
+
+.switch-label-robo-perdida{  
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 78px;
+    line-height: 23px;
+    font-size: 11px;
+    color: rgba(178, 178, 178, 1);
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.switch-selection-robo-perdida{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 2px;
+    width: 80px;
+    height: 32px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 22px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.8), inset 0 1px 0 #8b69a1;
+    background-image: -moz-linear-gradient(bottom, #4f2967 0%, #7f5795 100%);
+    background-image: -o-linear-gradient(bottom, #4f2967 0%, #7f5795 100%);
+    background-image: linear-gradient(bottom, #4f2967 0%, #7f5795 100%);
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+    border: 2px solid rgb(202, 202, 202);
+    font-weight: 600;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(168, 168, 168, 0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(168, 168, 168, 0.75);
+    box-shadow: 0px 0px 6px 0px rgba(168, 168, 168, 0.75);
+}
+
+
+.wave-Button-Volver {
+    display: block !important;
+    background: transparent !important;
+    color: #888888 !important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none !important;
+    padding: 11px 15px !important;
+    margin: 21px auto !important;
+    font-weight: 400;
+}
+.placeholder-contact-suspension{
+      
+}
+
+
+.card-sub-container-adress-suspension-line {
+    display:inline-block;
+    margin-left: 1em;
+    overflow: hidden;
+    }
+
+.margin-text{
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+/*****************Info Succes*****************/
+
+.corpo-info-messages-container-suspension-succes {
+    display: table;
+    margin: 0px auto;
+}
+.gestion-display1 {
+    display: none;
+}
+.corpo-info-circle-container-suspension-succes {
+    display: table-cell;
+    vertical-align: middle;
+    width: 2em;
+}
+.corpo-info-circle-messages-suspension-succes {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.4em;
+    line-height: 0.6em;
+    padding-left: 0.05em;
+    padding-top: 10px!important;
+
+}
+.corpo-messages-display-table-cell-suspension-succes {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+//.corpo-info-messages-container-suspension-succes {
+    display: table;
+    margin: 0px auto;
+}
+.gestion-display1 {
+    display: none;
+}
+.corpo-info-circle-container-suspension-succes {
+    display: table-cell;
+    vertical-align: middle;
+    width: 2em;
+}
+.corpo-info-circle-messages-suspension-succes {
+    text-align: center;
+    height: 1.6em;
+    width: 1.6em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.4em;
+    line-height: 0.6em;
+    padding-left: 0.05em;
+    padding-top: 10px!important;
+
+}
+.corpo-messages-display-table-cell-suspension-succes {
+    display: table-cell;
+    vertical-align: middle;
+  text-align: justify;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 0.5em;
+}
+
+/************** Info Succes***********************/
+
+.row-width-suspension-succes{
+  margin-top: 2em;
+}
+

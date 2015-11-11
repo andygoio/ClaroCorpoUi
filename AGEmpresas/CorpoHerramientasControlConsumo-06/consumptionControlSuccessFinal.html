@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Claro">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>Herramientas de Control de Consumo</title>
+
+<!-- animsition -->
+    <link rel="stylesheet" href="css/animsition.min.css">
+<!-- /animsition -->
+    
+<!-- Animaciones -->
+    <link rel='stylesheet prefetch' href='css/animate.min.css'>
+<!-- /Animaciones -->
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- /Bootstrap -->
+    
+<!-- Waves Style-->
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+<!-- Waves Style-->
+
+<!-- gestionesEnLinea -->
+    <link rel="stylesheet" href="css/consumptionControlStyle.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/validate.css" media="screen" type="text/css" />
+<!-- gestionesEnLinea -->
+
+
+
+</head>
+
+<body>
+
+<!-- Content Wrapper -->
+<div class="container no_selection">
+ <row>
+    <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs"></div>
+    <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 margin-boostraap">
+    <form method="post" action="" id="">    
+    <div class="consumptionControlContainer">
+        <div class="title-container">
+            <h3>Herramientas de Control de Consumo</h3>  
+        </div>
+
+         <row class="animsition" data-animsition-in="fade-in-right-sm" data-animsition-in-duration="1000" data-animsition-out="fade-out-right-sm" data-animsition-out-duration="800">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row-width-gestiones-en-linea-succes">
+                <!-- <div class="corpo-info-container">
+                    <i class="fa fa-check corpo-success-circle animated infinite pulse"></i>
+                    Su gesti&oacute;n se ha registrado correctamente. Nuestros asesores lo contactar&aacute;n a la brevedad.
+                </div> -->
+
+                <div class="corpo-info-messages-container-consumptionControl gestion-display-consumptionControl">
+                    <div class="corpo-info-circle-container-consumptionControl">
+                        <i class="fa fa-check corpo-success-circle animated infinite pulse"></i>
+                    </div>
+                        <span class="corpo-messages-display-table-cell-consumptionControl">
+                           <div class="confirmMontoText">
+                                 <div class="confirmMontoTitle"><span>Su nuevo monto nuevo configurado es </span><span id="newAmount">$ 137,28</span></div>
+                            </span>
+                           </div>
+                </div>
+         </row>
+
+        <row>
+            <div class="hidden-lg hidden-md col-sm-1 hidden-xs"></div>
+            <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 margin-boostraap">
+                <button type="submit" class="configurationButtonContinue waves-effect waves-float">
+                    <span>Aceptar</span>
+                </button>
+                <button type="reset" class="configurationButton waves-effect wave-Button-Volver waves-float" onclick="location.href='index.html'">
+                    <span>Cancelar</span>
+                </button>
+            </div>
+            <div class="hidden-lg hidden-md col-sm-1 col-xs-2"></div>
+         </row> 
+    </div>
+  </form>
+</div> 
+</row>
+</div>
+
+
+<!-- jquery js -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+<!-- /jquery js -->
+
+<!-- Boostrap js -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- /Boostrap js -->
+
+<!-- animsition js --> 
+    <script src="js/jquery.animsition.min.js"></script>
+<!-- /animsition js --> 
+
+<!-- Waves js -->
+    <script src="js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
+<!-- /Waves js -->
+
+<!-- gestionesEnLineaIndex js --> 
+    <script src="js/controlConsuptionAnimsition.js"></script>
+<!-- /gestionesEnLineaIndex js -->  
+
+    <script>
+    function disabletext(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=disabletext
+    document.onclick=reEnable
+    }
+    </script>
+    
+</body>
+
+</html>
