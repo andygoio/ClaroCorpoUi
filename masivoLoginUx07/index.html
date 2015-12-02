@@ -1,0 +1,368 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="UTF-8">
+    <!-- core styles -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- /core styles -->
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="css/skins/palette.1.css" id="skin">
+    <link rel="stylesheet" href="css/fonts/style.1.css" id="font">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- template styles -->
+
+	<!-- Fixes styles -->
+        <link rel="stylesheet" href="css/loginStyle.css">
+    <!-- Fixes styles -->
+    
+    <!-- coolPlaceholderStyle -->
+    <link rel="stylesheet" href="css/coolPlaceholderStyle.css" media="screen" type="text/css" />
+    <!-- coolPlaceholderStyle -->
+    
+</head>
+
+<!-- body -->
+<body>
+
+    <!-- main content -->
+    <section class="main-content">
+
+        <!-- content wrapper -->
+        <div class="content-wrap">
+            <div >
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-2 col-xs-1"></div>
+                <div class="col-lg-4 col-md-4 col-sm-8 col-xs-10" style="padding-left:0px; padding-right:0px;">
+
+                    <section>
+                        <ul id="myTab2" class="nav nav-tabs">
+                            <li class="active borderRadiusTabLogin">
+                                <a href="#miClaro" data-toggle="tab" class="tabColorText">Claro Móvil</a>
+                            </li>
+                            <li class=" borderRadiusTabBack">
+                                <a href="#ClaroHogar" data-toggle="tab" class="tabColorText">Claro Hogar</a>
+                            </li>
+                        </ul>
+                        <section class="panel">
+                            <div class="panel-body">
+                                <div id="myTabContent2" class="tab-content">
+                                    <div class="tab-pane active" id="miClaro">
+                                        <div class="row">
+                                            <div clas="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                                            <div clas="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center">
+                                            <img src="./img/miclaro.png" class="logoStyle">
+                                            <p class="txt-miclaro">Con Mi Claro podés canjear beneficios, consultar tu saldo, consumos y mucho más.</p>
+                                            </div>
+                                            <div clas="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                                        </div>
+
+                                        <form id="subscribe" class="form">
+                                            <label for="linea">Número de línea:</label>
+                                            <input id="lineaLogin" type="tel" placeholder="Ej: 3513918773">
+                                            <p class="leyenda-linea">Código de área + Número de línea</p>
+                                            <label for="clave">Clave:</label>
+                                            <input id="clave" type="password" min="4">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                    <div class="links-pass">
+                                                        <a id="forget-password" class="pull-right link" href="#">¿Olvidaste tu clave?</a>
+                                                    </div>
+                                                </div> 
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="alert alert-danger alertLinea hide-error-leyend-login" id="error-login-line" role="alert">El número de línea ingresado es incorrecto. Intentalo nuevamente.</div>
+                                                    <div class="alert alert-danger alertClave hide-error-leyend-login" id="error-login-password" role="alert">La clave ingresada es incorrecta. Intentalo nuevamente.</div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <a href="#" class="button" onclick="procesar()">Ingresá</a>
+                                                    <div class="link-ingreso">
+                                                        <a id="new-password" href="#" class="link">¿Ingresas por primera vez?</a>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form id="reset" class="form" style="display: none;">
+                                            <label for="linea">Número de línea:</label>
+                                            <input id="resetLinea" type="tel" placeholder="Ej: 3513918773">                                            
+                                            <p class="leyenda-linea">Código de área + Número de línea</p>
+                                            <label for="captcha">Ingresá el código:</label>
+                                            <div class="clearfix"></div>
+                                                <span class="captcha">
+                                                    <img id="imgcaptcha" src="https://miclaro.claro.com.ar/web/guest/bienvenido;jsessionid=7B95E70C0C61F50CB2CE5292078322B9?p_p_id=58&amp;p_p_lifecycle=1&amp;p_p_state=exclusive&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_count=2&amp;_58_struts_action=%2Flogin%2Fcaptcha&amp;time=12">
+                                                </span>
+                                                <a href="#" class="refresh"  onclick="document.getElementById('imgcaptcha').src = 'https://miclaro.claro.com.ar/web/guest/bienvenido;jsessionid=7B95E70C0C61F50CB2CE5292078322B9?p_p_id=58&amp;p_p_lifecycle=1&amp;p_p_state=exclusive&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_count=2&amp;_58_struts_action=%2Flogin%2Fcaptcha&amp;time='+ new Date().getSeconds(); ">
+                                                    
+                                                </a>
+                                                <div class="clearfix"></div>
+                                            <input id="captcha" type="text">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="alert alert-success hide-error-leyend-login" id="success-reset-password" role="alert">Te enviaremos tu nueva clave por SMS.</div>
+                                                    <div class="alert alert-danger hide-error-leyend-login" id="error-reset-password" role="alert">El número de línea ingresado es incorrecto. Intentalo nuevamente.</div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<a href="#" id="reset-password" class="button" onclick="resetPass()">Recuperar clave</a>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                    <a id="btn-cancelar-reset" href="#" class="link">Cancelar</a>
+                                                    <a style="display: none;" id="btn-volver-reset" href="#" class="link">Volver</a>
+                                                </div> 
+                                            </div>
+                                        </form>
+                                        <form id="new" class="form" style="display: none;">
+                                            <label for="linea">Número de línea:</label>
+                                            <input id="linea" type="tel" placeholder="Ej: 3513918773">
+                                            <p class="leyenda-linea">Código de área + Número de línea</p>
+                                            <label for="captcha">Ingresá el código:</label>
+                                            <div class="clearfix"></div>
+                                                <span class="captcha">
+                                                    <img id="imgcaptcha2" src="https://miclaro.claro.com.ar/web/guest/bienvenido;jsessionid=7B95E70C0C61F50CB2CE5292078322B9?p_p_id=58&amp;p_p_lifecycle=1&amp;p_p_state=exclusive&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_count=2&amp;_58_struts_action=%2Flogin%2Fcaptcha&amp;time=12">
+                                                </span>
+                                                <a href="#" class="refresh"  onclick="document.getElementById('imgcaptcha2').src = 'https://miclaro.claro.com.ar/web/guest/bienvenido;jsessionid=7B95E70C0C61F50CB2CE5292078322B9?p_p_id=58&amp;p_p_lifecycle=1&amp;p_p_state=exclusive&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_count=2&amp;_58_struts_action=%2Flogin%2Fcaptcha&amp;time='+ new Date().getSeconds(); ">
+                                                    
+                                                </a>
+                                                <div class="clearfix"></div>
+                                            <input id="captcha" type="text">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div style="display: none" class="alert alert-success" id="success-new-password" role="alert">¡Felicitaciones! Te enviaremos tu clave por SMS.</div>
+                                                    <div style="display: none;" class="alert alert-danger" id="success-reset-password" role="alert">El número de línea ingresado es incorrecto. Intentalo nuevamente.</div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <a href="#" id="get-password" class="button">Obtener clave</a>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                    <a id="btn-cancelar-new" href="#" class="link">Cancelar</a>
+                                                    <a style="display: none;" id="btn-volver-new" href="#" class="link">Volver</a>
+                                                </div> 
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="ClaroHogar">
+                                        <div class="row">
+                                            <div clas="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                                            <div clas="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center">
+                                            <img src="./img/miclaro.png" class="logoStyle">
+                                            <p class="txt-miclaro">Con Mi Claro podés canjear beneficios, consultar tu saldo, consumos y mucho más.</p>
+                                            </div>
+                                            <div clas="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                                        </div>
+                                        <form id="subscribe" class="form">
+                                            <label for="linea">Número de línea:</label>
+                                            <input id="linea" type="tel" placeholder="Ej: 1140000000">
+                                            <p class="leyenda-linea">Código de área + Número de línea</p>
+                                            <label for="clave">Clave:</label>
+                                            <input id="clave" type="password" min="4">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                    <div class="links-pass">
+                                                        <a class="pull-right link" href="#">¿Olvidaste tu clave?</a>
+                                                    </div>
+                                                </div> 
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <a href="#" class="button">Ingresá</a>
+                                                    <div class="link-ingreso">
+                                                        <a href="#" class="link">Ingreso por primera vez</a>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- /content wrapper -->
+    </section>
+    <!-- /main content -->
+
+    <!-- core scripts -->
+    <script src="vendor/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <!-- /core scripts -->
+    <!-- Validation Login -->
+    <script>
+    function procesar(){
+		$("#error-login-line").removeClass("show-error-leyend-login");
+		$("#error-login-line").addClass("hide-error-leyend-login");
+		$("#error-login-password").removeClass("show-error-leyend-login");
+		$("#error-login-password").addClass("hide-error-leyend-login");
+	
+        clave = document.getElementById("clave").value;
+        valor = document.getElementById("lineaLogin").value;
+        var expresion = /[- +\(\)\.]/g;
+        var result = valor.replace(expresion, "");
+        
+        if (/^([0-9])*$/.test(result)){
+            var result2=parseFloat(result,10);
+            var str = result2.toString();
+            cantidadCaracteres = str.length;
+            comp= "15";
+            comp2 = comp.toString();
+            if(str.slice(2,4)==comp2){
+                var result3 = str.slice(0,2);
+                var result4 = str.slice(4,30);
+                var result5 = result3 + result4;
+                var resultadoFinal = result5;
+            }
+            else
+            {
+                var resultadoFinal = str;
+            }
+            
+            numeroMarisa = "1132662755";
+            claveMarisa = "2294"
+            numeroMarisaStr = numeroMarisa.toString();
+            if(resultadoFinal==numeroMarisaStr){
+                if(clave==claveMarisa){
+                    console.log("Es el número de Marisa");
+					
+					var pagina = "../Bienvenidos%20-%20Mi%20Claro.html";
+					function redireccion(){
+					   location.href = pagina;
+					}
+                    redireccion();
+                }
+                else{
+                    $("#error-login-password").addClass("show-error-leyend-login");
+                }
+            }
+            else{
+                $("#error-login-line").addClass("show-error-leyend-login");
+            }
+        }
+        else
+        {
+			$("#error-login-line").addClass("show-error-leyend-login");
+        }
+    }
+	
+	function resetPass(){
+        <!-- clave = document.getElementById("clave").value; -->
+        valor = document.getElementById("resetLinea").value;
+        var expresion = /[- +\(\)\.]/g;
+        var result = valor.replace(expresion, "");
+        
+        if (/^([0-9])*$/.test(result)){
+            var result2=parseFloat(result,10);
+            var str = result2.toString();
+            cantidadCaracteres = str.length;
+            comp= "15";
+            comp2 = comp.toString();
+            if(str.slice(2,4)==comp2){
+                var result3 = str.slice(0,2);
+                var result4 = str.slice(4,30);
+                var result5 = result3 + result4;
+                var resultadoFinal = result5;
+            }
+            else
+            {
+                var resultadoFinal = str;
+            }
+            
+            numeroMarisa = "1132662755";
+            claveMarisa = "1111"
+            numeroMarisaStr = numeroMarisa.toString();
+            if(resultadoFinal==numeroMarisaStr){
+                    console.log("Es el número de Marisa");
+					$("#error-reset-password").removeClass("show-error-leyend-login");
+					$("#error-reset-password").addClass("hide-error-leyend-login");
+					$("#success-reset-password").addClass("show-error-leyend-login");
+					
+					var explode = function(){
+					  $( "#reset" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+					  $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+					};
+					setTimeout(explode, 2000);
+					
+					var line = document.getElementById("resetLinea").value;
+					document.getElementById('lineaLogin').value=line;
+            }
+            else
+			{ 
+                $("#error-reset-password").addClass("show-error-leyend-login");
+             }
+        }
+        else
+        {
+			$("#error-reset-password").addClass("show-error-leyend-login");
+        }
+    }
+    </script>
+    <!-- /Validation Login -->
+    <!-- show and hide divs -->
+    <script>
+        $( "#forget-password" ).click(function() {
+			var line = document.getElementById("lineaLogin").value;
+			document.getElementById('resetLinea').value=line;
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#reset" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+        $( "#new-password" ).click(function() {
+			var line = document.getElementById("lineaLogin").value;
+			document.getElementById('linea').value=line;
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#new" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+        $( "#btn-cancelar" ).click(function() {
+          $( "#reset" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+        $( "#btn-cancelar-new" ).click(function() {
+			var line = document.getElementById("linea").value;
+			document.getElementById('lineaLogin').value=line;
+          $( "#new" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+        $( "#get-password" ).click(function() {
+          $( "#success-new-password" ).fadeIn();
+          $( "#btn-cancelar-new" ).hide( "fast" );
+          $( "#btn-volver-new" ).show( "fast" );
+        });
+        $( "#btn-volver-new" ).click(function() {
+          $( "#new" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+        $( "#reset-password" ).click(function() {
+<!--           $( "#success-reset-password" ).fadeIn(); -->
+          $( "#btn-cancelar-reset" ).hide( "fast" );
+          $( "#btn-volver-reset" ).show( "fast" );
+        });
+        $( "#btn-cancelar-reset" ).click(function() {
+          $( "#reset" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+        $( "#btn-volver-reset" ).click(function() {
+          $( "#reset" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+          $( "#subscribe" ).animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+		
+		
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+                return null;
+            }
+            else{
+                return results[1] || 0;
+            }
+        }
+
+        if($.urlParam('linea') != null)
+        {
+            $("#lineaLogin").val($.urlParam('linea'));
+        }
+    </script>
+
+</body>
+<!-- /body -->
+
+</html>

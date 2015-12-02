@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+    background: #f8f8f8;
+}
+
+
+.form {
+    margin: 2.5em 2em 1.5em 2em;
+    overflow: hidden;
+}
+
+.form input[type="text"], .form input[type="submit"] {
+    font-family: Open Sans;
+    font-size: 14px;
+    width: 100%;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+/*
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+*/
+}
+
+.form input[type="text"] {
+    background: white;
+    margin: 0 0 10px;
+    border: 1px solid #CACACA;
+	color: #646464;
+}
+
+.form input[type="text"]:focus {
+    outline: none;
+}
+
+.form input[type="password"], .form input[type="submit"] {
+    font-family: Open Sans;
+    font-size: 14px;
+    width: 100%;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+/*
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+*/
+}
+
+.form input[type="password"] {
+    background: white;
+    margin: 0 0 10px;
+    border: 1px solid #CACACA;
+	color: #646464;
+}
+
+.form input[type="password"]:focus {
+    outline: none;
+}
+
+.form input[type="number"], .form input[type="submit"] {
+    font-family: Open Sans;
+    font-size: 14px;
+    width: 100%;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+/*
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+*/
+}
+
+.form input[type="number"] {
+    background: white;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #e5e5e5;
+	color: #646464;
+}
+
+.form input[type="number"]:focus {
+    outline: none;
+}
+
+.form input[type="tel"], .form input[type="submit"] {
+    font-family: Open Sans;
+    font-size: 14px;
+    width: 100%;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+/*
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+*/
+}
+
+.form input[type="tel"] {
+    background: white;
+    border: 1px solid #CACACA;
+	color: #646464;
+    margin-bottom: 5px;
+}
+
+.form input[type="tel"]:focus {
+    outline: none;
+}
+
+
+
+.form input[type="submit"] {
+    background: #96d492;
+    color: white;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background: #A4DFA1;
+}
+
+.form input[type="submit"]:active {
+    background: #8CC988;
+}
+
+.form label {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    -ms-transform: translate(300px, 0);
+    -o-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+    opacity: 0;
+}
