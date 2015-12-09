@@ -1,9 +1,11 @@
-.loader {
-  height: 64px;
-  left: 50%;
-  margin-left: -32px;
-  margin-top: -32px;
+.corpo-circular-loader {
   position: absolute;
+  height: 50px;
+  width: 50px;
+/*
   top: 50%;
-  width: 64px;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+*/
 }

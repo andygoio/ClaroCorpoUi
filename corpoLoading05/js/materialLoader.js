@@ -1,8 +1,8 @@
-var $loader = $('.loader');
-$loader.append('<canvas />');
+var $corpoCircularLoader = $('.corpo-circular-loader');
+$corpoCircularLoader.append('<canvas />');
 var $canvas = $('canvas');
-$canvas.attr('height', $loader.height());
-$canvas.attr('width', $loader.width());
+$canvas.attr('height', $corpoCircularLoader.height());
+$canvas.attr('width', $corpoCircularLoader.width());
 var canvas = $canvas[0];
 var ctx = canvas.getContext('2d');
 var requestAnimationFrame = window.webkitRequestAnimationFrame;
@@ -133,7 +133,7 @@ function drawArc(arc, color) {
   var end = arc.end * Math.PI + (-0.5 * Math.PI);
   var counterClockwise = false;
   
-  if (Math.abs(begin - end) < 0.05) {
+  if (Math.abs(begin - end) < 0.9) {
     begin -= 0.025;
     end += 0.025;
   }
