@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Progress Circular in md-button</title>
+		<link rel='stylesheet prefetch' href='css/angular-material.css'>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div ng-controller="AppCtrl" layout="column" layout-margin="" style="padding:25px;" class="progressCirculardemoBasicUsage" ng-app="MyApp">
+			<div layout="row" layout-align="center center">
+				<md-button class="md-raised circular-progress-button md-warn" ng-click="showSpinner = !showSpinner" keep-width>
+					<span ng-show="!showSpinner">circular spinner in md-button</span>
+					<md-progress-circular md-mode="indeterminate" md-diameter="20" ng-show="showSpinner"></md-progress-circular>
+				</md-button>
+			</div>
+			<md-progress-circular md-mode="indeterminate" md-diameter="100"></md-progress-circular>
+		</div>
+		<script src='js/angular.js'></script>
+		<script src='js/angular-animate.min.js'></script>
+		<script src='js/angular-aria.min.js'></script>
+		<script src='js/angular-messages.min.js'></script>
+		<script src='js/angular-material.js'></script>
+		<script src='js/assets-cache.js'></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
