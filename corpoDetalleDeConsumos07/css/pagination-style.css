@@ -1,0 +1,178 @@
+.pagination,
+.pagination li a {
+/*    display: flex;*/
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #5F5F5F !important;
+    font-weight: 600;
+    outline: none;
+}
+
+.pagination a {
+  font-weight: 500;
+  padding-top: 1px;
+  text-decoration:none;  
+  border: 1px solid rgba(0,0,0,.25);
+  border-left-width: 0;
+  color: rgba(255,255,255,.85);
+  box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.35);
+    min-width: 3em;
+    min-height: 2.2em;
+    font-size: 1em;
+}
+
+.pagination li:not([class*="active"]) a:hover { 
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination li:not([class*="active"]) a:focus,
+.pagination li:not([class*="active"]) a:active {;
+/*  box-shadow: 0px 0px 10px 1px rgba(0,0,0,.25);*/
+  border-left-width:1px;
+}
+
+.pagination li:first-of-type a {
+  border-left-width: 1px;
+}
+
+.pagination li:first-of-type span,
+.pagination li:last-of-type span,
+.pagination li:nth-of-type(2) span,
+.pagination li:nth-last-of-type(2) span { 
+  /* screen readers only */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.pagination li:first-child a::before,
+.pagination li:last-child a::after,
+.pagination li:nth-of-type(2) a::before,
+.pagination li:nth-last-of-type(2) a::after {  
+  display: inline-block;
+  font-family: Fontawesome;  
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.pagination li:first-child a::before,
+.pagination li:last-child a::after { content: "\f100"; }
+
+.pagination li:nth-of-type(2) a::before,
+.pagination li:nth-last-of-type(2) a::after { content: "\f104"; }
+
+.pagination li:last-child a::after,
+.pagination li:nth-last-of-type(2) a::after { transform: rotate(180deg); }
+
+.pagination li.active a { 
+    color: #fff !important;
+    background-color: #D32C1C !important;
+    border-color: #D32C1C !important;
+    box-shadow: 1px 1px 3px #868686;
+    outline: none;
+}
+
+@media only screen and ( max-width: 1200px ) {  
+  .pagination li:first-child,
+  .pagination li:last-child {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .pagination li:nth-of-type(2) a { 
+  	border-left-width: 1px;
+  	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+  }
+
+  .pagination li:nth-last-child(2) a {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+ 	}
+  	
+}
+
+@media only screen and ( max-width: 768px ) {  
+  .pagination li {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .pagination li.active,
+  .pagination li:first-of-type,
+  .pagination li:last-of-type,
+  .pagination li:nth-of-type(2),
+  .pagination li:nth-last-of-type(2){
+    position: initial;
+    top: initial;
+    left: initial;
+  }
+
+  .pagination li:nth-of-type(2) a { 
+  		border-left-width: 1px;
+  		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+  		
+	}
+
+}
+
+@media only screen and ( max-width: 421px ) {
+  
+  h1 { font-size: 1.35em !important; }
+  
+  .pagination li:first-child,
+  .pagination li:last-child {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .pagination li:nth-of-type(2) a {
+  		border-left-width: 1px;
+  		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+  	}
+
+  .pagination li:nth-last-child(2) a {
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+  	}
+
+}
+
+@media only screen and ( max-width: 420px ) {  /* For watches */
+  
+  .pagination li { width: 50%;}
+  
+  .pagination li.active { 
+    order: 2;
+    width: 100%;
+    border-left-width: 1px;
+      
+  }  
+
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}

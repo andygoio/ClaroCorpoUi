@@ -1,0 +1,66 @@
+:focus {
+		outline: 0;
+}
+
+.placeholder input {
+		display: block;
+}
+
+.ac-placeholder {
+		position: relative;
+}
+
+.placeholder input {
+		background: transparent;
+		border: solid 1px #ccc;
+		box-sizing: border-box;
+		color: #333;
+		padding: 10px 15px;
+		transition: .3s;
+		width: 100%;
+}
+
+.ac-placeholder:hover input, .placeholder input:hover {
+		border-color: #c0c0c0;
+}
+
+.ac-placeholder:hover label {
+		color: #808080;
+}
+
+.placeholder.focus input, .placeholder input:focus {
+		border-color: #ADADAD;
+}
+
+.placeholder label {
+		background: #ffffff;
+		color: #808080;
+		cursor: text;
+		font-size: 0.98em;
+		left: 1em;
+		padding: 0 2px;
+		position: absolute;
+		top: 0.8em;
+		transition: .3s;
+		font-weight: 300;
+}
+
+.placeholder .text label {
+		color: #808080;
+}
+
+.placeholder .focus label {
+		color: #ADADAD;
+}
+
+.placeholder .focus label, .placeholder .text label {
+		margin-top: -1.5em;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
