@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Claro">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		<!-- /meta -->
+		<title>Detalle de consumos</title>
+		<!-- Roboto (***PERTENECE AL TEMA***) -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+		<!-- /Roboto -->
+		<!-- Bootstrap (***PERTENECE AL TEMA***) -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<!-- /Bootstrap -->
+		<!-- Iconos font-awesome (***PERTENECE AL TEMA***) -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- /Iconos font-awesome -->
+		<!-- Animaciones (***PERTENECE AL TEMA***) -->
+		<link rel='stylesheet prefetch' href='css/animate.min.css'>
+		<!-- /Animaciones -->
+		<!-- Waves Style (***PERTENECE AL TEMA***) -->
+		<link rel="stylesheet" href="css/waves.css" media="screen" type="text/css" />
+		<!-- /Waves Style -->
+		<!-- AmaranNotification Style (***PERTENECE AL TEMA***) -->
+		<link rel='stylesheet' href='css/amaran.css'>
+		<!-- /AmaranNotification Style -->
+		<!-- placeholders2 Style (***PERTENECE AL TEMA***) -->
+		<link rel='stylesheet' href='css/placeholders2.css'>
+		<!-- /placeholders2 Style -->
+		<!-- Detalle-de-consumo Style -->
+		<link rel="stylesheet" href="css/detalle-de-consumo.css" media="screen" type="text/css" />
+		<!-- /Detalle-de-consumo Style -->
+		<!-- Tabs-acordion-style -->
+		<link rel="stylesheet" href="css/tabs-accordion-responsive-style.min.css">
+		<!-- Tabs-acordion-style -->
+		<!-- Select2 Style -->
+		<link rel="stylesheet" href="css/select2.css" media="screen" type="text/css" />
+		<!-- /Select2 Style -->
+        <!-- Pagination Style -->
+		<link rel="stylesheet" href="css/pagination-style.css" media="screen" type="text/css" />
+		<!-- /Pagination Style -->
+		<link rel="stylesheet" href="css/dataTables/dataTables.bootstrap.min.css" media="screen" type="text/css" />
+		<link rel="stylesheet" href="css/corpo-datatable-style.css" media="screen" type="text/css" />
+
+	</head>
+	<body>
+		<!-- Content Wrapper -->
+		<div class="container">
+            <row>
+                <div class="hidden-xs col-sm-1 col-md-1 col-lg-2"></div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
+                    <div class="title-container">
+                        <h3>Detalle de consumos</h3>
+                    </div>
+                    
+                    <div class="period-combo-container">
+                        <row>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <select id="combo-cell-number-calls-consumption-detail" js-states form-control >
+                                    <option value=""></option>
+                                    <option value="3512456359">3512456359</option>
+                                    <option value="3512456360">3512456360</option>
+                                    <option value="3512456359">3512456361</option>
+                                    <option value="3512456360">3512456362</option>
+                                    <option value="3512456359">3512456359</option>
+                                    <option value="3512456360">3512456360</option>
+                                    <option value="3512456359">3512456359</option>
+                                    <option value="3512456360">3512456360</option>
+
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <select id="period" js-states form-control >
+                                    <option value="Período en curso">Período en curso</option>
+                                    <option value="Período facturado">Período facturado</option>
+                                </select>
+                            </div>
+                        </row>
+                    </div>
+                    <!--Horizontal Tab-->
+                    <div id="parentHorizontalTab" class="margin-container">
+                        <ul class="resp-tabs-list hor_1">
+                            <li>
+                                <h5>Llamadas</h5>
+                            </li>
+                            <li>
+                                <h5>SMS / MMS</h5>
+                            </li>
+                            <li>
+                                <h5>Internet</h5>
+                            </li>
+                            <li>
+                                <h5>Otros</h5>
+                            </li>
+                        </ul>
+                        <div class="resp-tabs-container hor_1">
+                            <div>
+                                <div id="info-file-type-container">
+                                    <div class="amaran-wrapper bottom right">
+                                        <div class="amaran-wrapper-inner">
+                                            <div class="amaran cursorDefault smallInfoMessage animated fadeIn" style="display: block;">
+                                                <div class="icon">
+                                                    <div class="containerIconCenter"><i class="fa fa-info small-corpo-info-circle animated infinite pulse icon-display-style"></i></div>
+                                                </div>
+                                                <div class="text-message-style">Para visualizar correctamente los archivos descargados, su equipo debe tener instalado el software apropiado.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="current-period-calls-table-container" id="current-period-calls-table-container">
+
+                                    <table id="example" class="table table-striped" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">Fecha/Hora</th>
+                                                <th class="col-xs-4 col-sm-3 col-md-2 col-lg-2">Destino</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Duración</th>
+                                                <th class="col-xs-3 col-sm-2 col-md-2 col-lg-2">Precio</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Roaming</th>
+                                                <th class="hidden-xs hidden-sm col-md-2 col-lg-2">Entrada/Saliente</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:05</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">60:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td  class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">01:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="billed-period-table-container" id="billed-period-table-container">
+
+                                    <table id="billed-period-table" class="table table-striped" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">Fecha/Hora</th>
+                                                <th class="col-xs-4 col-sm-3 col-md-2 col-lg-2">Destino</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Duración</th>
+                                                <th class="col-xs-3 col-sm-2 col-md-2 col-lg-2">Precio</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Roaming</th>
+                                                <th class="hidden-xs hidden-sm col-md-2 col-lg-2">Entrada/Saliente</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:05</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">60:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td  class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">01:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="sms-mms-message-container">
+                                    <div class="amaran cursorDefault bigWarningMessage animated fadeIn" style="display: block;">
+                                        <div class="icon">
+                                            <div class="containerIconCenter">
+                                                <i class="fa fa-exclamation big-corpo-warning-circle animated infinite pulse icon-display-style"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-message-style">No se registran consumos en el período seleccionado.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="internet-message-container">
+                                    <div class="amaran-wrapper bottom right">
+                                        <div class="amaran-wrapper-inner">
+                                            <div class="amaran cursorDefault smallInfoMessage animated fadeIn" style="display: block;">
+                                                <div class="icon">
+                                                    <div class="containerIconCenter"><i class="fa fa-info small-corpo-info-circle animated infinite pulse icon-display-style"></i></div>
+                                                </div>
+                                                <div class="text-message-style">Para visualizar correctamente los archivos descargados, su equipo debe tener instalado el software apropiado.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="current-period-internet-table-container" id="current-period-internet-table-container">
+
+                                    <table id="current-period-internet-table" class="table table-striped" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">Fecha/Hora</th>
+                                                <th class="col-xs-4 col-sm-3 col-md-2 col-lg-2">Destino</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Duración</th>
+                                                <th class="col-xs-3 col-sm-2 col-md-2 col-lg-2">Precio</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Roaming</th>
+                                                <th class="hidden-xs hidden-sm col-md-2 col-lg-2">Entrada/Saliente</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:05</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">60:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td  class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">01:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                </div>
+                                <div class="billed-period-internet-table-container" id="billed-period-internet-table-container">
+
+                                    <table id="billed-period-internet-table" class="table table-striped" cellspacing="0" width="100%">
+                                         <thead>
+                                            <tr>
+                                                <th class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">Fecha/Hora</th>
+                                                <th class="col-xs-4 col-sm-3 col-md-2 col-lg-2">Destino</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Duración</th>
+                                                <th class="col-xs-3 col-sm-2 col-md-2 col-lg-2">Precio</th>
+                                                <th class="hidden-xs col-sm-2 col-md-2 col-lg-2">Roaming</th>
+                                                <th class="hidden-xs hidden-sm col-md-2 col-lg-2">Entrada/Saliente</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:05</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">60:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td  class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">01:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:05</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">60:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td  class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3516977641</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">01:03</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">16/02/2016 13:00</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3513019101</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:49</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:53</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">2747</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">34:20</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">18/02/2016 23:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">10:12</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3517656242</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">35:40</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">00:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:08</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">21/02/2016 19:45</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:09</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">25/02/2016 21:54</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">20:10</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">28/02/2016 16:32</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">21:40</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-xs-5 col-sm-3 col-md-2 col-lg-2 lineRow">01/03/2016 20:33</td>
+                                                <td class="col-xs-4 col-sm-3 col-md-2 col-lg-2">3548423051</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">13:34</td>
+                                                <td class="col-xs-3 col-sm-2 col-md-2 col-lg-2">$0,99</td>
+                                                <td class="hidden-xs col-sm-2 col-md-2 col-lg-2">No</td>
+                                                <td class="hidden-xs hidden-sm col-md-2 col-lg-2">Saliente</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="others-message-container">
+                                    <div class="amaran cursorDefault bigWarningMessage animated fadeIn" style="display: block;">
+                                        <div class="icon">
+                                            <div class="containerIconCenter">
+                                                <i class="fa fa-exclamation big-corpo-warning-circle animated infinite pulse icon-display-style"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-message-style">No se registran consumos en el período seleccionado.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Horizontal Tab-->
+                </div>
+                <div class="hidden-xs col-sm-1 col-md-1 col-lg-2"></div>
+            </row>
+		</div>
+        
+        <script type="text/javascript">
+//<!-- Llamados a las Notificaciones Amaran de Success, Error, Info y Warning -->
+function showNotificationAmaran(msg, targetId, theme) {
+    $.amaran.close();
+    $.amaran({
+        content: {
+            targetIdWidth: '5em',
+            targetIdHeight: '5em',
+            bgcolor: '#8e44ad',
+            color: '#fff',
+            message: msg
+        },
+        theme: theme,
+        position: 'bottom right',
+        closeButton: false,
+        delay: 7000,
+        cssanimationIn: 'fadeIn',
+        cssanimationOut: 'fadeOut',
+        targetId: targetId
+    });
+}
+
+function showNotificationAmaranNoTime(msg, targetId, theme) {
+    $.amaran.close();
+    $.amaran({
+        content: {
+            targetIdWidth: '5em',
+            targetIdHeight: '5em',
+            bgcolor: '#8e44ad',
+            color: '#fff',
+            message: msg
+        },
+        theme: theme,
+        position: 'bottom right',
+        closeOnClick: false,
+        closeButton: false,
+        cursorDefault: "cursorDefault",
+        delay: 86400000,
+        cssanimationIn: 'fadeIn',
+        cssanimationOut: 'fadeOut',
+        targetId: targetId
+    });
+}
+//<!-- /Llamados a las Notificaciones Amaran de Success, Error, Info y Warning -->
+        </script>
+		<!-- /Content Wrapper -->
+		<!-- jquery js (***PERTENECE AL TEMA***) -->
+		<script src='js/jquery-1.11.2.min.js'></script>
+		<!-- /jquery js -->
+		<!-- Boostrap js (***PERTENECE AL TEMA***) -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<!-- /Boostrap js -->
+		<!-- Waves (***PERTENECE AL TEMA***) -->
+		<script src="js/waves.min.js"></script>
+		<!-- /Waves -->
+		<!-- /Amaran Notification js (***PERTENECE AL TEMA***) -->
+		<script src='js/jquery.amaran.js'></script>
+		<!-- /Amaran Notification js -->
+		<!-- Tabs-accordion-responsive js -->
+		<script src="js/tabs-accordion-responsive.min.js"></script>
+		<!-- /Tabs-accordion-responsive js -->
+		<!-- Select2 js -->
+		<script src='js/select2.full.min.js'></script>
+		<!-- /Select2 js -->
+
+
+
+		<script src="js/dataTables/jquery.dataTables.js"></script>
+		<script src="js/dataTables/dataTables.bootstrap.min.js"></script>
+		<script src="js/dataTables/dataTables.buttons.min.js"></script>
+		<script src="js/dataTables/buttons.bootstrap.min.js"></script>
+		<script src="js/dataTables/jszip.min.js"></script>
+		<script src="js/dataTables/pdfmake.min.js"></script>
+		<script src="js/dataTables/vfs_fonts.js"></script>
+		<script src="js/dataTables/buttons.html5.min.js"></script>
+        <!-- Detalle-de-consumo js -->
+		<script src="js/detalle-de-consumo.js"></script>
+		<!-- /Detalle-de-consumo js -->
+		<!-- placeholders2 (***PERTENECE AL TEMA***) -->
+		<script src="js/placeholders2.js"></script>
+		<!-- /placeholders2 -->
+
+	</body>
+</html>

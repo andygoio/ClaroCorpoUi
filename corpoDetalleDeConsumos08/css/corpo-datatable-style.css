@@ -1,0 +1,224 @@
+#corpoTable tbody td a.off-left{
+	cursor:pointer;
+}
+
+.lineRow{
+	padding-left: 1.0em !important;	
+}
+
+.text-align-first-xs {
+    text-align: center;
+}
+
+@media (max-width: 768px){
+     
+    .text-align-first-xs {
+        text-align: left;
+        padding-left: 1.5em !important;
+    }
+}
+
+.title-container {
+    margin-left: 5%;
+}
+
+.title-container > h3 {
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px){
+    .table-container {
+        display: none;
+    }
+}
+
+@media (max-width: 546px){
+    .table-container {
+        display: none;
+    }
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    border: 0px!important; 
+    background-color: white;
+    background: 0px!important;
+    color: #fff!important;
+    background-color: #D32C1C !important;
+    border-color: #D32C1C !important;
+    box-shadow: 1px 1px 3px #868686!important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+   color: black!important;  
+   background: none!important;
+   outline: none;
+    background-color: #eee!important;
+    border-color: #ddd!important;
+}
+
+.dataTables_wrapper .dataTables_length{
+    margin-right: 28px;
+}
+
+.paginate_button:hover{
+    background-color: #eee!important;
+    border-color: #ddd!important;
+}
+
+button.dt-button, div.dt-button, a.dt-button{
+    background-color: none!important; 
+    background-image: none!important;
+    -moz-user-select: none!important;
+    -ms-user-select: none!important;
+    user-select: none!important;
+    color: #000!important;
+    background-color: none !important;
+    border-color: none !important;
+    box-shadow: 1px 1px 3px #8A8A8A!important;
+}
+
+ a.dt-button:hover:not(.disabled){
+    background-color: #f3f3f3 !important;
+    border-color: #f3f3f3 !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: none!important;
+}
+
+.dataTables_wrapper .dataTables_filter input{
+    outline: none;
+    height: 30px;
+    border-radius: 1px;
+    background: #fff;
+}
+
+.placeholder label {
+    top: 0.4em;
+}
+
+.placeholder .focus label, .placeholder .text label {
+		margin-top: -1.1em;
+}
+
+.dataTables_wrapper .dataTables_length label select{
+    margin-left: 6px;
+    margin-right: 1px;
+}
+
+button.dt-button:hover:not(.disabled), div.dt-button:hover:not(.disabled), a.dt-button:hover:not(.disabled){
+    border: none !important;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: none!important;
+}
+
+.dataTables_length {
+    display: inline-block;
+}
+
+.dataTables_filter {
+    display: inline-block;
+    float: right;
+}
+
+select.form-control.input-sm {
+    border: solid 1px #ccc;
+    border-radius: 1px;
+    outline: none;
+}
+
+.form-control:focus {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+.dataTables_wrapper > div > label > select > option {
+/*    background-color: #d32c1c;*/
+    background-color: #fff;
+    border-color: #fff;
+}
+
+/*
+.dataTables_wrapper > div > label > select > option:hover {
+    background-color: #d32c1c !important;
+}
+*/
+
+/*
+.dataTables_wrapper > div > label > select > option:active {
+    background-color: #d32c1c !important;
+}
+*/
+
+.dataTables_wrapper > div > label > select > option:focus {
+    background-color: #d32c1c !important;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    width: inherit;
+    font-weight: 600;
+    color: #5F5F5F;
+}
+
+div.dataTables_wrapper div.dataTables_length label {
+    font-weight: 600;
+    color: #5F5F5F;
+}
+
+table.dataTable {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+div#example_info {
+    padding-left: 5px;
+    display: inline-block;
+}
+
+div#example_paginate {
+    display: inline-block;
+    float: right;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    div.dataTables_wrapper div.dataTables_info {
+        text-align: left;
+    }
+}
+
+.display-footer-datatable {
+    display: inline-block;
+}
+
+.float-right-footer-datatable {
+    float: right;
+}
+
+a.btn.btn-default.buttons-pdf.buttons-html5.waves-effect.waves-button.waves-float, a.btn.btn-default.buttons-excel.buttons-html5.waves-effect.waves-button.waves-float, a.btn.btn-default.buttons-copy.buttons-html5.waves-effect.waves-button.waves-float, a.btn.btn-default.buttons-csv.buttons-html5.waves-effect.waves-button.waves-float {
+    display: inline-block;
+    width: 46px;
+    height: 28px;
+    padding: 5px 0px;
+    margin-right: 5px;
+    background: #fff;
+}
+
+.table>thead>tr>th {
+    background: #fff;
+}
+
+.table-striped>tbody>tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+    background-color: #fff;
+}
