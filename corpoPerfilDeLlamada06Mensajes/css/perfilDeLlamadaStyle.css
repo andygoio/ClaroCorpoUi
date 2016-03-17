@@ -1,0 +1,474 @@
+body {
+    font-family: 'Roboto', sans-serif;
+/*    font-size: 1em !important;*/
+}
+
+.margin-container {
+	margin: 0em 1.5em;
+}
+
+/*
+.shadow-container {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0), 0px 8px 17px rgba(0, 0, 0, 0.1) !important;
+}
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 767px) { 
+    .margin-and-shadow-container{
+		padding-top: 15px;
+		margin-top:0px;
+		margin-right: 0px;
+		margin-left: 0px;
+		}
+		
+	.td-text-center{
+		text-align: center;
+	}
+}
+
+#corpoTable tbody td a.off-left{
+	cursor:pointer;
+}
+
+.icon-success{
+	color:#5CB85C;
+}
+
+.icon-warning{
+	color:#f89406;
+}
+
+.icon-danger{
+	color: #D32C1C;
+}
+
+.rate-plan, .update-user, .consume, .pin-puk, .line-detail{
+	cursor:pointer;
+}
+
+
+div.detail i{
+	margin-left: 10px;
+}
+
+#corpoTable   > thead > tr{
+	background-color: #fff;
+}
+
+#corpoTable   > thead > tr  > th{
+	/*border: 1px solid #F2F2F2;*/
+}
+
+#corpoTable > tbody {
+	/*border: 1px solid #F2F2F2;*/
+}
+
+/*
+#corpoTable  tbody  td   div i{
+	padding: 5px;
+	margin-left: 30px;
+	font-size:16px;
+}
+*/
+
+#corpoTable > tbody > tr:nth-child(2n+1) > td, #corpoTable > tbody > tr:nth-child(2n+1) > th {
+/*   background-color: #fff;*/
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.active-pane{
+	padding-top: 20px;
+}
+
+.selected td{
+	background-color:#95a5a6;
+}
+
+.tableCorpoContent{
+/* 	margin: 0px 1.5em; */
+}
+
+.detailSelected{
+    color: #898989 !important;	
+}
+
+.corpoTableDetail a, .corpoTableDetail:hover a{
+	color: #000;
+}
+
+.nav-tabs > li.active{
+	font-weight: bold;
+}
+
+.lineRow{
+	padding-left: 1.0em !important;	
+}
+
+.actionRow{
+	padding-right: 1.0em !important;
+}
+
+.table-icon-bold-success {
+	font-weight: 600;
+	font-size: 1.1em;
+	margin-right: -0.1em;
+	top: -4px;
+}
+
+.table-icon-bold-warning {
+	font-weight: 400;
+	padding: 0 0.2em;
+	font-size: 1.3em;
+	top: -3px;
+}
+
+.table-icon-bold-danger {
+	font-weight: 600;
+	font-size: 1.2em;
+	top: -4px;
+}
+
+.short-text {
+	display: inline-block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:70%;
+}
+
+
+div.dataTables_filter label {
+	float: left !important;
+	width: 24%;
+	min-width: 13em;
+}
+
+.icon-search-style {
+	font-weight: 600;
+	color: #CCCCCC;
+	font-size: 1.2em;
+}
+
+.dataTables_info {
+	float: left;
+	margin-left: 1em;
+}
+
+.principal-item-table-servicios {
+    display: block;
+}
+
+.secondary-item-table-servicios {
+    display: block;
+    color: #D32C1C;
+    font-weight: 600;
+    margin-left: 1em;
+}
+
+.price-total-cost-of-services {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.text-total-cost-of-services {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.no-padding-bootstrap {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.corpo-info-container {
+    text-align: center;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.corpo-info-circle {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    background: #82B1FF;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0px auto;
+    padding-left: 0.05em;
+    margin-top: 1em;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  border-top: 1px solid #ddd;
+}
+
+.table th, .table td {
+  border-top: 1px solid #DDDDDD;
+}
+
+.icon-success-call-profile {
+/*    color: #69F0AE;*/
+    color: #d32c1c;
+    margin-left: 0.5em;
+}
+
+.icon-error-call-profile {
+    color: #C3C3C3;
+    margin-left: 0.5em;
+    font-size: 1.2em;
+}
+
+.padding-bottom-switch-status {
+    padding-bottom: 0px !important;
+    padding-top: 5px !important;
+}
+
+.direct-dial-status-style {
+    color: #d32c1c;
+    font-weight: 600;
+    font-size: 1em;
+    margin-left: 0.2em;
+}
+
+.show-label-direct-dial-status {
+    display: inline-block;
+    width: 100%;
+}
+
+.hide-label-direct-dial-status {
+    display: none;
+}
+
+.save-button-user-change {
+    background-color: #d32c1c !important;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cancel-button-user-change {
+    color: #888888 !important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none !important;
+    font-weight: 400;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.buttons-user-change-container {
+    float: right;
+    margin-right: 10%;
+}
+
+.width-buttons {
+    width: 10em !important;
+    height: 2.65em;
+    margin-right: 1em !important;
+    margin-top: 1em !important;
+    display: inline-block;
+}
+
+.waves-button, .waves-button:hover, .waves-button:visited, .waves-button:link, .waves-button-input {
+  margin: 0px;
+}
+
+
+@media (min-width: 1201px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1200px){
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 992px){
+    .container {
+        width: 98% !important;
+    }
+}
+
+@media (max-width: 768px){
+    .container {
+        width: 98% !important;
+    }
+    
+    .margin-container {
+        margin: 0em 0.5em;
+    }
+    
+    .buttons-user-change-container {
+      float: none;
+      margin-right: 0%;
+      text-align: center;
+    }
+    
+    .width-buttons {
+        margin-right: 0em !important;
+    }
+}
+
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+/*    height: 6rem;*/
+}
+
+.title-container {
+    margin-left: 5%;
+}
+
+.title-container > h3 {
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+
+
+
+
+.help-text-container-call-profile {
+/*    display: flex;*/
+    display: inline-block !important;
+	width: 100%;
+}
+
+.icon-Question-Tooltip {
+    color: rgba(231, 76, 60, 0.21) !important;
+    font-size: 2.5em;
+    float: left;
+    height: 100%;
+    margin: auto 0px;
+}
+
+.help-text-call-profile-display {
+    display: table;
+    height: 100%;
+    width: 95%;
+    margin: auto 0px;
+}
+
+.help-text-style-call-profile {
+    font-size: 0.85em;
+    margin: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 1em;
+    padding-right: 0.5em;
+    color: #7B7B7B;
+    text-align: justify;
+}
+
+/*
+.span-help-text-style-call-profile {
+    font-size: 0.85em;
+    color: #7B7B7B;
+}
+
+.span-help-title-style-call-profile {
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+*/
+
+
+.help-text-container-call-profile > .help-text-call-profile-display > h6 {
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+.help-text-container-call-profile > .help-text-call-profile-display > h6, .help-text-container-call-profile > .help-text-call-profile-display > p {
+    font-size: 0.85em;
+    color: #7B7B7B;
+    text-align: justify;
+}
+
+.icon-Question-help-call-profile {
+    color: #fff !important;
+    font-size: 17px;
+    cursor: pointer;
+    line-height: 0px;
+    margin-left: 2px;
+}
+
+.circle-help-container-call-profile {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #C3C3C3;
+    border-radius: 10px;
+    float: right;
+    margin-top: 1px;
+}
+
+.no-pading-right {
+    padding-right: 0px !important;
+}
+
+
+
+
+.style-container-message-container {
+	color: #fff;
+	display: block;
+	font-size: 13px;
+	position: relative;
+	text-align: left;
+}
+
+.style-container-message-container .icon {
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.help-text-message-style {
+	padding-left: 10px;
+	border-radius: 0.3em;
+	font-weight: 400;
+	font-size: 14px;
+	display: table-cell;
+	vertical-align: middle;
+	-webkit-filter: blur(0);
+    color: #7B7B7B;
+	text-align: justify;
+    font-size: 1em;
+}
+.small-corpo-info-circle {
+	background: #82B1FF;
+	text-align: center;
+	height: 1.6em;
+	width: 1.6em;
+	border-radius: 1em;
+	color: #fff;
+	font-size: 1.2em !important;
+	line-height: 1.6em !important;
+	margin: 0px auto;
+}
+.icon-display-style {
+	display: inline-table;
+}
+.help-text-message-style > h6 {
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+.help-text-message-style > h6, .help-text-message-style > p {
+    color: #7B7B7B;
+    text-align: justify;
+}
+
+.help-text-message-style > p {
+    margin-left: 2px;
+}
